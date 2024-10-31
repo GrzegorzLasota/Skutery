@@ -1,0 +1,60 @@
+@use "../utils/variables.scss" as *;
+
+.header {
+  min-height: 100vh;
+  background-color: $cool-black;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+
+  .main-nav {
+    .section {
+      width: 100%;
+      padding: 10px 10px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+
+      &__link {
+        color: $ivory;
+        text-shadow: 0 21px 3px $strawberry;
+        font-size: 20px;
+        font-family: $bruno;
+        text-decoration: none;
+      }
+
+      &__shortcut-call {
+        color: $ivory;
+        width: 200px;
+        font-size: 14px;
+        font-family: $bruno;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &__shortcut-call::after {
+        content: "\2706";
+        font-size: 30px;
+        color: $scarlet;
+      }
+    }
+
+    .navigation-list {
+      display: grid;
+      width: 100%;
+      height: 500px;
+      border: 2px solid #fff;
+      grid-template-columns: repeat(4, 200px);
+      grid-template-columns: repeat(4, 200px);
+      justify-content: center;
+      place-items: center;
+
+      &__item {
+        border: 2px solid #fff;
+        padding: 35px;
+      }
+    }
+  }
+}

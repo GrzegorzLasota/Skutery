@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.header {
+  min-height: 100vh;
+  background-color: #151922;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.header .main-nav .section {
+  width: 100%;
+  padding: 10px 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.header .main-nav .section__link {
+  color: #fffff0;
+  text-shadow: 0 21px 3px #fc4c4e;
+  font-size: 20px;
+  font-family: "Bruno Ace SC", sans-serif;
+  text-decoration: none;
+}
+.header .main-nav .section__shortcut-call {
+  color: #fffff0;
+  width: 200px;
+  font-size: 14px;
+  font-family: "Bruno Ace SC", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .main-nav .section__shortcut-call::after {
+  content: "✆";
+  font-size: 30px;
+  color: #ff2400;
+}
+.header .main-nav .navigation-list {
+  display: grid;
+  width: 100%;
+  height: 500px;
+  border: 2px solid #fff;
+  grid-template-columns: repeat(4, 200px);
+  grid-template-columns: repeat(4, 200px);
+  justify-content: center;
+  place-items: center;
+}
+.header .main-nav .navigation-list__item {
+  border: 2px solid #fff;
+  padding: 35px;
+}
+
+body {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  color: #fffff0;
+}
+
+/*# sourceMappingURL=style.css.map */

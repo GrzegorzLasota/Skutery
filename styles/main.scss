@@ -1,0 +1,11 @@
+@use './utils/reset.scss' as *;
+@use './utils/variables.scss' as *;
+
+@use './blocks/header.scss' as *;
+
+body {
+  font-family: $chakraP;
+  font-weight: 800;
+  font-style: normal;
+  color: $ivory;
+}
