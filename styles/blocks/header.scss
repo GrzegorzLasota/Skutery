@@ -1,60 +1,122 @@
 @use "../utils/variables.scss" as *;
 
 .header {
-  min-height: 100vh;
   background-color: $cool-black;
-  margin: 0;
-  padding: 20px;
+  background-image: url("../../images/morzep.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 80%;
+
+  min-height: 100vh;
+  padding: 20px 10px 50px;
   box-sizing: border-box;
 
-  .main-nav {
-    .section {
-      width: 100%;
-      padding: 10px 10px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-sizing: border-box;
+  display: grid;
+  justify-content: center;
 
-      &__link {
-        color: $ivory;
-        text-shadow: 0 21px 3px $strawberry;
-        font-size: 20px;
-        font-family: $bruno;
-        text-decoration: none;
-      }
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
 
-      &__shortcut-call {
-        color: $ivory;
-        width: 200px;
-        font-size: 14px;
-        font-family: $bruno;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+  @media (min-width: 500px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+  }
 
-      &__shortcut-call::after {
-        content: "\2706";
-        font-size: 30px;
-        color: $scarlet;
+  @media (min-width: 1020px) {
+    display: grid;
+    grid-template-columns: repeat(12, 63px);
+    grid-template-rows: 1fr 1fr;
+    gap: 24px;
+  }
+
+  &__section {
+    align-self: start;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+
+    @media (min-width: 1020px) {
+      grid-column: 1 / 13;
+    }
+  }
+
+  .top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__link {
+      width: 140px;
+
+      .logo-img {
+        width: 100%;
+        height: auto;
       }
     }
 
-    .navigation-list {
-      display: grid;
-      width: 100%;
-      height: 500px;
-      border: 2px solid #fff;
-      grid-template-columns: repeat(4, 200px);
-      grid-template-columns: repeat(4, 200px);
-      justify-content: center;
-      place-items: center;
+    &__shortcut-call {
+      text-decoration: none;
+      font-size: 16px;
+      color: $ink;
+    }
+  }
 
-      &__item {
-        border: 2px solid #fff;
-        padding: 35px;
-      }
+  &__title {
+    align-self: end;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+
+    @media (min-width: 1020px) {
+      grid-column: 1 / 13;
+    }
+  }
+
+  .main-title {
+    font-size: 36px;
+    font-family: $bruno;
+    letter-spacing: -1px;
+    color: $burgundy;
+    text-shadow: 0 1px 1px $ink;
+  }
+
+  .main-title::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: $burgundy;
+    top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+
+    &__label {
+      font-family: $bruno;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 16px;
+      padding-top: 10px;
+      color: $coconut;
+      text-shadow: 0 1px 3px #000;
+      position: absolute;
+      transform: translateY(100%);
+    }
+
+    &:not(:hover) .phone__label {
+      opacity: 0;
+    }
+
+    &__icon {
+      width: 40px;
+      height: auto;
     }
   }
 }

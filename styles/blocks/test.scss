@@ -1,0 +1,101 @@
+@use "../utils/variables.scss" as *;
+
+.header {
+  min-height: 100vh;
+  background-color: $cool-black;
+  background-image: url("../../images/morzeP.jpg");
+  background-size: cover;
+  padding: 20px 10px 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: 1240px) {
+    display: grid;
+    grid-template-columns: repeat(12, 63px);
+    grid-template-rows: 1fr 1fr;
+  }
+
+  @media (min-width: 500px) {
+    // min-height: 50vh;
+    width: 1250px;
+    margin: 0 auto;
+    background-image: url("../../images/laskap.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 25px;
+  }
+
+  &__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 319px) {
+      flex-direction: column;
+      min-height: 100px;
+    }
+  }
+
+  &__link {
+    width: 140px;
+
+    @media (min-width: 500px) {
+      width: 170px;
+    }
+
+    .logo-img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__shortcut-call {
+    text-decoration: none;
+    font-size: 16px;
+    color: $coconut;
+    text-align: center;
+
+    @media (max-width: 320px) {
+      color: $ink;
+    }
+
+    @media (min-width: 500px) {
+      font-size: 20px;
+      color: $berry;
+    }
+  }
+
+  &__shortcut-call::after {
+    content: "\2706";
+    color: $berry;
+    font-size: 25px;
+    display: block;
+
+    @media (max-width: 320px) {
+      color: $ink;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    font-family: $bruno;
+    letter-spacing: -1px;
+    color: $burgundy;
+
+    @media (min-width: 500px) {
+      font-size: 36px;
+    }
+  }
+
+  &__title::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: $burgundy;
+    top: 20px;
+    margin-bottom: 20px;
+  }
+}

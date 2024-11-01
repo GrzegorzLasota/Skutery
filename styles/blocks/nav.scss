@@ -1,0 +1,14 @@
+@use "../utils/variables.scss" as *;
+
+.main-nav {
+  min-height: 100vh;
+  width: 100%;
+  border: 3px solid $coconut;
+  box-sizing: border-box;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto-fill, 200px;
+
+  &__list {
+  }
+}
