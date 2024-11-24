@@ -137,9 +137,9 @@ table {
   background-repeat: no-repeat;
   display: grid;
   grid-template-columns: repeat(2, 150px);
-  grid-template-rows: repeat(2, 120px);
   gap: 20px;
   justify-content: center;
+  grid-template-rows: repeat(2, 120px);
 }
 @media (min-width: 640px) {
   .header {
