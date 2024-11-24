@@ -1,0 +1,342 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.header {
+  background-image: url("../../images/city1.jpg");
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-position: left 21%;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  grid-template-rows: repeat(2, 120px);
+  gap: 20px;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .header {
+    display: grid;
+    grid-template-columns: repeat(6, 84px);
+    gap: 24px;
+    justify-content: center;
+  }
+}
+@media (min-width: 1020px) {
+  .header {
+    display: grid;
+    grid-template-columns: repeat(12, 60px);
+    gap: 24px;
+    justify-content: center;
+  }
+}
+@media (min-width: 1600px) {
+  .header {
+    display: grid;
+    grid-template-columns: repeat(12, 83px);
+    gap: 44px;
+    justify-content: center;
+  }
+}
+@media (min-width: 640px) {
+  .header {
+    background-image: url("../../images//front1.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+}
+.header .start {
+  grid-column: 1/-1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.header .start__logo {
+  width: 170px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+@media (min-width: 640px) {
+  .header .start__logo {
+    padding: 30px;
+    box-sizing: content-box;
+  }
+}
+.header .start__icon {
+  width: 100%;
+  height: auto;
+}
+.header .start__timer {
+  width: 130px;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Bruno Ace SC", sans-serif;
+  color: #151922;
+  font-weight: bold;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.3411764706);
+}
+@media (min-width: 640px) {
+  .header .start__timer {
+    color: #f0ede5;
+    text-shadow: none;
+    padding: 30px;
+    box-sizing: content-box;
+  }
+}
+.header .start__warning {
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.header .start .hours {
+  color: #151922;
+  padding: 5px 0;
+}
+@media (min-width: 640px) {
+  .header .start .hours {
+    color: #f0ede5;
+  }
+}
+.header .start .stop-time {
+  color: #ab0b23;
+}
+.header .middle {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+@media (min-width: 640px) {
+  .header .middle {
+    justify-content: center;
+  }
+}
+.header .middle__banner {
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1921568627);
+  overflow: hidden;
+}
+.header .middle__paragraph {
+  position: relative;
+  right: 0;
+  font-family: "Chakra Petch", sans-serif;
+  color: #800020;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7450980392);
+  animation: flying-banner 10s linear infinite;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  color: #800020;
+  font-size: 25px;
+}
+@media (min-width: 640px) {
+  .header .middle__paragraph {
+    color: #f0ede5;
+  }
+}
+.header .middle__paragraph:hover {
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+@keyframes flying-banner {
+  0% {
+    transform: translateX(0);
+    padding-left: 100%;
+  }
+  100% {
+    transform: translateX(-100%);
+    padding-left: 100%;
+  }
+}
+.header__end {
+  margin-bottom: 30px;
+}
+@media (min-width: 640px) {
+  .header__end {
+    margin-bottom: 100px;
+  }
+}
+.header .end {
+  grid-column: 1/-1;
+  align-self: end;
+}
+@media (min-width: 640px) {
+  .header .end {
+    grid-column: 1/7;
+  }
+}
+.header .end__title {
+  font-size: 28px;
+  line-height: 30px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-shadow: 0 3px 5px #111;
+}
+@media (min-width: 1020px) {
+  .header .end__title {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+
+.title {
+  font-family: "Bruno Ace SC", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 40.8px;
+  letter-spacing: -0.05em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background-color: #000;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */

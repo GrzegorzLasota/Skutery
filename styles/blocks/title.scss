@@ -1,0 +1,12 @@
+@use "../utils/variables.scss" as *;
+
+.title {
+  font-family: $bruno;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 40.8px;
+  letter-spacing: -0.05em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
