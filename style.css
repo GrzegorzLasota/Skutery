@@ -181,6 +181,7 @@ table {
 .header .start__logo {
   width: 170px;
   box-sizing: border-box;
+  position: relative;
 }
 @media (min-width: 640px) {
   .header .start__logo {
@@ -195,6 +196,22 @@ table {
 .header .start__icon {
   width: 90%;
   height: auto;
+  display: none;
+}
+@media (min-width: 640px) {
+  .header .start__icon {
+    display: block;
+  }
+}
+.header .start__icon--black {
+  position: absolute;
+  width: 90%;
+  height: auto;
+}
+@media (min-width: 640px) {
+  .header .start__icon--black {
+    display: none;
+  }
 }
 .header .start__timer {
   width: 130px;
@@ -330,6 +347,10 @@ table {
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+}
+
+.main {
+  min-height: 100vh;
 }
 
 body {

@@ -28,6 +28,7 @@
     &__logo {
       width: 170px;
       box-sizing: border-box;
+      position: relative;
 
       @include md() {
         padding: 30px;
@@ -43,6 +44,21 @@
     &__icon {
       width: 90%;
       height: auto;
+      display: none;
+
+      @include md() {
+        display: block;
+      }
+    }
+
+    &__icon--black {
+      position: absolute;
+      width: 90%;
+      height: auto;
+
+      @include md() {
+        display: none;
+      }
     }
 
     //2 box
