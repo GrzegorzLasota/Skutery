@@ -135,11 +135,11 @@ table {
   box-sizing: border-box;
   background-position: left 21%;
   background-repeat: no-repeat;
+  grid-template-rows: repeat(2, 120px);
   display: grid;
   grid-template-columns: repeat(2, 150px);
   gap: 20px;
   justify-content: center;
-  grid-template-rows: repeat(2, 120px);
 }
 @media (min-width: 640px) {
   .header {
@@ -181,7 +181,6 @@ table {
 .header .start__logo {
   width: 170px;
   box-sizing: border-box;
-  padding: 10px;
 }
 @media (min-width: 640px) {
   .header .start__logo {
@@ -189,17 +188,22 @@ table {
     box-sizing: content-box;
   }
 }
+.header .start__link {
+  display: flex;
+  justify-content: flex-end;
+}
 .header .start__icon {
-  width: 100%;
+  width: 90%;
   height: auto;
 }
 .header .start__timer {
   width: 130px;
-  padding: 10px;
+  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   font-family: "Bruno Ace SC", sans-serif;
   color: #151922;
   font-weight: bold;
@@ -312,7 +316,7 @@ table {
 }
 @media (min-width: 1020px) {
   .header .end__title {
-    font-size: 48px;
+    font-size: 38px;
     line-height: 48px;
   }
 }
