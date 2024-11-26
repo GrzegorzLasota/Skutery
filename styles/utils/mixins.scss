@@ -5,24 +5,17 @@
   justify-content: center;
 
   @media (min-width: 640px) {
-    // display: grid;
     grid-template-columns: repeat(6, 84px);
     gap: 24px;
-    // justify-content: center;
   }
 
   @media (min-width: 1020px) {
-    // display: grid;
     grid-template-columns: repeat(12, 60px);
-    // gap: 24px;
-    // justify-content: center;
   }
 
   @media (min-width: 1600px) {
-    // display: grid;
     grid-template-columns: repeat(12, 83px);
     gap: 44px;
-    // justify-content: center;
   }
 }
 

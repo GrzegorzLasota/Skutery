@@ -17,6 +17,14 @@
     background-size: cover;
   }
 
+  @include lg() {
+    min-height: 900px;
+  }
+
+  @include xl() {
+    background-size: auto;
+  }
+
   .start {
     grid-column: 1/-1;
     display: flex;

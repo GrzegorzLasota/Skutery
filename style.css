@@ -165,6 +165,16 @@ table {
     background-size: cover;
   }
 }
+@media (min-width: 1020px) {
+  .header {
+    min-height: 900px;
+  }
+}
+@media (min-width: 1600px) {
+  .header {
+    background-size: auto;
+  }
+}
 .header .start {
   grid-column: 1/-1;
   display: flex;
@@ -406,12 +416,12 @@ table {
 }
 .main .navi__list {
   grid-column: 1/-1;
+  grid-template-rows: 300px;
+  grid-auto-rows: 200px;
   display: grid;
   grid-template-columns: repeat(2, 150px);
   gap: 20px;
   justify-content: center;
-  grid-template-rows: 300px;
-  grid-auto-rows: 200px;
 }
 @media (min-width: 640px) {
   .main .navi__list {
