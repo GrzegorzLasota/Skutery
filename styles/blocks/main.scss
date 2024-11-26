@@ -1,3 +1,83 @@
+@use "../utils/mixins.scss" as *;
+@use "../utils/variables.scss" as *;
+
 .main {
   min-height: 100vh;
+  @include grid();
+
+  &__navi {
+    margin: 50px 0;
+  }
+
+  .navi {
+    grid-column: 1/-1;
+    @include grid();
+
+    &__list {
+      grid-column: 1/-1;
+      @include grid();
+      grid-template-rows: 300px;
+      grid-auto-rows: 200px;
+    }
+    // scalowanie kafelek menu
+    &__item {
+      grid-column: 1/-1;
+      border: 2px solid #fff;
+      @include flex-center();
+    }
+    // scalowanie kafelek z klasą ...short menu dla > 640px
+    &__item--short {
+      @include md() {
+        grid-column: span 2;
+      }
+    }
+    // scalowanie kafelek z klasą ...small menu dla > 1020px
+    &__item--small {
+      @include lg() {
+        grid-column: span 4;
+      }
+    }
+    // scalowanie kafelek z klasą ...long menu dla > 1020px
+    &__item--long {
+      @include md() {
+        grid-column: span 4;
+      }
+    }
+    // scalowanie kafelek z klasą ...long menu dla > 1020px
+    &__item--big {
+      @include lg() {
+        grid-column: span 8;
+      }
+    }
+
+    &__item--cars {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 4fr 3fr;
+
+      .grid-cars-top {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+        &__item {
+          grid-column: 1fr;
+          @include flex-center();
+          border: 1px solid #fff;
+        }
+      }
+
+      .grid-cars-bottom {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        &__item {
+          grid-column: 1fr;
+          @include flex-center();
+          border: 1px solid #fff;
+        }
+      }
+    }
+  }
 }

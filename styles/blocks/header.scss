@@ -1,6 +1,5 @@
 @use "../utils/mixins.scss" as *;
 @use "../utils/variables.scss" as *;
-@use "../utils/mixins.scss" as *;
 
 .header {
   background-image: url("../../images/city1.jpg");
@@ -42,7 +41,7 @@
     }
 
     &__icon {
-      width: 90%;
+      width: 100%;
       height: auto;
       display: none;
 
@@ -53,7 +52,7 @@
 
     &__icon--black {
       position: absolute;
-      width: 90%;
+      width: 100%;
       height: auto;
 
       @include md() {
@@ -85,9 +84,7 @@
     &__warning {
       box-sizing: border-box;
       text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex-center();
       flex-wrap: wrap;
       text-align: center;
     }
@@ -108,7 +105,7 @@
   .middle {
     grid-column: 1/-1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     padding-right: 10px;
     box-sizing: border-box;
 

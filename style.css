@@ -143,26 +143,19 @@ table {
 }
 @media (min-width: 640px) {
   .header {
-    display: grid;
     grid-template-columns: repeat(6, 84px);
     gap: 24px;
-    justify-content: center;
   }
 }
 @media (min-width: 1020px) {
   .header {
-    display: grid;
     grid-template-columns: repeat(12, 60px);
-    gap: 24px;
-    justify-content: center;
   }
 }
 @media (min-width: 1600px) {
   .header {
-    display: grid;
     grid-template-columns: repeat(12, 83px);
     gap: 44px;
-    justify-content: center;
   }
 }
 @media (min-width: 640px) {
@@ -194,7 +187,7 @@ table {
   justify-content: flex-end;
 }
 .header .start__icon {
-  width: 90%;
+  width: 100%;
   height: auto;
   display: none;
 }
@@ -205,7 +198,7 @@ table {
 }
 .header .start__icon--black {
   position: absolute;
-  width: 90%;
+  width: 100%;
   height: auto;
 }
 @media (min-width: 640px) {
@@ -258,7 +251,7 @@ table {
 .header .middle {
   grid-column: 1/-1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   padding-right: 10px;
   box-sizing: border-box;
 }
@@ -349,8 +342,149 @@ table {
   text-decoration-skip-ink: none;
 }
 
+.title-secondary {
+  font-family: "Bruno Ace SC", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30.8px;
+  letter-spacing: -0.05em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
 .main {
   min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  gap: 20px;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .main {
+    grid-template-columns: repeat(6, 84px);
+    gap: 24px;
+  }
+}
+@media (min-width: 1020px) {
+  .main {
+    grid-template-columns: repeat(12, 60px);
+  }
+}
+@media (min-width: 1600px) {
+  .main {
+    grid-template-columns: repeat(12, 83px);
+    gap: 44px;
+  }
+}
+.main__navi {
+  margin: 50px 0;
+}
+.main .navi {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  gap: 20px;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .main .navi {
+    grid-template-columns: repeat(6, 84px);
+    gap: 24px;
+  }
+}
+@media (min-width: 1020px) {
+  .main .navi {
+    grid-template-columns: repeat(12, 60px);
+  }
+}
+@media (min-width: 1600px) {
+  .main .navi {
+    grid-template-columns: repeat(12, 83px);
+    gap: 44px;
+  }
+}
+.main .navi__list {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  gap: 20px;
+  justify-content: center;
+  grid-template-rows: 300px;
+  grid-auto-rows: 200px;
+}
+@media (min-width: 640px) {
+  .main .navi__list {
+    grid-template-columns: repeat(6, 84px);
+    gap: 24px;
+  }
+}
+@media (min-width: 1020px) {
+  .main .navi__list {
+    grid-template-columns: repeat(12, 60px);
+  }
+}
+@media (min-width: 1600px) {
+  .main .navi__list {
+    grid-template-columns: repeat(12, 83px);
+    gap: 44px;
+  }
+}
+.main .navi__item {
+  grid-column: 1/-1;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 640px) {
+  .main .navi__item--short {
+    grid-column: span 2;
+  }
+}
+@media (min-width: 1020px) {
+  .main .navi__item--small {
+    grid-column: span 4;
+  }
+}
+@media (min-width: 640px) {
+  .main .navi__item--long {
+    grid-column: span 4;
+  }
+}
+@media (min-width: 1020px) {
+  .main .navi__item--big {
+    grid-column: span 8;
+  }
+}
+.main .navi__item--cars {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 3fr;
+}
+.main .navi__item--cars .grid-cars-top {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.main .navi__item--cars .grid-cars-top__item {
+  grid-column: 1fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+}
+.main .navi__item--cars .grid-cars-bottom {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.main .navi__item--cars .grid-cars-bottom__item {
+  grid-column: 1fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
 }
 
 body {
