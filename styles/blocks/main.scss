@@ -23,7 +23,13 @@
     &__item {
       grid-column: 1/-1;
       border: 2px solid #fff;
+      border-radius: 10px;
       @include flex-center();
+    }
+
+    &__link {
+      text-decoration: none;
+      color: #fff;
     }
     // scalowanie kafelek z klasą ...short menu dla > 640px
     &__item--short {
@@ -59,11 +65,44 @@
         height: 100%;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
+        position: relative;
+
+        &__title-secondary {
+          grid-column: 1/-1;
+          height: 100%;
+          position: absolute;
+          text-align: center;
+          width: 100%;
+          @include flex-center();
+        }
 
         &__item {
           grid-column: 1fr;
           @include flex-center();
           border: 1px solid #fff;
+
+          &:hover {
+            cursor: pointer;
+            background-color: #242424;
+          }
+
+          &:hover .grid-cars-top__link {
+            color: gold;
+          }
+        }
+
+        &__link {
+          text-decoration: none;
+          color: #fff;
+          border: 1px solid red;
+          width: 100%;
+          height: 100%;
+          @include flex-center();
+        }
+
+        &__icon {
+          width: 100%;
+          height: auto;
         }
       }
 
@@ -76,6 +115,16 @@
           grid-column: 1fr;
           @include flex-center();
           border: 1px solid #fff;
+
+          &:hover {
+            cursor: pointer;
+            background-color: red;
+          }
+        }
+
+        &__link {
+          text-decoration: none;
+          color: #fff;
         }
       }
     }

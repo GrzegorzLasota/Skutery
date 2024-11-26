@@ -443,9 +443,14 @@ table {
 .main .navi__item {
   grid-column: 1/-1;
   border: 2px solid #fff;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.main .navi__link {
+  text-decoration: none;
+  color: #fff;
 }
 @media (min-width: 640px) {
   .main .navi__item--short {
@@ -476,6 +481,17 @@ table {
   height: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  position: relative;
+}
+.main .navi__item--cars .grid-cars-top__title-secondary {
+  grid-column: 1/-1;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main .navi__item--cars .grid-cars-top__item {
   grid-column: 1fr;
@@ -483,6 +499,27 @@ table {
   justify-content: center;
   align-items: center;
   border: 1px solid #fff;
+}
+.main .navi__item--cars .grid-cars-top__item:hover {
+  cursor: pointer;
+  background-color: #242424;
+}
+.main .navi__item--cars .grid-cars-top__item:hover .grid-cars-top__link {
+  color: gold;
+}
+.main .navi__item--cars .grid-cars-top__link {
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid red;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .navi__item--cars .grid-cars-top__icon {
+  width: 100%;
+  height: auto;
 }
 .main .navi__item--cars .grid-cars-bottom {
   height: 100%;
@@ -495,6 +532,14 @@ table {
   justify-content: center;
   align-items: center;
   border: 1px solid #fff;
+}
+.main .navi__item--cars .grid-cars-bottom__item:hover {
+  cursor: pointer;
+  background-color: red;
+}
+.main .navi__item--cars .grid-cars-bottom__link {
+  text-decoration: none;
+  color: #fff;
 }
 
 body {
