@@ -1,5 +1,6 @@
 @use "../utils/mixins.scss" as *;
 @use "../utils/variables.scss" as *;
+@use "../utils/font-icon.scss" as *;
 
 .main {
   min-height: 100vh;
@@ -15,21 +16,72 @@
 
     &__list {
       grid-column: 1/-1;
-      grid-template-rows: 300px;
+      grid-template-rows: 200px;
       grid-auto-rows: 200px;
       @include grid();
+      @include lg() {
+        grid-template-rows: 300px;
+        grid-auto-rows: 250px;
+      }
     }
     // scalowanie kafelek menu
     &__item {
       grid-column: 1/-1;
-      border: 2px solid #fff;
+      border: 1px solid $burgundy;
+      box-shadow: 0px 0px 6px $burgundy;
       border-radius: 10px;
+      overflow: hidden;
       @include flex-center();
+
+      &--maps {
+        border: none;
+        box-shadow: none;
+        position: relative;
+
+        &:hover .item-maps-photo {
+          transform: scale(2);
+        }
+
+        .item-maps-photo {
+          width: 50%;
+          height: auto;
+          position: absolute;
+        }
+      }
+
+      &--overlay {
+        position: relative;
+
+        .item-bckgrd-photo {
+          width: 100%;
+          height: auto;
+          position: absolute;
+        }
+
+        .item-overlay {
+          box-sizing: border-box;
+          width: 90%;
+          height: 90%;
+          position: absolute;
+          border-radius: 10px;
+          transition: transform 0.3s;
+          background-color: #0000004f;
+          @include flex-center();
+        }
+      }
+
+      &--overlay:hover .item-overlay {
+        transform: translateX(100%);
+      }
     }
 
     &__link {
       text-decoration: none;
       color: #fff;
+      width: 100%;
+      height: 100%;
+      @include flex-center();
+      z-index: 1;
     }
     // scalowanie kafelek z klasą ...short menu dla > 640px
     &__item--short {
@@ -58,6 +110,7 @@
 
     &__item--cars {
       display: grid;
+      gap: 5px;
       grid-template-columns: 1fr;
       grid-template-rows: 4fr 3fr;
 
@@ -66,6 +119,43 @@
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         position: relative;
+        overflow: hidden;
+
+        @include lg() {
+          &::before {
+            content: "Producenci";
+            text-align: center;
+            font-size: 13px;
+            line-height: 20px;
+            display: block;
+            width: 200px;
+            height: 20px;
+            background-color: $burgundy;
+            position: absolute;
+            top: 30px;
+            left: -60px;
+            transition: all 0.3s;
+            transform: rotate(-45deg);
+            z-index: 1;
+          }
+        }
+
+        &:hover .grid-cars-top__overlay {
+          transform: translateX(-100%);
+        }
+
+        &__overlay {
+          @include flex-center();
+          transition: transform 0.7s;
+          width: 100%;
+          height: 100%;
+          background-color: $ink;
+          position: absolute;
+          box-sizing: border-box;
+          background-image: url("../../images/scooternoc.jpg");
+          background-size: cover;
+          background-position: center;
+        }
 
         &__title-secondary {
           grid-column: 1/-1;
@@ -78,23 +168,22 @@
 
         &__item {
           grid-column: 1fr;
+          border: 1px solid $burgundy_light;
           @include flex-center();
-          border: 1px solid #fff;
 
           &:hover {
             cursor: pointer;
-            background-color: #242424;
+            background-color: $burgundy_light;
           }
 
           &:hover .grid-cars-top__link {
-            color: gold;
+            transform: scale(1.2);
           }
         }
 
         &__link {
           text-decoration: none;
           color: #fff;
-          border: 1px solid red;
           width: 100%;
           height: 100%;
           @include flex-center();
@@ -110,21 +199,87 @@
         height: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        position: relative;
+        overflow: hidden;
+
+        @include lg() {
+          &::before {
+            content: "Pojazdy";
+            text-align: center;
+            font-size: 13px;
+            line-height: 20px;
+            display: block;
+            width: 200px;
+            height: 20px;
+            background-color: $burgundy;
+            position: absolute;
+            top: 30px;
+            right: -60px;
+            transition: all 0.3s;
+            transform: rotate(45deg);
+            z-index: 2;
+          }
+        }
+
+        &:hover .grid-cars-bottom__overlay {
+          transform: translateX(100%);
+        }
+
+        &__overlay {
+          @include flex-center();
+          transition: transform 0.7s;
+          width: 100%;
+          height: 100%;
+          background-color: $ink;
+          position: absolute;
+          z-index: 1;
+          box-sizing: border-box;
+          background-image: url("../../images/sun.jpg");
+          background-size: cover;
+          background-position: center 70%;
+        }
 
         &__item {
           grid-column: 1fr;
           @include flex-center();
-          border: 1px solid #fff;
+          border: 1px solid $burgundy_light;
 
-          &:hover {
+          &--scooter {
+            background-image: url("./images/scooter1.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+
+          &--motorbike {
+            background-image: url("./images/motorbike1.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+
+          &--quad {
+            background-image: url("./images/quad1.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+
+          &:hover .grid-cars-bottom__link {
             cursor: pointer;
-            background-color: red;
+            opacity: 0;
           }
         }
 
         &__link {
           text-decoration: none;
+          width: 100%;
+          height: 100%;
+          @include flex-center();
+          flex-direction: column;
           color: #fff;
+          transition: opacity 0.7s ease;
+          background-color: rgb(0, 0, 0);
         }
       }
     }

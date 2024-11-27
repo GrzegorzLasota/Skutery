@@ -1,0 +1,11 @@
+@use "../utils/mixins.scss" as *;
+
+.font-icon {
+  display: block;
+  padding: 10px;
+  @include flex-center();
+
+  &--reverse {
+    transform: rotateY(180deg);
+  }
+}
