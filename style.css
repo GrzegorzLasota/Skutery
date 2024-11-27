@@ -343,24 +343,35 @@ table {
 
 .title {
   font-family: "Bruno Ace SC", sans-serif;
-  font-size: 48px;
   font-weight: 400;
-  line-height: 40.8px;
   letter-spacing: -0.05em;
-  text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  font-size: 48px;
+  line-height: 40.8px;
+  text-align: left;
 }
 
 .title-secondary {
   font-family: "Bruno Ace SC", sans-serif;
-  font-size: 30px;
   font-weight: 400;
-  line-height: 30.8px;
   letter-spacing: -0.05em;
-  text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  font-size: 30px;
+  line-height: 30.8px;
+  text-align: center;
+}
+
+.title-third {
+  font-family: "Bruno Ace SC", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  font-size: 22px;
+  line-height: 22.8px;
+  text-align: center;
 }
 
 .font-icon {
@@ -371,7 +382,7 @@ table {
   align-items: center;
 }
 .font-icon--reverse {
-  transform: rotateY(180deg);
+  transform: rotate(-40deg);
 }
 
 .main {
@@ -459,9 +470,10 @@ table {
 }
 .main .navi__item {
   grid-column: 1/-1;
-  border: 1px solid #800020;
-  box-shadow: 0px 0px 6px #800020;
-  border-radius: 10px;
+  border: 2px solid #5e1919;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -487,6 +499,7 @@ table {
   width: 100%;
   height: auto;
   position: absolute;
+  top: -15px;
 }
 .main .navi__item--overlay .item-overlay {
   box-sizing: border-box;
@@ -535,9 +548,8 @@ table {
 }
 .main .navi__item--cars {
   display: grid;
-  gap: 5px;
   grid-template-columns: 1fr;
-  grid-template-rows: 4fr 3fr;
+  grid-template-rows: 1fr 1fr;
 }
 .main .navi__item--cars .grid-cars-top {
   height: 100%;
@@ -550,16 +562,17 @@ table {
   .main .navi__item--cars .grid-cars-top::before {
     content: "Producenci";
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: 500;
     line-height: 20px;
     display: block;
     width: 200px;
     height: 20px;
-    background-color: #800020;
+    background-color: #5e1919;
     position: absolute;
-    top: 30px;
-    left: -60px;
-    transition: all 0.3s;
+    top: 20px;
+    left: -70px;
+    transition: opacity 0.7s;
     transform: rotate(-45deg);
     z-index: 1;
   }
@@ -571,15 +584,15 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.7s;
+  transition: transform 0.5s;
   width: 100%;
   height: 100%;
   background-color: #070504;
   position: absolute;
   box-sizing: border-box;
-  background-image: url("../../images/scooternoc.jpg");
+  background-image: url("../../images/desert1.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center 70%;
 }
 .main .navi__item--cars .grid-cars-top__title-secondary {
   grid-column: 1/-1;
@@ -630,34 +643,35 @@ table {
     content: "Pojazdy";
     text-align: center;
     font-size: 13px;
+    font-weight: 500;
     line-height: 20px;
     display: block;
     width: 200px;
     height: 20px;
-    background-color: #800020;
+    background-color: #5e1919;
     position: absolute;
-    top: 30px;
-    right: -60px;
-    transition: all 0.3s;
+    bottom: 20px;
+    left: -70px;
+    transition: opacity 0.7s;
     transform: rotate(45deg);
     z-index: 2;
   }
 }
 .main .navi__item--cars .grid-cars-bottom:hover .grid-cars-bottom__overlay {
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
 .main .navi__item--cars .grid-cars-bottom__overlay {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.7s;
+  transition: transform 0.5s;
   width: 100%;
   height: 100%;
   background-color: #070504;
   position: absolute;
   z-index: 1;
   box-sizing: border-box;
-  background-image: url("../../images/sun.jpg");
+  background-image: url("../../images/sun1.jpg");
   background-size: cover;
   background-position: center 70%;
 }
@@ -699,8 +713,39 @@ table {
   align-items: center;
   flex-direction: column;
   color: #fff;
-  transition: opacity 0.7s ease;
+  transition: opacity 0.3s ease;
   background-color: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+
+.footer {
+  min-height: 400px;
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  gap: 20px;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .footer {
+    grid-template-columns: repeat(6, 84px);
+    gap: 24px;
+  }
+}
+@media (min-width: 1020px) {
+  .footer {
+    grid-template-columns: repeat(12, 60px);
+  }
+}
+@media (min-width: 1600px) {
+  .footer {
+    grid-template-columns: repeat(12, 83px);
+    gap: 44px;
+  }
+}
+.footer__section {
+  border: 2px solid #fff;
+  margin-top: 50px;
+  grid-column: 1/-1;
 }
 
 body {

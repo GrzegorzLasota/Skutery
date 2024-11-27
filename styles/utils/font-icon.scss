@@ -6,6 +6,6 @@
   @include flex-center();
 
   &--reverse {
-    transform: rotateY(180deg);
+    transform: rotate(-40deg);
   }
 }

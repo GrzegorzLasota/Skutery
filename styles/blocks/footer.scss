@@ -1,0 +1,13 @@
+@use "../utils/mixins.scss" as *;
+@use "../utils/variables.scss" as *;
+
+.footer {
+  min-height: 400px;
+  @include grid();
+
+  &__section {
+    border: 2px solid #fff;
+    margin-top: 50px;
+    grid-column: 1/-1;
+  }
+}
