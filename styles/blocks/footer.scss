@@ -1,13 +1,98 @@
 @use "../utils/mixins.scss" as *;
 @use "../utils/variables.scss" as *;
+@use "../utils/paragraph.scss" as *;
 
 .footer {
-  min-height: 400px;
   @include grid();
 
-  &__section {
-    border: 2px solid #fff;
-    margin-top: 50px;
+  &-info-section {
     grid-column: 1/-1;
+    background-color: $ink;
+    padding: 20px;
+    @include grid();
+  }
+
+  &__block {
+    padding: 0 20px;
+    box-sizing: border-box;
+    grid-column: 1/-1;
+
+    @include md() {
+      grid-column: span 3;
+    }
+
+    @include lg() {
+      padding: 0;
+    }
+
+    &-title {
+      min-height: 133px;
+      width: 100%;
+      @include flex-center();
+    }
+  }
+
+  .about {
+    &__title {
+      text-transform: uppercase;
+    }
+  }
+
+  .company {
+    &__logo-overlay {
+      grid-column: 1/-1;
+    }
+
+    &__logo-img {
+      width: 100%;
+      height: auto;
+    }
+
+    &__call-overlay {
+      grid-column: 1/-1;
+      display: grid;
+      grid-template-columns: 35px 175px;
+    }
+
+    &__adress-overlay {
+      grid-column: 1/-1;
+      display: grid;
+      grid-template-columns: 35px 175px;
+    }
+
+    &__mail-overlay {
+      grid-column: 1/-1;
+      display: grid;
+      grid-template-columns: 35px 175px;
+    }
+
+    &__icon {
+      grid-column: 1/2;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &__paragraph {
+      grid-column: 1/-1;
+      margin-top: 20px;
+    }
+  }
+
+  .socials {
+  }
+
+  .nav-map {
+  }
+
+  &-finish {
+    grid-column: 1/-1;
+    margin-top: 50px;
+
+    &__paragraph {
+      text-align: center;
+      padding: 0;
+      font-size: 10px;
+    }
   }
 }

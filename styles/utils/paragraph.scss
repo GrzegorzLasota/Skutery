@@ -1,0 +1,10 @@
+@use "../utils/variables.scss" as *;
+
+.paragraph {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  color: $coconut;
+  font-weight: 400;
+  padding: 10px 0;
+  line-height: 24px;
+}

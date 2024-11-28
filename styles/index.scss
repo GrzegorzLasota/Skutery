@@ -1,11 +1,12 @@
 @use "./utils/reset.scss" as *;
 @use "./utils/variables.scss" as *;
 @use "./utils/mixins.scss" as *;
+@use "./utils/title.scss" as *;
 
 @use "./blocks/header.scss" as *;
-@use "./blocks/title.scss" as *;
 @use "./blocks/main.scss" as *;
 @use "./blocks/footer.scss" as *;
+@use "./blocks/contact.scss" as *;
 
 body {
   font-family: "Poppins", sans-serif;

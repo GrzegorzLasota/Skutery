@@ -6,6 +6,10 @@
   min-height: 100vh;
   @include grid();
 
+  @include xl() {
+    min-height: 950px;
+  }
+
   &__navi {
     margin: 50px 0;
   }
@@ -19,6 +23,11 @@
       grid-template-rows: 200px;
       grid-auto-rows: 200px;
       @include grid();
+
+      @include xl() {
+        grid-template-columns: repeat(12, 63px);
+      }
+
       @include lg() {
         grid-template-rows: 300px;
         grid-auto-rows: 250px;
@@ -39,14 +48,31 @@
         box-shadow: none;
         position: relative;
 
-        &:hover .item-maps-photo {
-          transform: scale(2);
+        .navi__link--maps {
+          width: 200px;
+          height: 200px;
+          grid-column: 1/-1;
+        }
+
+        .maps-title {
+          position: absolute;
+          width: 100%;
+          text-align: center;
+          padding-top: 10px;
+          top: 0;
+          left: 0;
+          z-index: 2;
+          font-family: "Poppins", sans-serif;
         }
 
         .item-maps-photo {
-          width: 50%;
+          width: 100%;
           height: auto;
-          position: absolute;
+          transition: transform 0.5s ease-in;
+        }
+
+        &:hover .item-maps-photo {
+          transform: scale(5) translateX(-20px) translateY(15px);
         }
       }
 
@@ -57,7 +83,12 @@
           width: 100%;
           height: auto;
           position: absolute;
-          top: -15px;
+          bottom: 0;
+
+          &--up {
+            position: absolute;
+            top: 0;
+          }
         }
 
         .item-overlay {
@@ -112,6 +143,7 @@
 
     &__item--cars {
       display: grid;
+      gap: 5px;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
 
@@ -177,9 +209,10 @@
           background-color: $ink;
           position: absolute;
           box-sizing: border-box;
-          background-image: url("../../images/desert1.jpg");
+          background-image: url("../../images/up2.jpg");
           background-size: cover;
-          background-position: center 70%;
+          background-position: center;
+          background-repeat: no-repeat;
         }
 
         &__title-secondary {
@@ -198,16 +231,17 @@
 
           &:hover {
             cursor: pointer;
-            background-color: $burgundy_light;
+            background-color: $blues;
           }
 
           &:hover .grid-cars-top__link {
-            transform: scale(1.2);
+            transform: translateY(-10px);
           }
         }
 
         &__link {
           text-decoration: none;
+          transition: transform 0.3s;
           color: #fff;
           width: 100%;
           height: 100%;
@@ -285,15 +319,14 @@
           position: absolute;
           z-index: 1;
           box-sizing: border-box;
-          background-image: url("../../images/sun1.jpg");
+          background-image: url("../../images/sunset.jpg");
           background-size: cover;
-          background-position: center 70%;
+          background-position: center 60%;
         }
 
         &__item {
           grid-column: 1fr;
           @include flex-center();
-          border: 1px solid $burgundy_light;
 
           &--scooter {
             background-image: url("./images/scooter1.png");
@@ -326,6 +359,7 @@
           text-decoration: none;
           width: 100%;
           height: 100%;
+          font-size: 14px;
           @include flex-center();
           flex-direction: column;
           color: #fff;

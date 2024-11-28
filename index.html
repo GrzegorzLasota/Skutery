@@ -134,7 +134,7 @@
             <img
               class="item-bckgrd-photo"
               alt="service-photo"
-              src="./images/fog1.jpg"
+              src="./images/forest1.jpg"
             />
 
             <div class="item-overlay">
@@ -157,19 +157,20 @@
           <li
             class="navi__item navi__item--maps navi__item--short navi__item--small"
           >
-            <a href="#" class="navi__link"></a>
-            <img
-              class="item-maps-photo"
-              alt="service-photo"
-              src="./images/mapka.jpg"
-            />
+            <h3 class="maps-title title-third">Wyznacz trasę do salonu!</h3>
+            <a href="#" class="navi__link navi__link--maps">
+              <img
+                class="item-maps-photo"
+                alt="service-photo"
+                src="./images/mapka.jpg"
+            /></a>
           </li>
           <li
             class="navi__item navi__item--overlay navi__item--short navi__item--small"
           >
             <a href="#" class="navi__link"></a>
             <img
-              class="item-bckgrd-photo"
+              class="item-bckgrd-photo item-bckgrd-photo--up"
               alt="service-photo"
               src="./images/jazda1.jpg"
             />
@@ -182,9 +183,9 @@
           >
             <a href="#" class="navi__link"></a>
             <img
-              class="item-bckgrd-photo"
+              class="item-bckgrd-photo item-bckgrd-photo--up"
               alt="service-photo"
-              src="./images/keeway1.png"
+              src="./images/murek1.jpg"
             />
             <div class="item-overlay">
               <h2 class="title-secondary">Serwis</h2>
@@ -197,7 +198,7 @@
             <img
               class="item-bckgrd-photo"
               alt="service-photo"
-              src="./images/murek1.jpg"
+              src="./images/autumn1.jpg"
             />
             <div class="item-overlay">
               <h2 class="title-secondary">Odzież</h2>
@@ -206,10 +207,110 @@
         </ul>
       </nav>
     </main>
+    <section class="contact" id="contact-us">
+      <h3 class="title contact__title">Bądźmy w kontakcie</h3>
+      <form class="form contact__form">
+        <div class="form-user">
+          <label for="name" class="form-user__label">Name</label>
+          <input
+            id="name"
+            class="form-user__input"
+            type="text"
+            placeholder="Imię"
+          />
+        </div>
+        <div class="form-user">
+          <label for="email" class="form-user__label">Email</label>
+          <input
+            id="email"
+            class="form-user__input"
+            type="text"
+            placeholder="Email"
+          />
+        </div>
+        <div class="form-user">
+          <label for="message" class="form-user__label">Message</label>
+          <textarea
+            id="message"
+            class="form-user__textarea"
+            type="text"
+            placeholder="Wiadomość"
+          ></textarea>
+        </div>
+        <button class="button" type="button">Wyślij</button>
+      </form>
+    </section>
     <footer class="footer">
-      <section class="footer__section">
-        <h3 class="title-third"></h3>
-        <p class="contact-paragraph"></p>
+      <section class="footer-info-section footer__section">
+        <section class="about footer__block">
+          <h4 class="title-fourth footer__block-title about__title">
+            Witamy na skuterygdansk.pl
+          </h4>
+          <p class="paragraph about__paragraph">
+            Znajdziesz tutaj stylowe skutery miejskie i nie tylko. Gdy
+            wybierzesz już swój wymarzony model, zajrzyj do działu z wyjątkowymi
+            akcesoriami.
+          </p>
+        </section>
+
+        <section class="company footer__block">
+          <div class="company__logo-overlay">
+            <img
+              class="company__logo-img"
+              alt="company-brand"
+              src="./images/logo_white.svg"
+            />
+          </div>
+          <div class="company__call-overlay">
+            <div class="company__icon">
+              <i class="icon-phone"></i>
+            </div>
+            <p class="paragraph">+58 123 456 789</p>
+          </div>
+          <div class="company__adress-overlay">
+            <div class="company__icon">
+              <i class="icon-home"></i>
+            </div>
+            <p class="paragraph">
+              ul. Kartuska 426 <br />
+              80-125 Gdańsk
+            </p>
+          </div>
+          <div class="company__mail-overlay">
+            <div class="company__icon">
+              <i class="icon-mail"></i>
+            </div>
+            <p class="paragraph">salon@skuterygdansk.pl</p>
+          </div>
+          <p class="paragraph company__paragraph">
+            Jesteśmy pierwszym i jedynym salonem skuterowym w Gdańsku.
+          </p>
+        </section>
+
+        <section class="socials footer__block">
+          <h4 class="title-fourth footer__block-title socials__title">
+            Social Media
+          </h4>
+          <p class="paragraph">Nie przegap okazji i śledź nas na</p>
+        </section>
+
+        <section class="nav-map footer__block">
+          <h4 class="title-fourth footer__block-title nav-map__title">
+            Mapa Strony
+          </h4>
+          <ul>
+            <li>
+              <a href="#"></a>
+            </li>
+          </ul>
+        </section>
+        <section class="footer-finish">
+          <p class="paragraph footer-finish__paragraph">
+            Copyright <span class="year">2024</span> skuterygdansk.pl &copy
+            Wszelkie prawa zastrzeżone. <br />
+            Realziacja - Grinjass
+          </p>
+        </section>
       </section>
     </footer>
   </body>
