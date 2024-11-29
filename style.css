@@ -456,7 +456,7 @@ table {
 }
 .main .navi__list {
   grid-column: 1/-1;
-  grid-template-rows: 200px;
+  grid-template-rows: 250px;
   grid-auto-rows: 200px;
   display: grid;
   grid-template-columns: repeat(2, 150px);
@@ -480,15 +480,15 @@ table {
     gap: 44px;
   }
 }
-@media (min-width: 1600px) {
-  .main .navi__list {
-    grid-template-columns: repeat(12, 63px);
-  }
-}
 @media (min-width: 1020px) {
   .main .navi__list {
     grid-template-rows: 300px;
     grid-auto-rows: 250px;
+  }
+}
+@media (min-width: 1600px) {
+  .main .navi__list {
+    grid-template-columns: repeat(12, 63px);
   }
 }
 .main .navi__item {
@@ -757,21 +757,36 @@ table {
 }
 .main .navi__item--cars .grid-cars-bottom__item--scooter {
   background-image: url("./images/scooter1.png");
-  background-size: contain;
+  background-size: 75%;
   background-repeat: no-repeat;
   background-position: center;
+}
+@media (min-width: 1020px) {
+  .main .navi__item--cars .grid-cars-bottom__item--scooter {
+    background-size: contain;
+  }
 }
 .main .navi__item--cars .grid-cars-bottom__item--motorbike {
   background-image: url("./images/motorbike1.png");
-  background-size: contain;
+  background-size: 75%;
   background-repeat: no-repeat;
   background-position: center;
 }
+@media (min-width: 1020px) {
+  .main .navi__item--cars .grid-cars-bottom__item--motorbike {
+    background-size: contain;
+  }
+}
 .main .navi__item--cars .grid-cars-bottom__item--quad {
   background-image: url("./images/quad1.png");
-  background-size: contain;
+  background-size: 75%;
   background-repeat: no-repeat;
   background-position: center;
+}
+@media (min-width: 1020px) {
+  .main .navi__item--cars .grid-cars-bottom__item--quad {
+    background-size: contain;
+  }
 }
 .main .navi__item--cars .grid-cars-bottom__item:hover .grid-cars-bottom__link {
   transform: translateY(-5px) rotate(-5deg);

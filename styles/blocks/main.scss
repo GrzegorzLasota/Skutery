@@ -20,17 +20,17 @@
 
     &__list {
       grid-column: 1/-1;
-      grid-template-rows: 200px;
+      grid-template-rows: 250px;
       grid-auto-rows: 200px;
       @include grid();
-
-      @include xl() {
-        grid-template-columns: repeat(12, 63px);
-      }
 
       @include lg() {
         grid-template-rows: 300px;
         grid-auto-rows: 250px;
+      }
+
+      @include xl() {
+        grid-template-columns: repeat(12, 63px);
       }
     }
     // scalowanie kafelek menu
@@ -412,23 +412,35 @@
 
           &--scooter {
             background-image: url("./images/scooter1.png");
-            background-size: contain;
+            background-size: 75%;
             background-repeat: no-repeat;
             background-position: center;
+
+            @include lg() {
+              background-size: contain;
+            }
           }
 
           &--motorbike {
             background-image: url("./images/motorbike1.png");
-            background-size: contain;
+            background-size: 75%;
             background-repeat: no-repeat;
             background-position: center;
+
+            @include lg() {
+              background-size: contain;
+            }
           }
 
           &--quad {
             background-image: url("./images/quad1.png");
-            background-size: contain;
+            background-size: 75%;
             background-repeat: no-repeat;
             background-position: center;
+
+            @include lg() {
+              background-size: contain;
+            }
           }
 
           &:hover .grid-cars-bottom__link {
