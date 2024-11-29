@@ -5,39 +5,41 @@
 .footer {
   @include grid();
 
+  //drugi najstarszy element całej stópki, musi być żeby tło było scalowane
   &-info-section {
     grid-column: 1/-1;
     background-color: $ink;
-    padding: 20px;
     @include grid();
   }
-
+  //wszystkie bloki responsywne tak samo
   &__block {
-    padding: 0 20px;
+    padding: 10px 20px 0;
     box-sizing: border-box;
     grid-column: 1/-1;
 
     @include md() {
       grid-column: span 3;
     }
-
-    @include lg() {
-      padding: 0;
-    }
-
+    //trzeba height żeby inne nagłówki były wycentrowane względem loga
     &-title {
       min-height: 133px;
-      width: 100%;
-      @include flex-center();
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      border-top: 1px solid #fff;
+
+      @include md() {
+        border-top: none;
+      }
     }
   }
-
+  //pierwsze skrzydło stópki
   .about {
     &__title {
       text-transform: uppercase;
     }
   }
-
+  //drugie skrzydło stópki
   .company {
     &__logo-overlay {
       grid-column: 1/-1;
@@ -78,20 +80,84 @@
       margin-top: 20px;
     }
   }
-
+  //trzecie skrzydło stópki
   .socials {
-  }
+    &__overlay {
+      padding: 20px 0;
+    }
+    &__link {
+      display: block;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #3b5998;
+      box-sizing: border-box;
+      border-radius: 50%;
+      text-decoration: none;
+      color: #3b5998;
+      @include flex-center();
 
-  .nav-map {
-  }
+      &:hover {
+        background-color: #3b5998;
+        color: #fff;
+      }
+    }
 
+    &__icon {
+      font-size: 20px;
+    }
+  }
+  //czwarte skrzydło stópki
+  .navi-map {
+    &__shortcut {
+      padding-top: 10px;
+      padding-left: 15px;
+    }
+
+    &__list {
+      list-style-type: disc;
+      list-style-position: outside;
+    }
+
+    .disabled-item {
+      color: #868686;
+    }
+
+    .sub-navi {
+      list-style-type: circle;
+      list-style-position: inside;
+
+      &__item {
+      }
+
+      &__link {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+
+    &__item {
+      text-decoration: none;
+      color: #fff;
+      font-size: 13px;
+      font-family: "Poppins", sans-serif;
+      color: $coconut;
+      font-weight: 400;
+      line-height: 20px;
+    }
+
+    &__link {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+  //stópka totalna - ostatnie linie
   &-finish {
     grid-column: 1/-1;
-    margin-top: 50px;
+    margin-top: 30px;
 
     &__paragraph {
       text-align: center;
-      padding: 0;
+      padding-bottom: 20px;
       font-size: 10px;
     }
   }

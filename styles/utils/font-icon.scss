@@ -2,10 +2,7 @@
 
 .font-icon {
   display: block;
-  padding: 10px;
+  font-size: 40px;
+  color: gold;
   @include flex-center();
-
-  &--reverse {
-    transform: rotate(-40deg);
-  }
 }

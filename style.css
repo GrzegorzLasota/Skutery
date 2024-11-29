@@ -391,13 +391,11 @@ table {
 
 .font-icon {
   display: block;
-  padding: 10px;
+  font-size: 40px;
+  color: gold;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.font-icon--reverse {
-  transform: rotate(-40deg);
 }
 
 .main {
@@ -495,10 +493,9 @@ table {
 }
 .main .navi__item {
   grid-column: 1/-1;
-  border: 2px solid #5e1919;
-  padding: 5px;
+  border: 5px solid #5e1919;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 15px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -538,12 +535,14 @@ table {
 .main .navi__item--overlay .item-bckgrd-photo {
   width: 100%;
   height: auto;
-  position: absolute;
-  bottom: 0;
 }
 .main .navi__item--overlay .item-bckgrd-photo--up {
   position: absolute;
   top: 0;
+}
+.main .navi__item--overlay .item-bckgrd-photo--bottom {
+  position: absolute;
+  bottom: 0;
 }
 .main .navi__item--overlay .item-overlay {
   box-sizing: border-box;
@@ -598,28 +597,39 @@ table {
 }
 .main .navi__item--cars .grid-cars-top {
   height: 100%;
+  border-bottom: 1px solid #800020;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   position: relative;
   overflow: hidden;
 }
-@media (min-width: 1020px) {
+@media (min-width: 640px) {
   .main .navi__item--cars .grid-cars-top::before {
     content: "Producenci";
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 20px;
     display: block;
-    width: 200px;
+    width: 100px;
     height: 20px;
     background-color: #5e1919;
     position: absolute;
-    top: 20px;
-    left: -70px;
+    top: 0;
+    left: calc(50% - 50px);
     transition: opacity 0.7s;
-    transform: rotate(-45deg);
     z-index: 1;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+}
+@media (min-width: 1020px) {
+  .main .navi__item--cars .grid-cars-top::before {
+    font-size: 16px;
+    line-height: 30px;
+    width: 200px;
+    height: 30px;
+    left: calc(50% - 100px);
   }
 }
 .main .navi__item--cars .grid-cars-top:hover .grid-cars-top__overlay {
@@ -639,6 +649,7 @@ table {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 1;
 }
 .main .navi__item--cars .grid-cars-top__title-secondary {
   grid-column: 1/-1;
@@ -652,14 +663,9 @@ table {
 }
 .main .navi__item--cars .grid-cars-top__item {
   grid-column: 1fr;
-  border: 1px solid #800020;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.main .navi__item--cars .grid-cars-top__item:hover {
-  cursor: pointer;
-  background-color: rgba(34, 51, 68, 0.2666666667);
 }
 .main .navi__item--cars .grid-cars-top__item:hover .grid-cars-top__link {
   transform: translateY(-10px);
@@ -680,47 +686,50 @@ table {
 }
 .main .navi__item--cars .grid-cars-bottom {
   height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   position: relative;
   overflow: hidden;
 }
-@media (min-width: 1020px) {
+@media (min-width: 640px) {
+  .main .navi__item--cars .grid-cars-bottom {
+    padding-bottom: 25px;
+  }
   .main .navi__item--cars .grid-cars-bottom::before {
     content: "Pojazdy";
     text-align: center;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 20px;
     display: block;
-    width: 200px;
+    width: 100px;
     height: 20px;
     background-color: #5e1919;
     position: absolute;
-    bottom: 20px;
-    left: -70px;
+    bottom: 0;
+    left: calc(50% - 50px);
     transition: opacity 0.7s;
-    transform: rotate(45deg);
-    z-index: 2;
+    z-index: 1;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+}
+@media (min-width: 1020px) {
+  .main .navi__item--cars .grid-cars-bottom {
+    padding-bottom: 30px;
+  }
+  .main .navi__item--cars .grid-cars-bottom::before {
+    font-size: 16px;
+    line-height: 30px;
+    width: 200px;
+    height: 30px;
+    left: calc(50% - 100px);
   }
 }
 .main .navi__item--cars .grid-cars-bottom:hover .grid-cars-bottom__overlay {
   transform: translateX(-100%);
-}
-.main .navi__item--cars .grid-cars-bottom__overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.5s;
-  width: 100%;
-  height: 100%;
-  background-color: #070504;
-  position: absolute;
-  z-index: 1;
-  box-sizing: border-box;
-  background-image: url("../../images/sunset.jpg");
-  background-size: cover;
-  background-position: center 60%;
 }
 .main .navi__item--cars .grid-cars-bottom__item {
   grid-column: 1fr;
@@ -747,8 +756,7 @@ table {
   background-position: center;
 }
 .main .navi__item--cars .grid-cars-bottom__item:hover .grid-cars-bottom__link {
-  cursor: pointer;
-  opacity: 0;
+  transform: translateY(-5px) rotate(-5deg);
 }
 .main .navi__item--cars .grid-cars-bottom__link {
   text-decoration: none;
@@ -763,6 +771,7 @@ table {
   transition: opacity 0.3s ease;
   background-color: rgb(0, 0, 0);
   text-transform: uppercase;
+  transition: transform 0.2s ease;
 }
 
 .footer {
@@ -791,7 +800,6 @@ table {
 .footer-info-section {
   grid-column: 1/-1;
   background-color: #070504;
-  padding: 20px;
   display: grid;
   grid-template-columns: repeat(2, 150px);
   gap: 20px;
@@ -815,7 +823,7 @@ table {
   }
 }
 .footer__block {
-  padding: 0 20px;
+  padding: 10px 20px 0;
   box-sizing: border-box;
   grid-column: 1/-1;
 }
@@ -824,17 +832,17 @@ table {
     grid-column: span 3;
   }
 }
-@media (min-width: 1020px) {
-  .footer__block {
-    padding: 0;
-  }
-}
 .footer__block-title {
   min-height: 133px;
-  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  border-top: 1px solid #fff;
+}
+@media (min-width: 640px) {
+  .footer__block-title {
+    border-top: none;
+  }
 }
 .footer .about__title {
   text-transform: uppercase;
@@ -871,13 +879,68 @@ table {
   grid-column: 1/-1;
   margin-top: 20px;
 }
+.footer .socials__overlay {
+  padding: 20px 0;
+}
+.footer .socials__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #3b5998;
+  box-sizing: border-box;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #3b5998;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .socials__link:hover {
+  background-color: #3b5998;
+  color: #fff;
+}
+.footer .socials__icon {
+  font-size: 20px;
+}
+.footer .navi-map__shortcut {
+  padding-top: 10px;
+  padding-left: 15px;
+}
+.footer .navi-map__list {
+  list-style-type: disc;
+  list-style-position: outside;
+}
+.footer .navi-map .disabled-item {
+  color: #868686;
+}
+.footer .navi-map .sub-navi {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+.footer .navi-map .sub-navi__link {
+  text-decoration: none;
+  color: #fff;
+}
+.footer .navi-map__item {
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+  font-family: "Poppins", sans-serif;
+  color: #f0ede5;
+  font-weight: 400;
+  line-height: 20px;
+}
+.footer .navi-map__link {
+  text-decoration: none;
+  color: #fff;
+}
 .footer-finish {
   grid-column: 1/-1;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .footer-finish__paragraph {
   text-align: center;
-  padding: 0;
+  padding-bottom: 20px;
   font-size: 10px;
 }
 

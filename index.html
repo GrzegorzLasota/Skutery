@@ -57,9 +57,14 @@
             class="navi__item navi__item--long navi__item--big navi__item--cars"
           >
             <ul class="grid-cars-top">
-              <div class="grid-cars-top__overlay">
-                <h2 class="title-secondary">Producenci</h2>
-              </div>
+              <li class="grid-cars-top__item">
+                <a href="#" class="grid-cars-top__link"
+                  ><img
+                    class="grid-cars-top__icon"
+                    alt="keeway-logo"
+                    src="./images/loga/keeway1.png"
+                /></a>
+              </li>
               <li class="grid-cars-top__item">
                 <a href="#" class="grid-cars-top__link"
                   ><img
@@ -72,8 +77,8 @@
                 <a href="#" class="grid-cars-top__link"
                   ><img
                     class="grid-cars-top__icon"
-                    alt="keeway-logo"
-                    src="./images/loga/keeway2.png"
+                    alt="qj-logo"
+                    src="./images/loga/qj1.png"
                 /></a>
               </li>
               <li class="grid-cars-top__item">
@@ -88,42 +93,35 @@
                 <a href="#" class="grid-cars-top__link"
                   ><img
                     class="grid-cars-top__icon"
-                    alt="qj-logo"
-                    src="./images/loga/QJ.png"
-                /></a>
-              </li>
-              <li class="grid-cars-top__item">
-                <a href="#" class="grid-cars-top__link"
-                  ><img
-                    class="grid-cars-top__icon"
                     alt="mbp-logo"
                     src="./images/loga/mbp.png"
                 /></a>
               </li>
             </ul>
             <ul class="grid-cars-bottom">
-              <div class="grid-cars-bottom__overlay">
-                <h2 class="title-secondary">Pojazdy</h2>
-              </div>
-              <li
-                class="grid-cars-bottom__item grid-cars-bottom__item--scooter"
-              >
-                <a href="#" class="grid-cars-bottom__link"
-                  ><i class="icon-motorcycle font-icon"></i>Skutery</a
+              <li class="grid-cars-bottom__item">
+                <a
+                  href="#"
+                  class="grid-cars-bottom__link grid-cars-bottom__item--scooter"
                 >
+                  <!-- <i class="icon-bicycle font-icon"></i> -->
+                </a>
               </li>
-              <li
-                class="grid-cars-bottom__item grid-cars-bottom__item--motorbike"
-              >
-                <a href="#" class="grid-cars-bottom__link"
-                  ><i class="icon-motorcycle font-icon font-icon--reverse"></i
-                  >Motocykle</a
+              <li class="grid-cars-bottom__item">
+                <a
+                  href="#"
+                  class="grid-cars-bottom__link grid-cars-bottom__item--motorbike"
                 >
+                  <!-- <i class="icon-motorcycle font-icon"></i> -->
+                </a>
               </li>
-              <li class="grid-cars-bottom__item grid-cars-bottom__item--quad">
-                <a href="#" class="grid-cars-bottom__link"
-                  ><i class="icon-road font-icon"></i>Quady</a
+              <li class="grid-cars-bottom__item">
+                <a
+                  href="#"
+                  class="grid-cars-bottom__link grid-cars-bottom__item--quad"
                 >
+                  <!-- <i class="icon-cab font-icon"></i> -->
+                </a>
               </li>
             </ul>
           </li>
@@ -132,7 +130,7 @@
           >
             <a href="#" class="navi__link"> </a>
             <img
-              class="item-bckgrd-photo"
+              class="item-bckgrd-photo item-bckgrd-photo--bottom"
               alt="service-photo"
               src="./images/forest1.jpg"
             />
@@ -196,7 +194,7 @@
           >
             <a href="#" class="navi__link"></a>
             <img
-              class="item-bckgrd-photo"
+              class="item-bckgrd-photo item-bckgrd-photo--bottom"
               alt="service-photo"
               src="./images/autumn1.jpg"
             />
@@ -255,11 +253,12 @@
 
         <section class="company footer__block">
           <div class="company__logo-overlay">
-            <img
-              class="company__logo-img"
-              alt="company-brand"
-              src="./images/logo_white.svg"
-            />
+            <a class="company__link" href="#">
+              <img
+                class="company__logo-img"
+                alt="company-brand"
+                src="./images/logo_white.svg"
+            /></a>
           </div>
           <div class="company__call-overlay">
             <div class="company__icon">
@@ -291,24 +290,87 @@
           <h4 class="title-fourth footer__block-title socials__title">
             Social Media
           </h4>
-          <p class="paragraph">Nie przegap okazji i śledź nas na</p>
+          <p class="paragraph">
+            Nie przegap żadnej okazji i śledź nas na facebooku.
+          </p>
+          <div class="socials__overlay">
+            <a class="socials__link" href="#"
+              ><i class="icon-facebook socials__icon"></i
+            ></a>
+          </div>
         </section>
 
-        <section class="nav-map footer__block">
-          <h4 class="title-fourth footer__block-title nav-map__title">
-            Mapa Strony
-          </h4>
-          <ul>
-            <li>
-              <a href="#"></a>
-            </li>
-          </ul>
+        <section class="navi-map footer__block">
+          <h4 class="title-fourth footer__block-title">Mapa Strony</h4>
+          <div class="navi-map__shortcut">
+            <ul class="navi-map__list">
+              <li class="navi-map__item">
+                <a class="navi-map__link" href="#">Strona Główna</a>
+              </li>
+
+              <li class="navi-map__item">
+                <span class="disabled-item">Producenci</span>
+                <ul class="sub-navi">
+                  <li class="sub-navi__item">
+                    <a class="sub-navi__link" href="#">Keeway</a>
+                  </li>
+                  <li>
+                    <a class="sub-navi__link" href="#">Benneli</a>
+                  </li>
+                  <li>
+                    <a class="sub-navi__link" href="#">Kymco</a>
+                  </li>
+                  <li>
+                    <a class="sub-navi__link" href="#">Qjmotor</a>
+                  </li>
+                  <li>
+                    <a class="sub-navi__link" href="#">Morbidelli</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="navi-map__item">
+                <span class="disabled-item">Pojazdy</span>
+                <ul class="sub-navi">
+                  <li class="sub-navi__item">
+                    <a class="sub-navi__link" href="#">Skutery</a>
+                  </li>
+                  <li class="sub-navi__item">
+                    <a class="sub-navi__link" href="#">Motocykle</a>
+                  </li>
+                  <li class="sub-navi__item">
+                    <a class="sub-navi__link" href="#">Quady</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="navi-map__item">
+                <a class="navi-map__link" href="#">Jazda Próbna</a>
+              </li>
+
+              <li class="navi-map__item">
+                <a class="navi-map__link" href="#">Akcesoria</a>
+              </li>
+
+              <li class="navi-map__item">
+                <a class="navi-map__link" href="#">Kaski</a>
+              </li>
+
+              <li class="navi-map__item">
+                <a class="navi-map__link" href="#">Serwis</a>
+              </li>
+
+              <li class="navi-map__item">
+                <a class="navi-map__link" href="#">Odzież</a>
+              </li>
+            </ul>
+          </div>
         </section>
         <section class="footer-finish">
           <p class="paragraph footer-finish__paragraph">
-            Copyright <span class="year">2024</span> skuterygdansk.pl &copy
-            Wszelkie prawa zastrzeżone. <br />
-            Realziacja - Grinjass
+            Copyright <span class="year">2024</span> &copy Wszelkie prawa
+            zastrzeżone. <br />
+            Realizacja - Grinjass
           </p>
         </section>
       </section>
