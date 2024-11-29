@@ -21,7 +21,7 @@
     &-title {
       min-height: 133px;
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
       border-top: 1px solid #fff;
 
@@ -41,6 +41,7 @@
 
     &__title {
       text-transform: uppercase;
+      text-align: center;
     }
   }
   //drugie skrzydło stópki
@@ -53,11 +54,19 @@
     }
 
     &__logo-overlay {
+      border-top: 1px solid #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       grid-column: 1/-1;
+
+      @include md() {
+        border-top: none;
+      }
     }
 
     &__logo-img {
-      width: 100%;
+      width: 188px;
       height: auto;
     }
 
@@ -91,54 +100,15 @@
       margin-top: 20px;
     }
   }
-  //trzecie skrzydło stópki
-  .socials {
-    @include md() {
-      grid-column: 1/4;
-    }
-    @include lg() {
-      grid-column: 7/11;
-    }
 
-    &__overlay {
-      padding: 20px 0;
-    }
-
-    &__google-box {
-    }
-
-    &__paragraph {
-      padding: 20px 0;
-    }
-
-    &__link {
-      display: block;
-      width: 40px;
-      height: 40px;
-      border: 1px solid #3b5998;
-      box-sizing: border-box;
-      border-radius: 50%;
-      text-decoration: none;
-      color: #3b5998;
-      @include flex-center();
-
-      &:hover {
-        background-color: #3b5998;
-        color: #fff;
-      }
-    }
-
-    &__icon {
-      font-size: 20px;
-    }
-  }
-  //czwarte skrzydło stópki
+  //trzecia skrzydło stópki
   .navi-map {
     @include md() {
-      grid-column: 5/7;
+      grid-column: 1/3;
     }
     @include lg() {
-      grid-column: 11/13;
+      grid-column: 7/9;
+      padding-right: 0;
     }
 
     &__shortcut {
@@ -183,6 +153,49 @@
       color: #fff;
     }
   }
+
+  //czwarta skrzydło stópki
+  .socials {
+    @include md() {
+      grid-column: 3/7;
+    }
+    @include lg() {
+      grid-column: 9/13;
+    }
+
+    &__overlay {
+      padding: 20px 0;
+    }
+
+    &__google-box {
+    }
+
+    &__paragraph {
+      padding: 20px 0;
+    }
+
+    &__link {
+      display: block;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #3b5998;
+      box-sizing: border-box;
+      border-radius: 50%;
+      text-decoration: none;
+      color: #3b5998;
+      @include flex-center();
+
+      &:hover {
+        background-color: #3b5998;
+        color: #fff;
+      }
+    }
+
+    &__icon {
+      font-size: 20px;
+    }
+  }
+
   //stópka totalna - ostatnie linie
   &-finish {
     grid-column: 1/-1;
