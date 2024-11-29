@@ -516,7 +516,7 @@ table {
   width: 100%;
   text-align: center;
   padding-top: 10px;
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: 2;
   font-family: "Poppins", sans-serif;
@@ -603,22 +603,31 @@ table {
   position: relative;
   overflow: hidden;
 }
+.main .navi__item--cars .grid-cars-top::before {
+  content: "Producenci";
+  text-align: center;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 16px;
+  display: block;
+  width: 70px;
+  height: 16px;
+  background-color: #5e1919;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 35px);
+  transition: opacity 0.7s;
+  z-index: 1;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
 @media (min-width: 640px) {
   .main .navi__item--cars .grid-cars-top::before {
-    content: "Producenci";
-    text-align: center;
     font-size: 14px;
-    font-weight: 500;
     line-height: 20px;
-    display: block;
     width: 100px;
     height: 20px;
-    background-color: #5e1919;
-    position: absolute;
-    top: 0;
     left: calc(50% - 50px);
-    transition: opacity 0.7s;
-    z-index: 1;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
   }
@@ -686,32 +695,41 @@ table {
 }
 .main .navi__item--cars .grid-cars-bottom {
   height: 100%;
-  padding: 10px;
+  padding-bottom: 10px;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   position: relative;
   overflow: hidden;
 }
+.main .navi__item--cars .grid-cars-bottom::before {
+  content: "Pojazdy";
+  text-align: center;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 16px;
+  display: block;
+  width: 70px;
+  height: 16px;
+  background-color: #5e1919;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 35px);
+  transition: opacity 0.7s;
+  z-index: 1;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
 @media (min-width: 640px) {
   .main .navi__item--cars .grid-cars-bottom {
     padding-bottom: 25px;
   }
   .main .navi__item--cars .grid-cars-bottom::before {
-    content: "Pojazdy";
-    text-align: center;
     font-size: 14px;
-    font-weight: 500;
     line-height: 20px;
-    display: block;
     width: 100px;
     height: 20px;
-    background-color: #5e1919;
-    position: absolute;
-    bottom: 0;
     left: calc(50% - 50px);
-    transition: opacity 0.7s;
-    z-index: 1;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
   }
@@ -763,10 +781,7 @@ table {
   width: 100%;
   height: 100%;
   font-size: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  text-align: center;
   color: #fff;
   transition: opacity 0.3s ease;
   background-color: rgb(0, 0, 0);
@@ -827,11 +842,6 @@ table {
   box-sizing: border-box;
   grid-column: 1/-1;
 }
-@media (min-width: 640px) {
-  .footer__block {
-    grid-column: span 3;
-  }
-}
 .footer__block-title {
   min-height: 133px;
   display: flex;
@@ -844,8 +854,28 @@ table {
     border-top: none;
   }
 }
+@media (min-width: 640px) {
+  .footer .about {
+    grid-column: 1/4;
+  }
+}
+@media (min-width: 1020px) {
+  .footer .about {
+    grid-column: 1/4;
+  }
+}
 .footer .about__title {
   text-transform: uppercase;
+}
+@media (min-width: 640px) {
+  .footer .company {
+    grid-column: 4/7;
+  }
+}
+@media (min-width: 1020px) {
+  .footer .company {
+    grid-column: 4/7;
+  }
 }
 .footer .company__logo-overlay {
   grid-column: 1/-1;
@@ -879,7 +909,20 @@ table {
   grid-column: 1/-1;
   margin-top: 20px;
 }
+@media (min-width: 640px) {
+  .footer .socials {
+    grid-column: 1/4;
+  }
+}
+@media (min-width: 1020px) {
+  .footer .socials {
+    grid-column: 7/11;
+  }
+}
 .footer .socials__overlay {
+  padding: 20px 0;
+}
+.footer .socials__paragraph {
   padding: 20px 0;
 }
 .footer .socials__link {
@@ -901,6 +944,16 @@ table {
 }
 .footer .socials__icon {
   font-size: 20px;
+}
+@media (min-width: 640px) {
+  .footer .navi-map {
+    grid-column: 5/7;
+  }
+}
+@media (min-width: 1020px) {
+  .footer .navi-map {
+    grid-column: 11/13;
+  }
 }
 .footer .navi-map__shortcut {
   padding-top: 10px;

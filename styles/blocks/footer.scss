@@ -17,9 +17,6 @@
     box-sizing: border-box;
     grid-column: 1/-1;
 
-    @include md() {
-      grid-column: span 3;
-    }
     //trzeba height żeby inne nagłówki były wycentrowane względem loga
     &-title {
       min-height: 133px;
@@ -35,12 +32,26 @@
   }
   //pierwsze skrzydło stópki
   .about {
+    @include md() {
+      grid-column: 1/4;
+    }
+    @include lg() {
+      grid-column: 1/4;
+    }
+
     &__title {
       text-transform: uppercase;
     }
   }
   //drugie skrzydło stópki
   .company {
+    @include md() {
+      grid-column: 4/7;
+    }
+    @include lg() {
+      grid-column: 4/7;
+    }
+
     &__logo-overlay {
       grid-column: 1/-1;
     }
@@ -82,9 +93,24 @@
   }
   //trzecie skrzydło stópki
   .socials {
+    @include md() {
+      grid-column: 1/4;
+    }
+    @include lg() {
+      grid-column: 7/11;
+    }
+
     &__overlay {
       padding: 20px 0;
     }
+
+    &__google-box {
+    }
+
+    &__paragraph {
+      padding: 20px 0;
+    }
+
     &__link {
       display: block;
       width: 40px;
@@ -108,6 +134,13 @@
   }
   //czwarte skrzydło stópki
   .navi-map {
+    @include md() {
+      grid-column: 5/7;
+    }
+    @include lg() {
+      grid-column: 11/13;
+    }
+
     &__shortcut {
       padding-top: 10px;
       padding-left: 15px;
