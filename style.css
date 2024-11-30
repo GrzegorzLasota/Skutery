@@ -535,6 +535,7 @@ table {
 .main .navi__item--overlay .item-bckgrd-photo {
   width: 100%;
   height: auto;
+  position: absolute;
 }
 .main .navi__item--overlay .item-bckgrd-photo--up {
   position: absolute;
@@ -597,7 +598,7 @@ table {
 }
 .main .navi__item--cars .grid-cars-top {
   height: 100%;
-  border-bottom: 1px solid #800020;
+  border-bottom: 1px solid #5e1919;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   position: relative;
@@ -789,7 +790,7 @@ table {
   }
 }
 .main .navi__item--cars .grid-cars-bottom__item:hover .grid-cars-bottom__link {
-  transform: translateY(-5px) rotate(-5deg);
+  transform: translateY(-5px);
 }
 .main .navi__item--cars .grid-cars-bottom__link {
   text-decoration: none;
@@ -802,6 +803,7 @@ table {
   background-color: rgb(0, 0, 0);
   text-transform: uppercase;
   transition: transform 0.2s ease;
+  border-radius: 10px;
 }
 
 .footer {
