@@ -1,0 +1,59 @@
+@use "../utils/mixins.scss" as *;
+@use "../utils/variables.scss" as *;
+@use "../utils/paragraph.scss" as *;
+
+.section {
+  &__open {
+    margin: 50px 0;
+  }
+  .open {
+    padding: 25px;
+    box-sizing: border-box;
+    @include grid();
+
+    &__title {
+      text-align: center;
+      padding: 10px 0;
+      grid-column: 1/-1;
+    }
+
+    .hours {
+      &-service {
+        grid-column: 1/-1;
+
+        @include lg() {
+          grid-column: 1/7;
+        }
+      }
+      &-season {
+        grid-column: 1/-1;
+
+        @include lg() {
+          grid-column: 7/13;
+        }
+      }
+      //   &-off-season {
+      //     grid-column: 1/-1;
+
+      //     @include lg() {
+      //       grid-column: 9/13;
+      //     }
+      //   }
+
+      &__title {
+        text-align: center;
+        line-height: 50px;
+        padding: 10px 0;
+        min-height: 50px;
+      }
+
+      &__schedule {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ffffff2c;
+      }
+    }
+  }
+}

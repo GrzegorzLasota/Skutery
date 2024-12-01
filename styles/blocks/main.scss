@@ -3,7 +3,6 @@
 @use "../utils/font-icon.scss" as *;
 
 .main {
-  min-height: 100vh;
   @include grid();
   // dzięki temu przy oddaleniu ekranu, fotka startowa nie rozlewa się na cały ekran
   @include xl() {
@@ -48,8 +47,8 @@
         position: relative;
 
         .navi__link--maps {
-          width: 200px;
-          height: 200px;
+          width: 100%;
+          height: 100%;
           grid-column: 1/-1;
         }
 
@@ -57,11 +56,11 @@
           position: absolute;
           width: 100%;
           text-align: center;
-          padding-top: 10px;
-          bottom: 0;
+          bottom: 2px;
           left: 0;
+          right: 0;
           z-index: 2;
-          font-family: "Poppins", sans-serif;
+          font-family: $chakra;
         }
 
         .item-maps-photo {
@@ -71,7 +70,7 @@
         }
 
         &:hover .item-maps-photo {
-          transform: scale(5) translateX(-20px) translateY(15px);
+          transform: scale(5) translateX(-40px) translateY(17px);
         }
       }
 

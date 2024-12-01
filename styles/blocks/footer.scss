@@ -76,10 +76,19 @@
       grid-template-columns: 35px 175px;
     }
 
+    &__title {
+      grid-column: 1/-1;
+      padding-top: 10px;
+      font-size: 13px;
+      font-family: "Poppins", sans-serif;
+    }
+
     &__adress-overlay {
       grid-column: 1/-1;
       display: grid;
       grid-template-columns: 35px 175px;
+      border-top: 1px solid #ffffff3b;
+      border-bottom: 1px solid #ffffff3b;
     }
 
     &__mail-overlay {
@@ -95,9 +104,18 @@
       align-items: center;
     }
 
+    &__call-paragraph {
+      text-decoration: none;
+    }
+
+    &__adress-paragraph {
+      line-height: 18px;
+    }
+
     &__paragraph {
       grid-column: 1/-1;
       margin-top: 20px;
+      text-decoration: none;
     }
   }
 
@@ -165,6 +183,9 @@
 
     &__overlay {
       padding: 20px 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
     }
 
     &__google-box {
@@ -178,16 +199,35 @@
       display: block;
       width: 40px;
       height: 40px;
-      border: 1px solid #3b5998;
       box-sizing: border-box;
       border-radius: 50%;
       text-decoration: none;
-      color: #3b5998;
       @include flex-center();
 
-      &:hover {
-        background-color: #3b5998;
-        color: #fff;
+      &-facebook {
+        border: 2px solid #3b5998;
+        color: #3b5998;
+        &:hover {
+          background-color: #3b5998;
+          color: #fff;
+        }
+      }
+
+      &-instagram {
+        border: 2px solid #fcaf45;
+        color: #fcaf45;
+        &:hover {
+          background-color: #fcaf45;
+          color: #ffffff;
+        }
+      }
+      &-youtube {
+        border: 2px solid #c4302b;
+        color: #c4302b;
+        &:hover {
+          background-color: #c4302b;
+          color: #fff;
+        }
       }
     }
 

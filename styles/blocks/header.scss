@@ -2,23 +2,23 @@
 @use "../utils/variables.scss" as *;
 
 .header {
-  background-image: url("../../images/city1.jpg");
+  background-image: url("../../images//front1.jpg");
   min-height: 100vh;
   box-sizing: border-box;
-  background-position: left 21%;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
 
   grid-template-rows: repeat(2, 120px);
   @include grid;
 
   @include md() {
-    background-image: url("../../images//front1.jpg");
     background-position: center;
     background-size: cover;
   }
 
   @include lg() {
-    min-height: 900px;
+    min-height: 800px;
   }
 
   @include xl() {
@@ -37,9 +37,9 @@
       box-sizing: border-box;
       position: relative;
 
-      @include md() {
-        padding: 30px;
-        box-sizing: content-box;
+      @include lg() {
+        width: 230px;
+        height: 162px;
       }
     }
 
@@ -51,21 +51,6 @@
     &__icon {
       width: 100%;
       height: auto;
-      display: none;
-
-      @include md() {
-        display: block;
-      }
-    }
-
-    &__icon--black {
-      position: absolute;
-      width: 100%;
-      height: auto;
-
-      @include md() {
-        display: none;
-      }
     }
 
     //2 box
@@ -74,35 +59,32 @@
       height: 100%;
       text-align: center;
       box-sizing: border-box;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+      @include flex-center();
       font-family: $bruno;
-      color: $cool-black;
+      color: $coconut;
       font-weight: bold;
       text-shadow: 0 1px 3px #ffffff57;
 
-      @include md() {
-        color: $coconut;
-        text-shadow: none;
-        padding: 30px;
-        box-sizing: content-box;
+      @include lg() {
+        width: 230px;
+        height: 162px;
       }
     }
     &__warning {
       box-sizing: border-box;
       text-align: center;
-      @include flex-center();
-      flex-wrap: wrap;
-      text-align: center;
+      font-family: $chakraP;
+      text-transform: uppercase;
+      line-height: 20px;
+      font-size: 14px;
     }
     .hours {
-      color: $cool-black;
-      padding: 5px 0;
-
-      @include md() {
-        color: $coconut;
-      }
+      width: 100%;
+      color: rgb(0, 163, 0);
+      display: block;
+      padding-top: 10px;
+      font-size: 20px;
+      font-family: $bruno;
     }
 
     .stop-time {
@@ -116,13 +98,52 @@
     justify-content: center;
     padding-right: 10px;
     box-sizing: border-box;
+    position: relative;
+
+    &::before {
+      content: "Strona w trakcie budowy.";
+      width: 100%;
+      height: 35px;
+      position: absolute;
+      left: 0;
+      bottom: 35px;
+      font-size: 10px;
+      white-space: wrap;
+      line-height: 35px;
+      text-align: center;
+      background-color: gold;
+      color: #000;
+
+      @include md() {
+        font-size: 20px;
+      }
+    }
+
+    &::after {
+      content: "Otwarcie salonu 1 marca 2025r.";
+      width: 100%;
+      height: 35px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      font-size: 10px;
+      white-space: wrap;
+      line-height: 35px;
+      text-align: center;
+      background-color: gold;
+      color: #000;
+
+      @include md() {
+        font-size: 20px;
+      }
+    }
 
     @include md() {
       justify-content: center;
     }
 
     &__banner {
-      width: 200px;
+      width: 250px;
       height: 40px;
       display: flex;
       align-items: center;
@@ -136,16 +157,13 @@
       right: 0;
       font-family: $chakraP;
       color: $burgundy;
-      text-shadow: 1px 1px 2px #000000be;
-      animation: flying-banner 10s linear infinite;
+      text-shadow: 3px 3px 1px #000000be;
+      animation: flying-banner 14s linear infinite;
       white-space: nowrap;
       letter-spacing: 1px;
       color: $burgundy;
-      font-size: 25px;
-
-      @include md() {
-        color: $coconut;
-      }
+      font-size: 30px;
+      line-height: 40px;
     }
 
     &__paragraph:hover {
