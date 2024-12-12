@@ -97,6 +97,10 @@
       grid-template-columns: 35px 175px;
     }
 
+    &__mail-paragraph {
+      text-decoration: none;
+    }
+
     &__icon {
       grid-column: 1/2;
       display: flex;

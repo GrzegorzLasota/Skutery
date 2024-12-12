@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body,
 div,
@@ -186,13 +187,13 @@ table {
   background-repeat: no-repeat;
   grid-template-rows: repeat(2, 120px);
   display: grid;
-  grid-template-columns: repeat(2, 150px);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   justify-content: center;
 }
 @media (min-width: 640px) {
   .header {
-    grid-template-columns: repeat(6, 84px);
+    grid-template-columns: repeat(6, 1fr);
     gap: 24px;
   }
 }
@@ -228,6 +229,12 @@ table {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  padding: 0 20px;
+}
+@media (min-width: 640px) {
+  .header .start {
+    padding: 0 40px;
+  }
 }
 .header .start__logo {
   width: 170px;
@@ -259,7 +266,6 @@ table {
   font-family: "Bruno Ace SC", sans-serif;
   color: #f0ede5;
   font-weight: bold;
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.3411764706);
 }
 @media (min-width: 1020px) {
   .header .start__timer {
@@ -271,17 +277,16 @@ table {
   box-sizing: border-box;
   text-align: center;
   font-family: "Chakra Petch", sans-serif;
-  text-transform: uppercase;
   line-height: 20px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .header .start .hours {
   width: 100%;
-  color: rgb(0, 163, 0);
+  color: gold;
   display: block;
   padding-top: 10px;
-  font-size: 20px;
-  font-family: "Bruno Ace SC", sans-serif;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
 }
 .header .start .stop-time {
   color: #ab0b23;
@@ -387,20 +392,43 @@ table {
 }
 @media (min-width: 640px) {
   .header .end {
-    grid-column: 1/7;
+    grid-column: 1/-1;
   }
 }
 .header .end__title {
-  font-size: 28px;
-  line-height: 30px;
-  padding: 10px;
+  font-size: 20px;
+  line-height: 22px;
   box-sizing: border-box;
   text-shadow: 0 3px 5px #111;
+  font-family: "Chakra Petch", sans-serif;
+  padding: 0 20px;
+}
+@media (min-width: 640px) {
+  .header .end__title {
+    padding: 0 40px;
+  }
+}
+@media (min-width: 640px) {
+  .header .end__title {
+    font-size: 28px;
+    line-height: 30px;
+  }
 }
 @media (min-width: 1020px) {
   .header .end__title {
     font-size: 38px;
     line-height: 48px;
+  }
+}
+.header .end__smile::after {
+  content: "☻";
+  font-size: 30px;
+  color: gold;
+  margin-left: 6px;
+}
+@media (min-width: 640px) {
+  .header .end__smile::after {
+    font-size: 45px;
   }
 }
 
@@ -415,13 +443,13 @@ table {
 
 .main {
   display: grid;
-  grid-template-columns: repeat(2, 150px);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   justify-content: center;
 }
 @media (min-width: 640px) {
   .main {
-    grid-template-columns: repeat(6, 84px);
+    grid-template-columns: repeat(6, 1fr);
     gap: 24px;
   }
 }
@@ -447,13 +475,13 @@ table {
 .main .navi {
   grid-column: 1/-1;
   display: grid;
-  grid-template-columns: repeat(2, 150px);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   justify-content: center;
 }
 @media (min-width: 640px) {
   .main .navi {
-    grid-template-columns: repeat(6, 84px);
+    grid-template-columns: repeat(6, 1fr);
     gap: 24px;
   }
 }
@@ -473,13 +501,13 @@ table {
   grid-template-rows: 250px;
   grid-auto-rows: 200px;
   display: grid;
-  grid-template-columns: repeat(2, 150px);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   justify-content: center;
 }
 @media (min-width: 640px) {
   .main .navi__list {
-    grid-template-columns: repeat(6, 84px);
+    grid-template-columns: repeat(6, 1fr);
     gap: 24px;
   }
 }
@@ -537,7 +565,7 @@ table {
 }
 .main .navi__item--maps .item-maps-photo {
   width: 100%;
-  height: auto;
+  height: 100%;
   transition: transform 0.5s ease-in;
 }
 .main .navi__item--maps:hover .item-maps-photo {
@@ -548,7 +576,8 @@ table {
 }
 .main .navi__item--overlay .item-bckgrd-photo {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   position: absolute;
 }
 .main .navi__item--overlay .item-bckgrd-photo--up {
@@ -772,7 +801,7 @@ table {
 }
 .main .navi__item--cars .grid-cars-bottom__item--scooter {
   background-image: url("./images/scooter1.png");
-  background-size: 75%;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -827,13 +856,13 @@ table {
   padding: 25px;
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: repeat(2, 150px);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   justify-content: center;
 }
 @media (min-width: 640px) {
   .section .open {
-    grid-template-columns: repeat(6, 84px);
+    grid-template-columns: repeat(6, 1fr);
     gap: 24px;
   }
 }
@@ -852,28 +881,46 @@ table {
   text-align: center;
   padding: 10px 0;
   grid-column: 1/-1;
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1020px) {
+  .section .open__title--service {
+    grid-column: 1/5;
+  }
 }
 .section .open .hours-service {
   grid-column: 1/-1;
 }
 @media (min-width: 1020px) {
   .section .open .hours-service {
-    grid-column: 1/7;
+    grid-column: 1/5;
   }
 }
-.section .open .hours-season {
+.section .open .hours__salon {
   grid-column: 1/-1;
 }
 @media (min-width: 1020px) {
-  .section .open .hours-season {
-    grid-column: 7/13;
+  .section .open .hours__salon {
+    grid-column: 5/-1;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 20px;
   }
+}
+.section .open .hours__salon--season {
+  grid-column: 1/-1;
+}
+.section .open .hours__salon--off-season {
+  grid-column: 1/-1;
 }
 .section .open .hours__title {
   text-align: center;
   line-height: 50px;
-  padding: 10px 0;
-  min-height: 50px;
+  padding: 20px 0;
+  color: gold;
 }
 .section .open .hours__schedule {
   margin: 0 auto;
@@ -885,13 +932,13 @@ table {
 
 .footer {
   display: grid;
-  grid-template-columns: repeat(2, 150px);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   justify-content: center;
 }
 @media (min-width: 640px) {
   .footer {
-    grid-template-columns: repeat(6, 84px);
+    grid-template-columns: repeat(6, 1fr);
     gap: 24px;
   }
 }
@@ -910,13 +957,13 @@ table {
   grid-column: 1/-1;
   background-color: #070504;
   display: grid;
-  grid-template-columns: repeat(2, 150px);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   justify-content: center;
 }
 @media (min-width: 640px) {
   .footer-info-section {
-    grid-template-columns: repeat(6, 84px);
+    grid-template-columns: repeat(6, 1fr);
     gap: 24px;
   }
 }
@@ -1010,6 +1057,9 @@ table {
   grid-column: 1/-1;
   display: grid;
   grid-template-columns: 35px 175px;
+}
+.footer .company__mail-paragraph {
+  text-decoration: none;
 }
 .footer .company__icon {
   grid-column: 1/2;

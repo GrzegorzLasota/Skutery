@@ -65,7 +65,7 @@
 
         .item-maps-photo {
           width: 100%;
-          height: auto;
+          height: 100%;
           transition: transform 0.5s ease-in;
         }
 
@@ -79,7 +79,8 @@
 
         .item-bckgrd-photo {
           width: 100%;
-          height: auto;
+          height: 100%;
+          object-fit: cover;
           position: absolute;
 
           &--up {
@@ -313,7 +314,7 @@
 
           &--scooter {
             background-image: url("./images/scooter1.png");
-            background-size: 75%;
+            background-size: 100%;
             background-repeat: no-repeat;
             background-position: center;
 

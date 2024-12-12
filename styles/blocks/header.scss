@@ -30,6 +30,10 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    padding: 0 20px;
+    @include md() {
+      padding: 0 40px;
+    }
 
     //1 box
     &__logo {
@@ -63,7 +67,6 @@
       font-family: $bruno;
       color: $coconut;
       font-weight: bold;
-      text-shadow: 0 1px 3px #ffffff57;
 
       @include lg() {
         width: 230px;
@@ -74,17 +77,16 @@
       box-sizing: border-box;
       text-align: center;
       font-family: $chakraP;
-      text-transform: uppercase;
       line-height: 20px;
-      font-size: 14px;
+      font-size: 16px;
     }
     .hours {
       width: 100%;
-      color: rgb(0, 163, 0);
+      color: gold;
       display: block;
       padding-top: 10px;
-      font-size: 20px;
-      font-family: $bruno;
+      font-size: 18px;
+      font-family: "Poppins", sans-serif;
     }
 
     .stop-time {
@@ -197,19 +199,40 @@
     align-self: end;
 
     @include md() {
-      grid-column: 1/7;
+      grid-column: 1/-1;
     }
 
     &__title {
-      font-size: 28px;
-      line-height: 30px;
-      padding: 10px;
+      font-size: 20px;
+      line-height: 22px;
       box-sizing: border-box;
       text-shadow: 0 3px 5px #111;
+      font-family: $chakraP;
+      padding: 0 20px;
+
+      @include md() {
+        padding: 0 40px;
+      }
+
+      @include md() {
+        font-size: 28px;
+        line-height: 30px;
+      }
 
       @include lg() {
         font-size: 38px;
         line-height: 48px;
+      }
+    }
+
+    &__smile::after {
+      content: "\263B";
+      font-size: 30px;
+      color: gold;
+      margin-left: 6px;
+
+      @include md() {
+        font-size: 45px;
       }
     }
   }

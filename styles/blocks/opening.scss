@@ -15,6 +15,14 @@
       text-align: center;
       padding: 10px 0;
       grid-column: 1/-1;
+      min-height: 80px;
+      @include flex-center();
+
+      &--service {
+        @include lg() {
+          grid-column: 1/5;
+        }
+      }
     }
 
     .hours {
@@ -22,29 +30,38 @@
         grid-column: 1/-1;
 
         @include lg() {
-          grid-column: 1/7;
+          grid-column: 1/5;
         }
+
+        // @include lg() {
+        //   grid-column: 1/7;
+        // }
       }
-      &-season {
+
+      &__salon {
         grid-column: 1/-1;
 
         @include lg() {
-          grid-column: 7/13;
+          grid-column: 5/-1;
+
+          display: grid;
+          grid-template-columns: 50% 50%;
+          column-gap: 20px;
+        }
+
+        &--season {
+          grid-column: 1/-1;
+        }
+        &--off-season {
+          grid-column: 1/-1;
         }
       }
-      //   &-off-season {
-      //     grid-column: 1/-1;
-
-      //     @include lg() {
-      //       grid-column: 9/13;
-      //     }
-      //   }
 
       &__title {
         text-align: center;
         line-height: 50px;
-        padding: 10px 0;
-        min-height: 50px;
+        padding: 20px 0;
+        color: gold;
       }
 
       &__schedule {
