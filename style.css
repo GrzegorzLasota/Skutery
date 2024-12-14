@@ -442,6 +442,7 @@ table {
 }
 
 .main {
+  padding: 10px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -535,7 +536,7 @@ table {
 }
 .main .navi__item {
   grid-column: 1/-1;
-  border: 5px solid #5e1919;
+  border: 4px solid #5e1919;
   box-sizing: border-box;
   border-radius: 15px;
   overflow: hidden;
@@ -575,18 +576,21 @@ table {
   position: relative;
 }
 .main .navi__item--overlay .item-bckgrd-photo {
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 95%;
   object-fit: cover;
   position: absolute;
+  border-radius: 10px;
 }
-.main .navi__item--overlay .item-bckgrd-photo--up {
-  position: absolute;
-  top: 0;
+.main .navi__item--overlay .item-bckgrd-photo--width {
+  width: 95%;
+  height: 95%;
 }
-.main .navi__item--overlay .item-bckgrd-photo--bottom {
-  position: absolute;
-  bottom: 0;
+@media (min-width: 640px) {
+  .main .navi__item--overlay .item-bckgrd-photo--width {
+    width: 98%;
+    height: 95%;
+  }
 }
 .main .navi__item--overlay .item-overlay {
   box-sizing: border-box;
@@ -1186,6 +1190,17 @@ table {
   text-align: center;
   padding-bottom: 20px;
   font-size: 10px;
+}
+
+.fading-box {
+  opacity: 0;
+  transform: translateY(150px);
+  transition: all 0.3s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 body {

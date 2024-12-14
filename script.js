@@ -1,73 +1,3 @@
-const ONE_SECOND = 1000;
-
-class Clock {
-  constructor() {
-    this.limitTime = null;
-    this.currentTime = 0;
-    this.$clock = document.querySelector(".hours");
-    this.clock = null;
-  }
-
-  render(string) {
-    this.$clock.textContent = string;
-  }
-
-  start(formattedTime) {
-    this.limitTime = Clock.parseSeconds(formattedTime);
-    this.update();
-    this.clock = setInterval(() => {
-      this.currentTime += ONE_SECOND;
-      this.update();
-
-      if (this.isFinished()) {
-        this.stop();
-      }
-    }, ONE_SECOND);
-  }
-
-  update() {
-    let remain = this.getRemainingTime();
-    let time = Clock.formattedTime(remain);
-    this.render(time);
-  }
-
-  getRemainingTime() {
-    return this.limitTime - this.currentTime;
-  }
-
-  stop() {
-    clearInterval(this.clock);
-    this.$clock.classList.add("stop-time");
-    // playAudio("alarm.mp3");
-  }
-
-  isFinished() {
-    return this.currentTime === this.limitTime;
-  }
-
-  static parseSeconds(time) {
-    let [minutes, seconds] = time.split(":").map(Number);
-    return minutes * 60 * ONE_SECOND + seconds * ONE_SECOND;
-  }
-
-  static formattedTime(miliseconds) {
-    let minutes = Math.floor(miliseconds / ONE_SECOND / 60);
-    let seconds = (miliseconds / ONE_SECOND) % 60;
-    minutes = String(minutes).padStart(2, "0");
-    seconds = String(seconds).padStart(2, "0");
-    return `${minutes}:${seconds}`;
-  }
-}
-
-function setup() {
-  let clock1 = new Clock();
-  clock1.start("00:59");
-}
-
-// Jeśli chcesz włączyć odliczanie do zamknięcia salonu gdy będzie otwarty:
-
-// window.addEventListener("DOMContentLoaded", setup);
-
 ////////////////////////////////////////Zegar///////////////////////////////////////////////////////
 function timer() {
   const time = new Date();
@@ -106,3 +36,23 @@ function days() {
 }
 
 window.addEventListener("DOMContentLoaded", days);
+
+//////////////////////////////////////////transition section///////////////////////////////////////////////////////
+
+const boxes = document.querySelectorAll(".fading-box");
+window.addEventListener("scroll", checkBoxes);
+
+function checkBoxes() {
+  const triggerBottom = window.innerHeight + 50;
+
+  boxes.forEach((box) => {
+    const boxTop = box.getBoundingClientRect().top;
+
+    if (boxTop < triggerBottom) {
+      box.classList.add("show");
+    }
+    // else {
+    //   box.classList.remove("show");
+    // }
+  });
+}

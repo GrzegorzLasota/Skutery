@@ -3,6 +3,8 @@
 @use "../utils/font-icon.scss" as *;
 
 .main {
+  padding: 10px;
+
   @include grid();
   // dzięki temu przy oddaleniu ekranu, fotka startowa nie rozlewa się na cały ekran
   @include xl() {
@@ -35,7 +37,7 @@
     // scalowanie kafelek menu
     &__item {
       grid-column: 1/-1;
-      border: 5px solid #5e1919;
+      border: 4px solid #5e1919;
       box-sizing: border-box;
       border-radius: 15px;
       overflow: hidden;
@@ -78,19 +80,20 @@
         position: relative;
 
         .item-bckgrd-photo {
-          width: 100%;
-          height: 100%;
+          width: 95%;
+          height: 95%;
           object-fit: cover;
           position: absolute;
+          border-radius: 10px;
 
-          &--up {
-            position: absolute;
-            top: 0;
-          }
+          &--width {
+            width: 95%;
+            height: 95%;
 
-          &--bottom {
-            position: absolute;
-            bottom: 0;
+            @include md() {
+              width: 98%;
+              height: 95%;
+            }
           }
         }
 
