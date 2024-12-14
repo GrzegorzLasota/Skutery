@@ -2,12 +2,31 @@
 @use "./utils/variables.scss" as *;
 @use "./utils/mixins.scss" as *;
 @use "./utils/title.scss" as *;
+@use "./utils/fading-boxes.scss" as *;
 
 @use "./blocks/header.scss" as *;
 @use "./blocks/main.scss" as *;
 @use "./blocks/opening.scss" as *;
 @use "./blocks/footer.scss" as *;
-@use "./blocks/fading-boxes.scss" as *;
+@use "./blocks/producer-header.scss" as *;
+@use "./blocks/producer-main.scss" as *;
+
+@use "./blocks/block_keeway/keeway-page.scss" as *;
+
+// @use "./blocks/block_benneli" as *;
+// @use "./blocks/block_qj-motor/" as *;
+// @use "./blocks/block_kymco/" as *;
+// @use "./blocks/block_morbidelli/" as *;
+// @use "./blocks/block_odziez/" as *;
+// @use "./blocks/block_quady/" as *;
+// @use "./blocks/block_skutery/" as *;
+// @use "./blocks/block_serwis/" as *;
+// @use "./blocks/block_jazda/" as *;
+// @use "./blocks/block_akcesoria/" as *;
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Poppins", sans-serif;
