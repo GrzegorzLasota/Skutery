@@ -2,5 +2,301 @@
 @use "../utils/variables.scss" as *;
 
 .producer-main {
-  height: 900px;
+  @include grid;
+
+  &__invite {
+    margin-top: 60px;
+  }
+
+  .invite {
+    padding: 0 20px;
+    grid-column: 1/-1;
+    @include grid;
+
+    @include md {
+      padding: 0 72px;
+    }
+
+    &__title {
+      grid-column: 1/-1;
+      font-family: Poppins;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 32px;
+      letter-spacing: -1.5px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      padding-bottom: 12px;
+
+      @include md {
+        grid-column: 1/4;
+      }
+
+      @include lg {
+        grid-column: 2/4;
+      }
+    }
+
+    &__paragraph {
+      grid-column: 1/-1;
+      font-family: Poppins;
+      font-size: 23px;
+      font-weight: 500;
+      line-height: 32.2px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+
+      @include md {
+        grid-column: 4/-1;
+      }
+
+      @include lg {
+        grid-column: 5/-2;
+      }
+    }
+
+    &__title--position {
+      grid-column: 1/-1;
+      text-align: center;
+      margin-top: 90px;
+
+      @include md {
+        margin-top: 132px;
+      }
+
+      @include lg {
+        margin-top: 164px;
+      }
+    }
+  }
+
+  &__products-wrapper {
+    margin-top: 50px;
+  }
+
+  .products-wrapper {
+    padding: 0 20px;
+    grid-column: 1/-1;
+    padding: 0 20px;
+    @include grid;
+
+    &__product-wrap {
+      grid-column: 1/-1;
+      @include grid;
+    }
+  }
+
+  .product-wrap {
+    &__product {
+      grid-column: 1/-1;
+      margin-bottom: 90px;
+
+      @include md {
+        grid-column: 2/-2;
+        margin-bottom: 120px;
+      }
+
+      @include lg {
+        margin-bottom: 144px;
+      }
+    }
+
+    &__details {
+      grid-column: 1/-1;
+      margin-bottom: 90px;
+
+      @include md {
+        margin-bottom: 120px;
+      }
+
+      @include lg {
+        margin-bottom: 144px;
+      }
+    }
+
+    &__technicals {
+      grid-column: 1/-1;
+      margin-bottom: 90px;
+
+      @include md {
+        margin-bottom: 120px;
+      }
+
+      @include lg {
+        margin-bottom: 144px;
+      }
+    }
+  }
+
+  .product {
+    @include grid;
+
+    &__photo-box {
+      grid-column: 1/-1;
+      text-align: center;
+      padding: 50px;
+      box-sizing: border-box;
+    }
+
+    &__photo {
+      max-width: 100%;
+      height: auto;
+    }
+
+    &__title {
+      grid-column: 1/-1;
+      font-family: Poppins;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 33.6px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+
+    &__title--name {
+      grid-column: 1/-1;
+      font-style: italic;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    &__paragraph {
+      grid-column: 1/-1;
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+
+    &__button {
+      grid-column: 1/2;
+      margin-top: 40px;
+
+      @include md {
+        grid-column: 2/-2;
+        margin-top: 48px;
+      }
+
+      @include lg {
+        grid-column: 5/9;
+      }
+    }
+  }
+
+  .details {
+    @include grid;
+
+    &__title {
+      grid-column: 1/-1;
+      font-family: Poppins;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 32px;
+      letter-spacing: -1.5px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      margin-bottom: 48px;
+
+      @include md {
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 64px;
+      }
+
+      @include lg {
+        font-size: 64px;
+        line-height: 64px;
+      }
+
+      &--element {
+        grid-column: 1/-1;
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 33.6px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+    }
+
+    &__photo {
+      height: 163px;
+      text-align: center;
+
+      @include md {
+        height: 200px;
+      }
+
+      @include lg {
+        height: 321px;
+      }
+
+      &--big {
+        grid-column: span 1;
+
+        @include md {
+          grid-column: span 4;
+        }
+
+        @include lg {
+          grid-column: span 8;
+        }
+      }
+
+      &--small {
+        grid-column: span 1;
+
+        @include md {
+          grid-column: span 2;
+        }
+
+        @include lg {
+          grid-column: span 4;
+        }
+      }
+    }
+
+    &__element {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    &__element--up {
+      object-position: center 10%;
+    }
+
+    &__paragraph {
+      grid-column: 1/-1;
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+  }
+
+  .technicals {
+    @include grid;
+
+    &__title {
+    }
+
+    &__photo {
+    }
+
+    &__paragraph {
+    }
+  }
 }

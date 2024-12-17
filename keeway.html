@@ -21,7 +21,7 @@
   </head>
   <body class="keeway-page">
     <header class="producer-header producer-header--keeway">
-      <nav class="producer-header__nav">
+      <nav class="producer-header__nav producer-header__nav--start">
         <ul class="producer-header__list">
           <li class="producer-header__item producer-header__item--logo">
             <a href="#" class="producer-header__link"
@@ -32,15 +32,368 @@
             /></a>
           </li>
           <li class="producer-header__item">
+            <a href="#keeway-menu" class="producer-header__link burger"></a>
+          </li>
+        </ul>
+      </nav>
+      <h1 class="producer-header__title">Przyjdź - Dotknij - Poczuj</h1>
+    </header>
+
+    <section class="drop-menu" id="keeway-menu">
+      <nav class="producer-header__nav">
+        <ul class="producer-header__list">
+          <li class="producer-header__item producer-header__item--logo">
             <a href="#" class="producer-header__link"
-              ><img alt="menu-icon" src="./images/menu.svg"
+              ><img
+                class="producer-header__keeway"
+                alt="keeway-logo"
+                src="./images/loga/keeway33.png"
+            /></a>
+          </li>
+          <li class="producer-header__item">
+            <a href="#" class="producer-header__link"
+              ><img alt="menu-icon" src="./images/cross.svg"
             /></a>
           </li>
         </ul>
       </nav>
-      <h1 class="title producer-header__title">Przyjdź - Dotknij - Poczuj</h1>
-    </header>
-    <main class="producer-main"></main>
+      <nav class="producer-links drop-menu__links">
+        <ul class="producer-links__list">
+          <li class="producer-links__item">
+            <a class="producer-links__link" href="#fact"> Fact X 50 </a>
+          </li>
+
+          <li class="producer-links__item">
+            <a class="producer-links__link" href="#vieste"> Vieste 125 </a>
+          </li>
+
+          <li class="producer-links__item">
+            <a class="producer-links__link" href="#versilia"> Versilia 125 </a>
+          </li>
+
+          <li class="producer-links__item">
+            <a class="producer-links__link" href="#rks"> RKS 125 </a>
+          </li>
+
+          <li class="producer-links__item">
+            <a class="producer-links__link" href="#x-light">
+              X-Light 125 CBS
+            </a>
+          </li>
+
+          <li class="producer-links__item">
+            <a class="producer-links__link" href="#superlight">
+              Superlight 125 STD
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <main class="producer-main">
+      <section class="invite producer-main__invite">
+        <h2 class="invite__title">Ruszaj się swobodnie</h2>
+        <p class="invite__paragraph">
+          Znajdź najszybszy sposób poruszania się po mieście. Wybierz swój
+          ulubiony pojazd.
+        </p>
+        <h2 class="invite__title invite__title--position">Porównaj skutery</h2>
+      </section>
+
+      <section class="products-wrapper producer-main__products-wrapper">
+        <section class="product-wrap products-wrapper__product-wrap" id="fact">
+          <article class="product product-wrap__product">
+            <h2 class="product__title product__title--name">
+              "Ten co zaskakuje"
+            </h2>
+            <div class="product__photo-box">
+              <img
+                class="product__photo"
+                alt="img-Fact X 50"
+                src="./images/factx50_side1.png"
+              />
+            </div>
+            <h2 class="product__title">Fact X 50</h2>
+
+            <p class="product__paragraph">
+              Ten kompaktowy model o pojemności 50 cm3 charakteryzuje się
+              solidną konstrukcją z odważnymi detalami, które lśnią w mieście.
+              Silnik osiąga prędkość maksymalną 45 km/h podczas jazdy po
+              ulicach. Wskocz i ciesz się współczynnikiem X tego kreatywnie
+              zaprojektowanego skutera miejskiego.
+            </p>
+            <h2 class="title product__title">8 990zł</h2>
+            <button class="button product__button" type="button">Więcej</button>
+          </article>
+
+          <article class="details product-wrap__details">
+            <h2 class="details__title">Dodatki</h2>
+            <div class="details__photo details__photo--big">
+              <img
+                class="details__element"
+                alt="img-screen"
+                src="./images/ekran1.jpg"
+              />
+            </div>
+            <div class="details__photo details__photo--small">
+              <img
+                class="details__element details__element--up"
+                alt="img-Fact X 50-back"
+                src="./images/factx50_back1.jpg"
+              />
+            </div>
+
+            <h2 class="details__title--element">Ultra-szeroki wyświetlacz</h2>
+            <p class="details__paragraph">
+              Łatwy do odczytania cyfrowy pulpit nawigacyjny pokazuje wszystkie
+              aktualne statystyki jazdy, dzięki czemu możesz zobaczyć wszystko
+              na pierwszy rzut oka.
+            </p>
+          </article>
+
+          <article class="details product-wrap__details">
+            <div class="details__photo details__photo--small">
+              <img
+                class="details__element details__element--up"
+                alt="img-screen"
+                src="./images/factx50_forward1.jpg"
+              />
+            </div>
+            <div class="details__photo details__photo--big">
+              <img
+                class="details__element"
+                alt="img-Fact X 50-back"
+                src="./images/reflektor2.jpg"
+              />
+            </div>
+
+            <h2 class="details__title--element">Asymetryczny reflektor</h2>
+            <p class="details__paragraph">
+              Asymetryczny reflektor Stopnikowy kształt reflektora pozwala na
+              maksymalną widoczność do przodu dla kierowcy bez utrudniania
+              wzroku nadjeżdżającym kierowcom.
+            </p>
+          </article>
+
+          <article class="technicals product-wrap__technicals">
+            <h2 class="technicals__title">Techniczne</h2>
+            <div
+              class="technicals__photo technicals__photo--big technicals__photo--dynamic"
+            ></div>
+            <div
+              class="technicals__photo technicals__photo--small technicals__photo--static"
+            ></div>
+            <h2 class="technicals__title">Ultra-szeroki wyświetlacz</h2>
+            <p class="technicals__paragraph">
+              Łatwy do odczytania cyfrowy pulpit nawigacyjny pokazuje wszystkie
+              aktualne statystyki jazdy, dzięki czemu możesz zobaczyć wszystko
+              na pierwszy rzut oka.
+            </p>
+          </article>
+        </section>
+
+        <section
+          class="product-wrap products-wrapper__product-wrap"
+          id="vieste"
+        >
+          <article class="product product-wrap__product">
+            <h2 class="product__title product__title--name">
+              "Wszechstronny miejski wariat!"
+            </h2>
+            <div class="product__photo-box">
+              <img
+                class="product__photo"
+                alt="img-Fact X 50"
+                src="./images/factx50_side1.png"
+              />
+            </div>
+            <h2 class="product__title">Vieste 125</h2>
+
+            <p class="product__paragraph">
+              Ten kompaktowy model o pojemności 50 cm3 charakteryzuje się
+              solidną konstrukcją z odważnymi detalami, które lśnią w mieście.
+              Silnik osiąga prędkość maksymalną 45 km/h podczas jazdy po
+              ulicach. Wskocz i ciesz się współczynnikiem X tego kreatywnie
+              zaprojektowanego skutera miejskiego.
+            </p>
+            <h2 class="title product__title">8 990zł</h2>
+            <button class="button product__button" type="button">Więcej</button>
+          </article>
+
+          <article class="details product-wrap__details">
+            <h2 class="details__title">Dodatki</h2>
+            <div class="details__photo details__photo--big">
+              <img
+                class="details__element"
+                alt="img-screen"
+                src="./images/ekran1.jpg"
+              />
+            </div>
+            <div class="details__photo details__photo--small">
+              <img
+                class="details__element details__element--up"
+                alt="img-Fact X 50-back"
+                src="./images/factx50_back1.jpg"
+              />
+            </div>
+
+            <h2 class="details__title--element">Ultra-szeroki wyświetlacz</h2>
+            <p class="details__paragraph">
+              Łatwy do odczytania cyfrowy pulpit nawigacyjny pokazuje wszystkie
+              aktualne statystyki jazdy, dzięki czemu możesz zobaczyć wszystko
+              na pierwszy rzut oka.
+            </p>
+          </article>
+
+          <article class="details product-wrap__details">
+            <div class="details__photo details__photo--small">
+              <img
+                class="details__element details__element--up"
+                alt="img-screen"
+                src="./images/factx50_forward1.jpg"
+              />
+            </div>
+            <div class="details__photo details__photo--big">
+              <img
+                class="details__element"
+                alt="img-Fact X 50-back"
+                src="./images/reflektor2.jpg"
+              />
+            </div>
+
+            <h2 class="details__title--element">Asymetryczny reflektor</h2>
+            <p class="details__paragraph">
+              Asymetryczny reflektor Stopnikowy kształt reflektora pozwala na
+              maksymalną widoczność do przodu dla kierowcy bez utrudniania
+              wzroku nadjeżdżającym kierowcom.
+            </p>
+          </article>
+
+          <article class="technicals product-wrap__technicals">
+            <h2 class="technicals__title">Techniczne</h2>
+            <div
+              class="technicals__photo technicals__photo--big technicals__photo--dynamic"
+            ></div>
+            <div
+              class="technicals__photo technicals__photo--small technicals__photo--static"
+            ></div>
+            <h2 class="technicals__title">Ultra-szeroki wyświetlacz</h2>
+            <p class="technicals__paragraph">
+              Łatwy do odczytania cyfrowy pulpit nawigacyjny pokazuje wszystkie
+              aktualne statystyki jazdy, dzięki czemu możesz zobaczyć wszystko
+              na pierwszy rzut oka.
+            </p>
+          </article>
+        </section>
+        <section
+          class="product-wrap products-wrapper__product-wrap"
+          id="versilia"
+        >
+          <article class="product product-wrap__product">
+            <h2 class="product__title product__title--name">
+              "No elegancja Francja!"
+            </h2>
+            <div class="product__photo-box">
+              <img
+                class="product__photo"
+                alt="img-Fact X 50"
+                src="./images/factx50_side1.png"
+              />
+            </div>
+            <h2 class="product__title">Versilia</h2>
+
+            <p class="product__paragraph">
+              Ten kompaktowy model o pojemności 50 cm3 charakteryzuje się
+              solidną konstrukcją z odważnymi detalami, które lśnią w mieście.
+              Silnik osiąga prędkość maksymalną 45 km/h podczas jazdy po
+              ulicach. Wskocz i ciesz się współczynnikiem X tego kreatywnie
+              zaprojektowanego skutera miejskiego.
+            </p>
+            <h2 class="title product__title">8 990zł</h2>
+            <button class="button product__button" type="button">Więcej</button>
+          </article>
+
+          <article class="details product-wrap__details">
+            <h2 class="details__title">Dodatki</h2>
+            <div class="details__photo details__photo--big">
+              <img
+                class="details__element"
+                alt="img-screen"
+                src="./images/ekran1.jpg"
+              />
+            </div>
+            <div class="details__photo details__photo--small">
+              <img
+                class="details__element details__element--up"
+                alt="img-Fact X 50-back"
+                src="./images/factx50_back1.jpg"
+              />
+            </div>
+
+            <h2 class="details__title--element">Ultra-szeroki wyświetlacz</h2>
+            <p class="details__paragraph">
+              Łatwy do odczytania cyfrowy pulpit nawigacyjny pokazuje wszystkie
+              aktualne statystyki jazdy, dzięki czemu możesz zobaczyć wszystko
+              na pierwszy rzut oka.
+            </p>
+          </article>
+
+          <article class="details product-wrap__details">
+            <div class="details__photo details__photo--small">
+              <img
+                class="details__element details__element--up"
+                alt="img-screen"
+                src="./images/factx50_forward1.jpg"
+              />
+            </div>
+            <div class="details__photo details__photo--big">
+              <img
+                class="details__element"
+                alt="img-Fact X 50-back"
+                src="./images/reflektor2.jpg"
+              />
+            </div>
+
+            <h2 class="details__title--element">Asymetryczny reflektor</h2>
+            <p class="details__paragraph">
+              Asymetryczny reflektor Stopnikowy kształt reflektora pozwala na
+              maksymalną widoczność do przodu dla kierowcy bez utrudniania
+              wzroku nadjeżdżającym kierowcom.
+            </p>
+          </article>
+
+          <article class="technicals product-wrap__technicals">
+            <h2 class="technicals__title">Techniczne</h2>
+            <div
+              class="technicals__photo technicals__photo--big technicals__photo--dynamic"
+            ></div>
+            <div
+              class="technicals__photo technicals__photo--small technicals__photo--static"
+            ></div>
+            <h2 class="technicals__title">Ultra-szeroki wyświetlacz</h2>
+            <p class="technicals__paragraph">
+              Łatwy do odczytania cyfrowy pulpit nawigacyjny pokazuje wszystkie
+              aktualne statystyki jazdy, dzięki czemu możesz zobaczyć wszystko
+              na pierwszy rzut oka.
+            </p>
+          </article>
+        </section>
+        <article class="producer-main__product" id="rks">
+          <h2 class="title title-secondary producer-main__title">RKS 125</h2>
+        </article>
+        <article class="producer-main__product" id="x-light">
+          <h2 class="title title-secondary producer-main__title">
+            X-Light 125 CBS
+          </h2>
+        </article>
+        <article class="producer-main__product" id="superlight">
+          <h2 class="title title-secondary producer-main__title">
+            Superlight 125 STD
+          </h2>
+        </article>
+      </section>
+    </main>
+
     <footer class="footer">
       <section class="footer-info-section footer__section">
         <section class="about footer__block">

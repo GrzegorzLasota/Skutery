@@ -15,7 +15,7 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    @include md() {
+    @include lg() {
       background-position: center;
       background-size: contain;
       min-height: 682px;
@@ -37,13 +37,30 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    @include xl {
-      justify-content: space-around;
-    }
   }
 
   &__item {
+    .burger {
+      display: inline-block;
+      width: 22px;
+      height: 16px;
+      background-image: url("../images/menu.svg");
+      background-size: cover;
+
+      &:hover {
+        background-image: url("../images/menu_hover.svg");
+      }
+      &__label {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+      }
+    }
+
     &--logo {
       width: 160px;
     }
@@ -55,12 +72,10 @@
   }
 
   &__title {
-    min-height: 120px;
     grid-column: 1/-1;
     font-family: Poppins;
     font-size: 26px;
     font-weight: 700;
-    line-height: 36px;
     letter-spacing: -1.5px;
     text-align: center;
     text-underline-position: from-font;
@@ -72,6 +87,14 @@
 
     @include md {
       font-size: 36px;
+    }
+
+    @include md {
+      font-size: 64px;
+    }
+
+    @include xl {
+      font-size: 80px;
     }
   }
 }
