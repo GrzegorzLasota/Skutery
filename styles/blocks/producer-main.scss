@@ -143,14 +143,20 @@
       grid-column: 1/-1;
       text-align: center;
       box-sizing: border-box;
+      overflow: hidden;
     }
 
     &__photo {
       max-width: 60%;
       height: auto;
+      transition: transform 0.3s;
 
       @include lg {
         max-width: 40%;
+      }
+
+      &:hover {
+        transform: scale(1.2);
       }
     }
 
@@ -239,6 +245,7 @@
     &__photo {
       height: 163px;
       text-align: center;
+      overflow: hidden;
 
       @include md {
         height: 200px;
@@ -279,6 +286,11 @@
       object-fit: cover;
       object-position: center;
       border-radius: 10px;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
 
     &__element--up {
@@ -332,9 +344,8 @@
       grid-column: span 2;
       min-height: 200px;
       border: 1px solid #ffffffa4;
-      background-size: 30%;
-      background-repeat: no-repeat;
-      background-position: bottom;
+      background-position: center;
+      background-size: cover;
 
       @include md {
         grid-column: span 3;
@@ -345,15 +356,19 @@
       }
 
       &--engine {
-      }
-
-      &--chassis {
+        background-image: url("../../images/keeway/X-Light125/silnik1.jpg");
       }
 
       &--gearcase {
+        background-image: url("../../images/keeway/X-Light125/licznik.png");
       }
 
       &--weight {
+        background-image: url("../../images/back1.jpg");
+      }
+
+      &--chassis {
+        background-image: url("../../images/keeway/vies125/amorek.png");
       }
     }
 
@@ -395,6 +410,7 @@
           text-decoration-skip-ink: none;
           text-align: center;
           font-weight: bold;
+          text-shadow: 0px 1px 3px #000000;
         }
 
         &__paragraph:last-child {

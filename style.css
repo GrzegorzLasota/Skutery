@@ -1593,15 +1593,20 @@ table {
   grid-column: 1/-1;
   text-align: center;
   box-sizing: border-box;
+  overflow: hidden;
 }
 .producer-main .product__photo {
   max-width: 60%;
   height: auto;
+  transition: transform 0.3s;
 }
 @media (min-width: 1020px) {
   .producer-main .product__photo {
     max-width: 40%;
   }
+}
+.producer-main .product__photo:hover {
+  transform: scale(1.2);
 }
 .producer-main .product__title {
   grid-column: 1/-1;
@@ -1705,6 +1710,7 @@ table {
 .producer-main .details__photo {
   height: 163px;
   text-align: center;
+  overflow: hidden;
 }
 @media (min-width: 640px) {
   .producer-main .details__photo {
@@ -1748,6 +1754,10 @@ table {
   object-fit: cover;
   object-position: center;
   border-radius: 10px;
+  transition: transform 0.3s;
+}
+.producer-main .details__element:hover {
+  transform: scale(1.1);
 }
 .producer-main .details__element--up {
   object-position: center 10%;
@@ -1817,9 +1827,8 @@ table {
   grid-column: span 2;
   min-height: 200px;
   border: 1px solid rgba(255, 255, 255, 0.6431372549);
-  background-size: 30%;
-  background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
+  background-size: cover;
 }
 @media (min-width: 640px) {
   .producer-main .technicals__tech-el {
@@ -1830,6 +1839,18 @@ table {
   .producer-main .technicals__tech-el {
     grid-column: span 6;
   }
+}
+.producer-main .technicals__tech-el--engine {
+  background-image: url("../../images/keeway/X-Light125/silnik1.jpg");
+}
+.producer-main .technicals__tech-el--gearcase {
+  background-image: url("../../images/keeway/X-Light125/licznik.png");
+}
+.producer-main .technicals__tech-el--weight {
+  background-image: url("../../images/back1.jpg");
+}
+.producer-main .technicals__tech-el--chassis {
+  background-image: url("../../images/keeway/vies125/amorek.png");
 }
 .producer-main .technicals .tech-el {
   position: relative;
@@ -1866,6 +1887,7 @@ table {
   text-decoration-skip-ink: none;
   text-align: center;
   font-weight: bold;
+  text-shadow: 0px 1px 3px #000000;
 }
 .producer-main .technicals .tech-el .tech-info__paragraph:last-child {
   padding-bottom: 5px;
@@ -1877,6 +1899,7 @@ table {
 }
 
 .drop-menu {
+  z-index: 1;
   background-color: #c2c2c2;
   min-height: 100vh;
   box-sizing: border-box;
