@@ -3,6 +3,7 @@
 @use "../utils/paragraph.scss" as *;
 
 .button {
+  position: relative;
   display: block;
   width: 100%;
   height: 56px;
@@ -20,4 +21,20 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   border: none;
+
+  &__link {
+    @include flex-center;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%;
+
+    &:focus {
+      color: #1d1d1d;
+    }
+  }
 }

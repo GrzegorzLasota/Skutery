@@ -82,13 +82,6 @@
     padding: 0 20px;
     @include grid;
 
-    &__product-wrap {
-      grid-column: 1/-1;
-      @include grid;
-    }
-  }
-
-  .product-wrap {
     &__product {
       grid-column: 1/-1;
       margin-bottom: 90px;
@@ -101,6 +94,19 @@
       @include lg {
         margin-bottom: 144px;
       }
+    }
+
+    &__product-wrap {
+      grid-column: 1/-1;
+      @include grid;
+    }
+  }
+
+  .product-wrap {
+    display: none;
+
+    &:target {
+      display: block;
     }
 
     &__details {
@@ -136,13 +142,16 @@
     &__photo-box {
       grid-column: 1/-1;
       text-align: center;
-      padding: 50px;
       box-sizing: border-box;
     }
 
     &__photo {
-      max-width: 100%;
+      max-width: 60%;
       height: auto;
+
+      @include lg {
+        max-width: 40%;
+      }
     }
 
     &__title {
@@ -269,10 +278,15 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
+      border-radius: 10px;
     }
 
     &__element--up {
       object-position: center 10%;
+    }
+
+    &__element--down {
+      object-position: center 60%;
     }
 
     &__paragraph {
@@ -291,12 +305,108 @@
     @include grid;
 
     &__title {
+      grid-column: 1/-1;
+      font-family: Poppins;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 32px;
+      letter-spacing: -1.5px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      margin-bottom: 48px;
+
+      @include md {
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 64px;
+      }
+
+      @include lg {
+        font-size: 64px;
+        line-height: 64px;
+      }
     }
 
-    &__photo {
+    &__tech-el {
+      grid-column: span 2;
+      min-height: 200px;
+      border: 1px solid #ffffffa4;
+      background-size: 30%;
+      background-repeat: no-repeat;
+      background-position: bottom;
+
+      @include md {
+        grid-column: span 3;
+      }
+
+      @include lg {
+        grid-column: span 6;
+      }
+
+      &--engine {
+      }
+
+      &--chassis {
+      }
+
+      &--gearcase {
+      }
+
+      &--weight {
+      }
     }
 
-    &__paragraph {
+    .tech-el {
+      position: relative;
+      @include flex-center;
+      cursor: default;
+
+      &__paragraph {
+        font-size: 40px;
+        text-align: center;
+        text-transform: uppercase;
+        position: absolute;
+        transition: opacity 0.3s;
+      }
+
+      &:hover .tech-el__paragraph {
+        opacity: 0.2;
+      }
+
+      &__tech-info {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      &:hover .tech-el__tech-info {
+        opacity: 1;
+      }
+
+      .tech-info {
+        &__paragraph {
+          padding-top: 15px;
+          font-family: Poppins;
+          font-size: 16px;
+          line-height: 22.4px;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          text-align: center;
+          font-weight: bold;
+        }
+
+        &__paragraph:last-child {
+          padding-bottom: 5px;
+        }
+
+        &__paragraph--value {
+          padding: 0;
+          font-weight: normal;
+          color: gold;
+        }
+      }
     }
   }
 }

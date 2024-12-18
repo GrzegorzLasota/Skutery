@@ -190,6 +190,7 @@ table {
 }
 
 .button {
+  position: relative;
   display: block;
   width: 100%;
   height: 56px;
@@ -206,6 +207,22 @@ table {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   border: none;
+}
+.button__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  border-radius: 40px;
+  width: 100%;
+  height: 100%;
+}
+.button__link:focus {
+  color: #1d1d1d;
 }
 
 .header {
@@ -1476,6 +1493,21 @@ table {
     gap: 34px;
   }
 }
+.producer-main .products-wrapper__product {
+  grid-column: 1/-1;
+  margin-bottom: 90px;
+}
+@media (min-width: 640px) {
+  .producer-main .products-wrapper__product {
+    grid-column: 2/-2;
+    margin-bottom: 120px;
+  }
+}
+@media (min-width: 1020px) {
+  .producer-main .products-wrapper__product {
+    margin-bottom: 144px;
+  }
+}
 .producer-main .products-wrapper__product-wrap {
   grid-column: 1/-1;
   display: grid;
@@ -1500,20 +1532,11 @@ table {
     gap: 34px;
   }
 }
-.producer-main .product-wrap__product {
-  grid-column: 1/-1;
-  margin-bottom: 90px;
+.producer-main .product-wrap {
+  display: none;
 }
-@media (min-width: 640px) {
-  .producer-main .product-wrap__product {
-    grid-column: 2/-2;
-    margin-bottom: 120px;
-  }
-}
-@media (min-width: 1020px) {
-  .producer-main .product-wrap__product {
-    margin-bottom: 144px;
-  }
+.producer-main .product-wrap:target {
+  display: block;
 }
 .producer-main .product-wrap__details {
   grid-column: 1/-1;
@@ -1569,12 +1592,16 @@ table {
 .producer-main .product__photo-box {
   grid-column: 1/-1;
   text-align: center;
-  padding: 50px;
   box-sizing: border-box;
 }
 .producer-main .product__photo {
-  max-width: 100%;
+  max-width: 60%;
   height: auto;
+}
+@media (min-width: 1020px) {
+  .producer-main .product__photo {
+    max-width: 40%;
+  }
 }
 .producer-main .product__title {
   grid-column: 1/-1;
@@ -1720,9 +1747,13 @@ table {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  border-radius: 10px;
 }
 .producer-main .details__element--up {
   object-position: center 10%;
+}
+.producer-main .details__element--down {
+  object-position: center 60%;
 }
 .producer-main .details__paragraph {
   grid-column: 1/-1;
@@ -1757,6 +1788,94 @@ table {
     gap: 34px;
   }
 }
+.producer-main .technicals__title {
+  grid-column: 1/-1;
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -1.5px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-bottom: 48px;
+}
+@media (min-width: 640px) {
+  .producer-main .technicals__title {
+    font-size: 48px;
+    line-height: 48px;
+    margin-bottom: 64px;
+  }
+}
+@media (min-width: 1020px) {
+  .producer-main .technicals__title {
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
+.producer-main .technicals__tech-el {
+  grid-column: span 2;
+  min-height: 200px;
+  border: 1px solid rgba(255, 255, 255, 0.6431372549);
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+@media (min-width: 640px) {
+  .producer-main .technicals__tech-el {
+    grid-column: span 3;
+  }
+}
+@media (min-width: 1020px) {
+  .producer-main .technicals__tech-el {
+    grid-column: span 6;
+  }
+}
+.producer-main .technicals .tech-el {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+}
+.producer-main .technicals .tech-el__paragraph {
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  transition: opacity 0.3s;
+}
+.producer-main .technicals .tech-el:hover .tech-el__paragraph {
+  opacity: 0.2;
+}
+.producer-main .technicals .tech-el__tech-info {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.producer-main .technicals .tech-el:hover .tech-el__tech-info {
+  opacity: 1;
+}
+.producer-main .technicals .tech-el .tech-info__paragraph {
+  padding-top: 15px;
+  font-family: Poppins;
+  font-size: 16px;
+  line-height: 22.4px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-align: center;
+  font-weight: bold;
+}
+.producer-main .technicals .tech-el .tech-info__paragraph:last-child {
+  padding-bottom: 5px;
+}
+.producer-main .technicals .tech-el .tech-info__paragraph--value {
+  padding: 0;
+  font-weight: normal;
+  color: gold;
+}
+
 .drop-menu {
   background-color: #c2c2c2;
   min-height: 100vh;

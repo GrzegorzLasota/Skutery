@@ -32,7 +32,9 @@ function days() {
 
   const timeDays = document.querySelector(".hours");
 
-  timeDays.textContent = `${daysLeft}d i ${hoursLeft}g`;
+  if (timeDays) {
+    timeDays.textContent = `${daysLeft}d i ${hoursLeft}g`;
+  }
 }
 
 window.addEventListener("DOMContentLoaded", days);
