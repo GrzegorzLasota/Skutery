@@ -1,5 +1,6 @@
 @use "../utils/mixins.scss" as *;
 @use "../utils/variables.scss" as *;
+@use "../utils/fading-boxes.scss" as *;
 
 .producer-main {
   @include grid;
@@ -141,22 +142,140 @@
 
     &__photo-box {
       grid-column: 1/-1;
-      text-align: center;
       box-sizing: border-box;
+      position: relative;
       overflow: hidden;
+      border-radius: 10px;
+      border: 2px solid rgba(255, 217, 0, 0.63);
     }
 
-    &__photo {
-      max-width: 60%;
-      height: auto;
-      transition: transform 0.3s;
+    .photo-box {
+      .switch-color {
+        @include flex-center;
+        height: 50px;
 
-      @include lg {
-        max-width: 40%;
+        &__arrow {
+          font-size: 30px;
+          color: gold;
+          transition: transform 0.3s;
+          margin: 0 10px;
+          cursor: pointer;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
       }
 
-      &:hover {
-        transform: scale(1.2);
+      &__pro-colors {
+        position: relative;
+        overflow: hidden;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .pro-colors {
+        transition: transform 0.4s;
+
+        // slider z kolorowymi skuterami, klasy po kliknieciu zeby zwiewaly i wracały
+
+        &--fact_hide {
+          @include motor_hide;
+        }
+
+        &--fact_show {
+          @include motor_show;
+        }
+
+        &--fact_run {
+          @include motor_run;
+        }
+
+        &--vieste_hide {
+          @include motor_hide;
+        }
+
+        &--vieste_show {
+          @include motor_show;
+        }
+
+        &--vieste_run {
+          @include motor_run;
+        }
+
+        &--versilia_hide {
+          @include motor_hide;
+        }
+
+        &--versilia_show {
+          @include motor_show;
+        }
+
+        &--versilia_run {
+          @include motor_run;
+        }
+
+        // slider z kolorowymi skuterami, klasy po kliknieciu zeby zwiewaly i wracały
+
+        &__photo {
+          width: 50%;
+          height: auto;
+          transition: transform 0.3s;
+
+          @include lg {
+            width: 50%;
+          }
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+
+        // kolory beforków i afterków
+
+        &--blackwhite {
+          &::after {
+            @include white;
+          }
+
+          &::before {
+            @include black;
+          }
+        }
+
+        &--gray {
+          &::before {
+            @include gray;
+          }
+        }
+
+        &--white {
+          &::after {
+            @include white;
+          }
+        }
+
+        &--black {
+          &::before {
+            @include black;
+          }
+        }
+
+        &--blue {
+          &::before {
+            @include blue;
+          }
+        }
+
+        &--red {
+          &::after {
+            @include red;
+          }
+        }
+
+        // kolory beforków i afterków - KONIEC
       }
     }
 
@@ -171,11 +290,32 @@
       text-decoration-skip-ink: none;
     }
 
+    &__write {
+      font-family: "Niconne", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 50px;
+      letter-spacing: 2px;
+      display: block;
+      padding-top: 25px;
+      line-height: 60px;
+
+      @include lg {
+        padding-top: 0;
+        padding-left: 20px;
+        display: inline-block;
+      }
+    }
+
     &__title--name {
       grid-column: 1/-1;
+      line-height: 60px;
+      border-top: 2px dashed gold;
+      padding-top: 175px;
       font-style: italic;
-      font-size: 16px;
+      font-size: 46px;
       text-align: center;
+      min-height: 100px;
     }
 
     &__paragraph {
@@ -236,7 +376,7 @@
         font-size: 24px;
         font-weight: 700;
         line-height: 33.6px;
-        text-align: left;
+        text-align: center;
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
       }
@@ -294,11 +434,11 @@
     }
 
     &__element--up {
-      object-position: center 10%;
+      object-position: center 25%;
     }
 
     &__element--down {
-      object-position: center 60%;
+      object-position: center 80%;
     }
 
     &__paragraph {
@@ -343,7 +483,8 @@
     &__tech-el {
       grid-column: span 2;
       min-height: 200px;
-      border: 1px solid #ffffffa4;
+      border: 1px solid #ffffff3f;
+      box-sizing: border-box;
       background-position: center;
       background-size: cover;
 
@@ -360,11 +501,11 @@
       }
 
       &--gearcase {
-        background-image: url("../../images/keeway/X-Light125/licznik.png");
+        background-image: url("../../images/keeway/X-Light125/bebechy.jpg");
       }
 
       &--weight {
-        background-image: url("../../images/back1.jpg");
+        background-image: url("../../images/keeway/X-Light125/licznik.png");
       }
 
       &--chassis {
@@ -404,13 +545,14 @@
         &__paragraph {
           padding-top: 15px;
           font-family: Poppins;
-          font-size: 16px;
+          font-size: 20px;
           line-height: 22.4px;
           text-underline-position: from-font;
           text-decoration-skip-ink: none;
           text-align: center;
           font-weight: bold;
           text-shadow: 0px 1px 3px #000000;
+          transition: transform 0.3s;
         }
 
         &__paragraph:last-child {
@@ -421,6 +563,7 @@
           padding: 0;
           font-weight: normal;
           color: gold;
+          font-size: 18px;
         }
       }
     }

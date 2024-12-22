@@ -16,37 +16,33 @@
       padding: 10px 0;
       grid-column: 1/-1;
       min-height: 80px;
+      font-size: 30px;
+      line-height: 40px;
+      width: 100%;
       @include flex-center();
 
-      &--service {
-        @include lg() {
-          grid-column: 1/5;
-        }
+      &--salon-service {
+        border-bottom: 2px solid gold;
+        padding-bottom: 10px;
+        margin-top: 20px;
+        font-size: 40px;
+        font-weight: 400;
+        text-transform: uppercase;
       }
     }
 
     .hours {
-      &-service {
-        grid-column: 1/-1;
-
-        @include lg() {
-          grid-column: 1/5;
-        }
-
-        // @include lg() {
-        //   grid-column: 1/7;
-        // }
-      }
-
       &__salon {
         grid-column: 1/-1;
+        padding: 0 20px;
 
         @include lg() {
-          grid-column: 5/-1;
+          grid-column: 1/9;
 
-          display: grid;
-          grid-template-columns: 50% 50%;
-          column-gap: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          align-items: center;
         }
 
         &--season {
@@ -55,6 +51,19 @@
         &--off-season {
           grid-column: 1/-1;
         }
+      }
+
+      &-service {
+        grid-column: 1/-1;
+        padding: 0 20px;
+
+        @include lg() {
+          grid-column: 9/-1;
+        }
+
+        // @include lg() {
+        //   grid-column: 1/7;
+        // }
       }
 
       &__title {

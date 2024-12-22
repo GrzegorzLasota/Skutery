@@ -933,32 +933,32 @@ table {
   padding: 10px 0;
   grid-column: 1/-1;
   min-height: 80px;
+  font-size: 30px;
+  line-height: 40px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-@media (min-width: 1020px) {
-  .section .open__title--service {
-    grid-column: 1/5;
-  }
-}
-.section .open .hours-service {
-  grid-column: 1/-1;
-}
-@media (min-width: 1020px) {
-  .section .open .hours-service {
-    grid-column: 1/5;
-  }
+.section .open__title--salon-service {
+  border-bottom: 2px solid gold;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 .section .open .hours__salon {
   grid-column: 1/-1;
+  padding: 0 20px;
 }
 @media (min-width: 1020px) {
   .section .open .hours__salon {
-    grid-column: 5/-1;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    column-gap: 20px;
+    grid-column: 1/9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
   }
 }
 .section .open .hours__salon--season {
@@ -966,6 +966,15 @@ table {
 }
 .section .open .hours__salon--off-season {
   grid-column: 1/-1;
+}
+.section .open .hours-service {
+  grid-column: 1/-1;
+  padding: 0 20px;
+}
+@media (min-width: 1020px) {
+  .section .open .hours-service {
+    grid-column: 9/-1;
+  }
 }
 .section .open .hours__title {
   text-align: center;
@@ -1266,7 +1275,6 @@ table {
   }
 }
 .producer-header--keeway {
-  background-color: #0f0f0f;
   background-image: url("../../images//keewfront4.jpg");
   min-height: 90vh;
   background-position: 85% center;
@@ -1591,22 +1599,247 @@ table {
 }
 .producer-main .product__photo-box {
   grid-column: 1/-1;
-  text-align: center;
   box-sizing: border-box;
+  position: relative;
   overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 217, 0, 0.63);
 }
-.producer-main .product__photo {
-  max-width: 60%;
+.producer-main .product .photo-box .switch-color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.producer-main .product .photo-box .switch-color__arrow {
+  font-size: 30px;
+  color: gold;
+  transition: transform 0.3s;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.producer-main .product .photo-box .switch-color__arrow:hover {
+  transform: scale(1.2);
+}
+.producer-main .product .photo-box__pro-colors {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.producer-main .product .photo-box .pro-colors {
+  transition: transform 0.4s;
+}
+.producer-main .product .photo-box .pro-colors--fact_hide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+.producer-main .product .photo-box .pro-colors--fact_show {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: translateX(0%);
+}
+.producer-main .product .photo-box .pro-colors--fact_run {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+}
+.producer-main .product .photo-box .pro-colors--vieste_hide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+.producer-main .product .photo-box .pro-colors--vieste_show {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: translateX(0%);
+}
+.producer-main .product .photo-box .pro-colors--vieste_run {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+}
+.producer-main .product .photo-box .pro-colors--versilia_hide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+.producer-main .product .photo-box .pro-colors--versilia_show {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: translateX(0%);
+}
+.producer-main .product .photo-box .pro-colors--versilia_run {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+}
+.producer-main .product .photo-box .pro-colors__photo {
+  width: 50%;
   height: auto;
   transition: transform 0.3s;
 }
 @media (min-width: 1020px) {
-  .producer-main .product__photo {
-    max-width: 40%;
+  .producer-main .product .photo-box .pro-colors__photo {
+    width: 50%;
   }
 }
-.producer-main .product__photo:hover {
+.producer-main .product .photo-box .pro-colors__photo:hover {
   transform: scale(1.2);
+}
+.producer-main .product .photo-box .pro-colors--blackwhite::after {
+  display: block;
+  z-index: -1;
+  text-align: center;
+  width: 140px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: gold;
+  text-shadow: 1px 1px 10px rgb(0, 0, 0);
+  position: absolute;
+  top: 20px;
+  content: "biały";
+  color: rgb(254, 255, 216);
+  transform: rotate(45deg);
+  right: -40px;
+}
+.producer-main .product .photo-box .pro-colors--blackwhite::before {
+  display: block;
+  z-index: -1;
+  text-align: center;
+  width: 140px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: gold;
+  text-shadow: 1px 1px 10px rgb(0, 0, 0);
+  position: absolute;
+  top: 20px;
+  content: "czarny";
+  color: rgb(0, 0, 0);
+  transform: rotate(-45deg);
+  left: -40px;
+}
+.producer-main .product .photo-box .pro-colors--gray::before {
+  display: block;
+  z-index: -1;
+  text-align: center;
+  width: 140px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: gold;
+  text-shadow: 1px 1px 10px rgb(0, 0, 0);
+  position: absolute;
+  top: 20px;
+  content: "szary";
+  color: rgb(73, 73, 73);
+  transform: rotate(-45deg);
+  left: -40px;
+}
+.producer-main .product .photo-box .pro-colors--white::after {
+  display: block;
+  z-index: -1;
+  text-align: center;
+  width: 140px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: gold;
+  text-shadow: 1px 1px 10px rgb(0, 0, 0);
+  position: absolute;
+  top: 20px;
+  content: "biały";
+  color: rgb(254, 255, 216);
+  transform: rotate(45deg);
+  right: -40px;
+}
+.producer-main .product .photo-box .pro-colors--black::before {
+  display: block;
+  z-index: -1;
+  text-align: center;
+  width: 140px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: gold;
+  text-shadow: 1px 1px 10px rgb(0, 0, 0);
+  position: absolute;
+  top: 20px;
+  content: "czarny";
+  color: rgb(0, 0, 0);
+  transform: rotate(-45deg);
+  left: -40px;
+}
+.producer-main .product .photo-box .pro-colors--blue::before {
+  display: block;
+  z-index: -1;
+  text-align: center;
+  width: 140px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: gold;
+  text-shadow: 1px 1px 10px rgb(0, 0, 0);
+  position: absolute;
+  top: 20px;
+  content: "niebieski";
+  font-size: 14px;
+  color: rgb(0, 61, 173);
+  transform: rotate(45deg);
+  right: -40px;
+}
+.producer-main .product .photo-box .pro-colors--red::after {
+  display: block;
+  z-index: -1;
+  text-align: center;
+  width: 140px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: gold;
+  text-shadow: 1px 1px 10px rgb(0, 0, 0);
+  position: absolute;
+  top: 20px;
+  content: "czerwony";
+  font-size: 12px;
+  color: rgb(158, 0, 0);
+  transform: rotate(-45deg);
+  left: -40px;
 }
 .producer-main .product__title {
   grid-column: 1/-1;
@@ -1618,11 +1851,32 @@ table {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
+.producer-main .product__write {
+  font-family: "Niconne", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  letter-spacing: 2px;
+  display: block;
+  padding-top: 25px;
+  line-height: 60px;
+}
+@media (min-width: 1020px) {
+  .producer-main .product__write {
+    padding-top: 0;
+    padding-left: 20px;
+    display: inline-block;
+  }
+}
 .producer-main .product__title--name {
   grid-column: 1/-1;
+  line-height: 60px;
+  border-top: 2px dashed gold;
+  padding-top: 175px;
   font-style: italic;
-  font-size: 16px;
+  font-size: 46px;
   text-align: center;
+  min-height: 100px;
 }
 .producer-main .product__paragraph {
   grid-column: 1/-1;
@@ -1703,7 +1957,7 @@ table {
   font-size: 24px;
   font-weight: 700;
   line-height: 33.6px;
-  text-align: left;
+  text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
@@ -1760,10 +2014,10 @@ table {
   transform: scale(1.1);
 }
 .producer-main .details__element--up {
-  object-position: center 10%;
+  object-position: center 25%;
 }
 .producer-main .details__element--down {
-  object-position: center 60%;
+  object-position: center 80%;
 }
 .producer-main .details__paragraph {
   grid-column: 1/-1;
@@ -1826,7 +2080,8 @@ table {
 .producer-main .technicals__tech-el {
   grid-column: span 2;
   min-height: 200px;
-  border: 1px solid rgba(255, 255, 255, 0.6431372549);
+  border: 1px solid rgba(255, 255, 255, 0.2470588235);
+  box-sizing: border-box;
   background-position: center;
   background-size: cover;
 }
@@ -1844,10 +2099,10 @@ table {
   background-image: url("../../images/keeway/X-Light125/silnik1.jpg");
 }
 .producer-main .technicals__tech-el--gearcase {
-  background-image: url("../../images/keeway/X-Light125/licznik.png");
+  background-image: url("../../images/keeway/X-Light125/bebechy.jpg");
 }
 .producer-main .technicals__tech-el--weight {
-  background-image: url("../../images/back1.jpg");
+  background-image: url("../../images/keeway/X-Light125/licznik.png");
 }
 .producer-main .technicals__tech-el--chassis {
   background-image: url("../../images/keeway/vies125/amorek.png");
@@ -1881,13 +2136,14 @@ table {
 .producer-main .technicals .tech-el .tech-info__paragraph {
   padding-top: 15px;
   font-family: Poppins;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 22.4px;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   text-align: center;
   font-weight: bold;
   text-shadow: 0px 1px 3px #000000;
+  transition: transform 0.3s;
 }
 .producer-main .technicals .tech-el .tech-info__paragraph:last-child {
   padding-bottom: 5px;
@@ -1896,6 +2152,7 @@ table {
   padding: 0;
   font-weight: normal;
   color: gold;
+  font-size: 18px;
 }
 
 .drop-menu {
@@ -1971,6 +2228,42 @@ table {
 
 .keeway-page {
   background-color: #0f0f0f;
+  background: linear-gradient(0.25turn, #0f0f0f, #111111, #0f0f0f);
+}
+
+.about-company {
+  margin-bottom: 50px;
+}
+.about-company__title {
+  font-family: "Dancing Script", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.about-company .company-wrap {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgb(255, 255, 255);
+  margin: 30px auto;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 50%;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-company .company-wrap__link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-image: url("../../../images/loga/keeway1000.png");
+  background-size: cover;
+}
+.about-company .company-wrap__link:hover {
+  background-image: url("../../../images/loga/keeway2.png");
 }
 
 html {

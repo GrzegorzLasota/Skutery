@@ -1,0 +1,41 @@
+@use "../../utils/mixins.scss" as *;
+
+.about-company {
+  margin-bottom: 50px;
+
+  &__title {
+    font-family: "Dancing Script", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  &__company-wrap {
+  }
+
+  .company-wrap {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgb(255, 255, 255);
+    margin: 30px auto;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+    @include flex-center;
+
+    &__link {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-image: url("../../../images/loga/keeway1000.png");
+      background-size: cover;
+
+      &:hover {
+        background-image: url("../../../images/loga/keeway2.png");
+      }
+    }
+  }
+}

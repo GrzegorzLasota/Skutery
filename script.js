@@ -52,9 +52,85 @@ function checkBoxes() {
 
     if (boxTop < triggerBottom) {
       box.classList.add("show");
+    } else {
+      box.classList.remove("show");
+    }
+  });
+}
+
+const drops = document.querySelectorAll(".fading-drop");
+window.addEventListener("scroll", checkDrops);
+
+function checkDrops() {
+  const triggerBot = window.innerHeight + 50;
+
+  drops.forEach((drop) => {
+    const dropTop = drop.getBoundingClientRect().top;
+
+    if (dropTop < triggerBot) {
+      drop.classList.add("closer");
     }
     // else {
     //   box.classList.remove("show");
     // }
+  });
+}
+
+const btnFactRight = document.querySelector(".switch-color__arrow--fact_right");
+const btnFactLeft = document.querySelector(".switch-color__arrow--fact_left");
+
+if (btnFactRight) {
+  btnFactRight.addEventListener("click", function () {
+    $(".pro-colors--fact_one").addClass("pro-colors--fact_run");
+    $(".pro-colors--fact_hide").addClass("pro-colors--fact_show");
+  });
+}
+
+if (btnFactLeft) {
+  btnFactLeft.addEventListener("click", function () {
+    $(".pro-colors--fact_hide").removeClass("pro-colors--fact_show");
+    $(".pro-colors--fact_one").removeClass("pro-colors--fact_run");
+  });
+}
+
+const btnViesteRight = document.querySelector(
+  ".switch-color__arrow--vieste_right"
+);
+const btnViesteLeft = document.querySelector(
+  ".switch-color__arrow--vieste_left"
+);
+
+if (btnViesteRight) {
+  btnViesteRight.addEventListener("click", function () {
+    $(".pro-colors--vieste_one").addClass("pro-colors--vieste_run");
+    $(".pro-colors--vieste_hide").addClass("pro-colors--vieste_show");
+  });
+}
+
+if (btnViesteLeft) {
+  btnViesteLeft.addEventListener("click", function () {
+    $(".pro-colors--vieste_hide").removeClass("pro-colors--vieste_show");
+    $(".pro-colors--vieste_one").removeClass("pro-colors--vieste_run");
+  });
+}
+
+const btnVersiliaRight = document.querySelector(
+  ".switch-color__arrow--versilia_right"
+);
+const btnVersiliaLeft = document.querySelector(
+  ".switch-color__arrow--versilia_left"
+);
+
+if (btnVersiliaRight) {
+  btnVersiliaRight.addEventListener("click", function () {
+    $(".pro-colors--versilia_one").addClass("pro-colors--versilia_run");
+    $(".pro-colors--versilia_hide").addClass("pro-colors--versilia_show");
+  });
+}
+
+if (btnVersiliaLeft) {
+  btnVersiliaLeft.addEventListener("click", function () {
+    $(".pro-colors--versilia_hide").removeClass("pro-colors--versilia_show");
+    $(".pro-colors--versilia_one").removeClass("pro-colors--versilia_run");
   });
 }

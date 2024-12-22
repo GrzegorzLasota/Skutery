@@ -15,8 +15,18 @@
       href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Niconne&family=Playwrite+AU+VIC+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./fontello/css/fontello.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./script.js" defer></script>
   </head>
   <body class="keeway-page">
@@ -92,27 +102,60 @@
 
     <main class="producer-main">
       <section class="invite producer-main__invite">
-        <h2 class="invite__title">Ruszaj się swobodnie</h2>
+        <h2 class="invite__title">Keeway</h2>
         <p class="invite__paragraph">
-          Znajdź najszybszy sposób poruszania się po mieście. Wybierz swój
-          ulubiony pojazd.
+          25 lat doświadczenia, przygody, innowacji...
         </p>
-        <h2 class="invite__title invite__title--position">Porównaj skutery</h2>
+        <!-- <h2 class="invite__title invite__title--position">
+          25 lat doświadczenia, przygody, innowacji...
+        </h2> -->
       </section>
 
       <section class="products-wrapper producer-main__products-wrapper">
         <!-- pierwszy produkt -->
-        <article class="product products-wrapper__product" id="fact">
-          <h2 class="product__title product__title--name">
-            "Ten co zaskakuje"
+        <article class="product products-wrapper__product">
+          <h2 class="product__title product__title--name" id="fact">
+            Fact X 50 <span class="product__write">"Ten co zaskakuje"</span>
           </h2>
-          <div class="product__photo-box">
-            <img
-              class="product__photo"
-              alt="img-Fact X 50"
-              src="./images/keeway/factx50/fact pd.png"
-            />
+          <div class="photo-box product__photo-box">
+            <div
+              class="pro-colors photo-box__pro-colors pro-colors--fact_one pro-colors--blackwhite"
+            >
+              <img
+                class="pro-colors__photo"
+                alt="img-Fact X 50-black"
+                src="./images/keeway/factx50/factblack.png"
+              />
+              <img
+                class="pro-colors__photo"
+                alt="img-Fact X 50-white"
+                src="./images/keeway/factx50/factwhite.png"
+              />
+            </div>
+            <div
+              class="pro-colors photo-box__pro-colors pro-colors--fact_hide pro-colors--blue pro-colors--red"
+            >
+              <img
+                class="pro-colors__photo"
+                alt="img-Fact X 50-white"
+                src="./images/keeway/factx50/factred.png"
+              />
+              <img
+                class="pro-colors__photo"
+                alt="img-Fact X 50-black"
+                src="./images/keeway/factx50/factblue.png"
+              />
+            </div>
+            <div class="switch-color photo-box__switch-color">
+              <a class="switch-color__arrow switch-color__arrow--fact_left">
+                <i class="icon-left-circled"></i
+              ></a>
+              <a class="switch-color__arrow switch-color__arrow--fact_right">
+                <i class="icon-right-circled"></i>
+              </a>
+            </div>
           </div>
+
           <h2 class="product__title">Fact X 50</h2>
 
           <p class="product__paragraph">
@@ -131,19 +174,19 @@
           id="fact-details"
         >
           <article class="details product-wrap__details">
-            <h2 class="details__title">Dodatki</h2>
+            <h2 class="details__title">Mocne strony</h2>
             <div class="details__photo details__photo--big">
               <img
-                class="details__element"
+                class="details__element details__element--up"
                 alt="img-screen"
-                src="./images/keeway/factx50/ekran1.jpg"
+                src="./images/keeway/factx50/fact pg1.jpg"
               />
             </div>
             <div class="details__photo details__photo--small">
               <img
-                class="details__element details__element--up"
+                class="details__element"
                 alt="img-Fact X 50-back"
-                src="./images/keeway/factx50/fact pg1.jpg"
+                src="./images/keeway/factx50/ekran1.jpg"
               />
             </div>
 
@@ -385,16 +428,16 @@
                 </p>
               </div>
               <div class="tech-info tech-el__tech-info">
-                <p class="tech-info__paragraph">Opona przednia</p>
-                <p class="tech-info__paragraph tech-info__paragraph--value">
-                  120/70-12
-                </p>
-
                 <p class="tech-info__paragraph">
                   Średnica przednich hamulców (mm)
                 </p>
                 <p class="tech-info__paragraph tech-info__paragraph--value">
                   190
+                </p>
+
+                <p class="tech-info__paragraph">Opona przednia</p>
+                <p class="tech-info__paragraph tech-info__paragraph--value">
+                  120/70-12
                 </p>
 
                 <p class="tech-info__paragraph">Koło tylne</p>
@@ -514,16 +557,48 @@
 
         <!-- drugi produkt -->
 
-        <article class="product products-wrapper__product" id="vieste">
-          <h2 class="product__title product__title--name">
-            "Wszechstronny miejski wariat!"
+        <article class="product products-wrapper__product">
+          <h2 class="product__title product__title--name" id="vieste">
+            Vieste 125
+            <span class="product__write">"Wszechstronny miejski wariat!"</span>
           </h2>
-          <div class="product__photo-box">
-            <img
-              class="product__photo"
-              alt="img-vieste 125"
-              src="./images/keeway/vies125/vieste1.png"
-            />
+          <div class="photo-box product__photo-box">
+            <div
+              class="pro-colors photo-box__pro-colors pro-colors--vieste_one pro-colors--blackwhite"
+            >
+              <img
+                class="pro-colors__photo"
+                alt="img-vieste 125"
+                src="./images/keeway/vies125/viesblack.png"
+              />
+              <img
+                class="pro-colors__photo"
+                alt="img-vieste 125"
+                src="./images/keeway/vies125/vieste1.png"
+              />
+            </div>
+            <div
+              class="pro-colors photo-box__pro-colors pro-colors--vieste_hide pro-colors--blue"
+            >
+              <img
+                class="pro-colors__photo"
+                alt="img-vieste 125"
+                src="./images/keeway/vies125/empty.png"
+              />
+              <img
+                class="pro-colors__photo"
+                alt="img-vieste 125"
+                src="./images/keeway/vies125/viesblue.png"
+              />
+            </div>
+            <div class="switch-color photo-box__switch-color">
+              <a class="switch-color__arrow switch-color__arrow--vieste_left">
+                <i class="icon-left-circled"></i
+              ></a>
+              <a class="switch-color__arrow switch-color__arrow--vieste_right">
+                <i class="icon-right-circled"></i>
+              </a>
+            </div>
           </div>
           <h2 class="product__title">Vieste 125</h2>
 
@@ -544,7 +619,7 @@
           id="vieste-details"
         >
           <article class="details product-wrap__details">
-            <h2 class="details__title">Dodatki</h2>
+            <h2 class="details__title">Mocne strony</h2>
             <div class="details__photo details__photo--big">
               <img
                 class="details__element"
@@ -620,7 +695,7 @@
           <article class="details product-wrap__details">
             <div class="details__photo details__photo--small">
               <img
-                class="details__element details__element--up"
+                class="details__element"
                 alt="img-screen"
                 src="./images/keeway/vies125/viespd1.jpg"
               />
@@ -644,20 +719,20 @@
           <article class="details product-wrap__details">
             <div class="details__photo details__photo--big">
               <img
-                class="details__element details__element--down"
+                class="details__element"
                 alt="img-screen"
                 src="./images/keeway/vies125/swiatla1.jpg"
               />
             </div>
             <div class="details__photo details__photo--small">
               <img
-                class="details__element details__element--down"
+                class="details__element"
                 alt="img-Fact X 50-back"
                 src="./images/keeway/vies125/viesfr1.jpg"
               />
             </div>
 
-            <h2 class="details__title--element">Przednie światłay</h2>
+            <h2 class="details__title--element">Przednie światła</h2>
             <p class="details__paragraph">
               4 bardzo jasne reflektory i światła dzienne DRL zgrupowano w dwóch
               symetrycznych lampach - lub w innym ujęciu – świecące brewki i
@@ -864,16 +939,50 @@
 
         <!-- trzeci produkt -->
 
-        <article class="product products-wrapper__product" id="versilia">
-          <h2 class="product__title product__title--name">
-            "No elegancja Francja!"
+        <article class="product products-wrapper__product">
+          <h2 class="product__title product__title--name" id="versilia">
+            Versilia 125
+            <span class="product__write">"No elegancja Francja!"</span>
           </h2>
-          <div class="product__photo-box">
-            <img
-              class="product__photo"
-              alt="img-versilia 125"
-              src="./images/keeway/versilia125/verwhitedown.png"
-            />
+          <div class="photo-box product__photo-box">
+            <div
+              class="pro-colors photo-box__pro-colors pro-colors--versilia_one pro-colors--white pro-colors--gray"
+            >
+              <img
+                class="pro-colors__photo"
+                alt="img-versilia 125"
+                src="./images/keeway/versilia125/vergraydown.png"
+              />
+              <img
+                class="pro-colors__photo"
+                alt="img-versilia 125"
+                src="./images/keeway/versilia125/verwhitedown.png"
+              />
+            </div>
+            <div
+              class="pro-colors photo-box__pro-colors pro-colors--versilia_hide pro-colors--red"
+            >
+              <img
+                class="pro-colors__photo"
+                alt="img-versilia 125"
+                src="./images/keeway/versilia125/verreddown.png"
+              />
+              <img
+                class="pro-colors__photo"
+                alt="img-vieste 125"
+                src="./images/keeway/vies125/empty.png"
+              />
+            </div>
+            <div class="switch-color photo-box__switch-color">
+              <a class="switch-color__arrow switch-color__arrow--versilia_left">
+                <i class="icon-left-circled"></i
+              ></a>
+              <a
+                class="switch-color__arrow switch-color__arrow--versilia_right"
+              >
+                <i class="icon-right-circled"></i>
+              </a>
+            </div>
           </div>
           <h2 class="product__title">Versilia 125</h2>
 
@@ -893,10 +1002,10 @@
           id="versilia-details"
         >
           <article class="details product-wrap__details">
-            <h2 class="details__title">Dodatki</h2>
+            <h2 class="details__title">Mocne strony</h2>
             <div class="details__photo details__photo--big">
               <img
-                class="details__element"
+                class="details__element details__element--up"
                 alt="img-screen"
                 src="./images//keeway/versilia125/vergraydown1.jpg"
               />
@@ -919,16 +1028,16 @@
           <article class="details product-wrap__details">
             <div class="details__photo details__photo--small">
               <img
-                class="details__element details__element--up"
+                class="details__element"
                 alt="img-screen"
-                src="./images/keeway/versilia125/vergrayleft1.jpg"
+                src="./images/keeway/versilia125/zarowka1.jpg"
               />
             </div>
             <div class="details__photo details__photo--big">
               <img
-                class="details__element"
+                class="details__element details__element--down"
                 alt="img-Fact X 50-back"
-                src="./images/keeway/versilia125/zarowka1.jpg"
+                src="./images/keeway/versilia125/vergrayleft1.jpg"
               />
             </div>
 
@@ -1018,14 +1127,14 @@
               <img
                 class="details__element details__element--up"
                 alt="img-screen"
-                src="./images/keeway/versilia125/verredleft1.jpg"
+                src="./images/keeway/versilia125/ekran.jpg"
               />
             </div>
             <div class="details__photo details__photo--big">
               <img
                 class="details__element details__element--down"
                 alt="img-Fact X 50-back"
-                src="./images/keeway/versilia125/ekran.jpg"
+                src="./images/keeway/versilia125/vergrayright1.jpg"
               />
             </div>
 
@@ -1213,15 +1322,28 @@
 
         <!-- czwarty produkt -->
 
-        <article class="product products-wrapper__product" id="rks">
-          <h2 class="product__title product__title--name">"brak danych"</h2>
-          <div class="product__photo-box">
-            <img
-              class="product__photo"
-              alt="img-RKS 125"
-              src="./images/keeway/rks125/rksblackdown.png"
-            />
+        <article class="product products-wrapper__product">
+          <h2 class="product__title product__title--name" id="rks">
+            RKS
+            <span class="product__write">"Nowość"</span>
+          </h2>
+          <div class="photo-box product__photo-box">
+            <div
+              class="pro-colors photo-box__pro-colors pro-colors--vieste_one pro-colors--blackwhite"
+            >
+              <img
+                class="pro-colors__photo"
+                alt="img-RKS 125"
+                src="./images/keeway/rks125/rksblackdown.png"
+              />
+              <img
+                class="pro-colors__photo"
+                alt="img-RKS 125"
+                src="./images/keeway/rks125/rksblackdown.png"
+              />
+            </div>
           </div>
+
           <h2 class="product__title">RKS 125</h2>
 
           <p class="product__paragraph">
@@ -1238,16 +1360,26 @@
 
         <!-- piąty produkt -->
 
-        <article class="product products-wrapper__product" id="x-light">
-          <h2 class="product__title product__title--name">
-            "Nowoczesny buntownik z wyboru"
+        <article class="product products-wrapper__product">
+          <h2 class="product__title product__title--name" id="x-light">
+            X-light 125 CBS
+            <span class="product__write">"Nowoczesny buntownik z wyboru!"</span>
           </h2>
-          <div class="product__photo-box">
-            <img
-              class="product__photo"
-              alt="img-x-light 125"
-              src="./images/keeway/X-Light125/xwhitepd.png"
-            />
+          <div class="photo-box product__photo-box">
+            <div
+              class="pro-colors photo-box__pro-colors pro-colors--vieste_one pro-colors--blackwhite"
+            >
+              <img
+                class="pro-colors__photo"
+                alt="img-x-light 125"
+                src="./images/keeway/X-Light125/xblack.png"
+              />
+              <img
+                class="pro-colors__photo"
+                alt="img-x-light 125"
+                src="./images/keeway/X-Light125/xwhitepd.png"
+              />
+            </div>
           </div>
           <h2 class="product__title">X-light 125 CBS</h2>
 
@@ -1267,7 +1399,7 @@
           id="x-light-details"
         >
           <article class="details product-wrap__details">
-            <h2 class="details__title">Dodatki</h2>
+            <h2 class="details__title">Mocne strony</h2>
             <div class="details__photo details__photo--big">
               <img
                 class="details__element"
@@ -1395,16 +1527,16 @@
           <article class="details product-wrap__details">
             <div class="details__photo details__photo--small">
               <img
-                class="details__element details__element--up"
+                class="details__element"
                 alt="img-screen"
-                src="./images/keeway/X-Light125/xwhiteback1.jpg"
+                src="./images/keeway/X-Light125/kierownica.jpg"
               />
             </div>
             <div class="details__photo details__photo--big">
               <img
-                class="details__element details__element--down"
+                class="details__element"
                 alt="img-Fact X 50-back"
-                src="./images/keeway/X-Light125/kiera1.jpg"
+                src="./images/keeway/X-Light125/xwhiteback1.jpg"
               />
             </div>
 
@@ -1652,14 +1784,21 @@
 
         <!--Szósty produkt-->
 
-        <article class="product products-wrapper__product" id="superlight">
-          <h2 class="product__title product__title--name">"Klasyka i styl"</h2>
-          <div class="product__photo-box">
-            <img
-              class="product__photo"
-              alt="img-superlight 125 STD"
-              src="./images/keeway/superlight125/superblackpd1.png"
-            />
+        <article class="product products-wrapper__product">
+          <h2 class="product__title product__title--name" id="superlight">
+            Superlight 125
+            <span class="product__write">-"Klasyka i styl!"</span>
+          </h2>
+          <div class="photo-box product__photo-box">
+            <div
+              class="pro-colors photo-box__pro-colors pro-colors--vieste_one pro-colors--black"
+            >
+              <img
+                class="pro-colors__photo"
+                alt="img-superlight 125 STD"
+                src="./images/keeway/superlight125/superblackpd1.png"
+              />
+            </div>
           </div>
           <h2 class="product__title">Superlight 125 STD</h2>
 
@@ -1681,7 +1820,7 @@
           id="superlight-details"
         >
           <article class="details product-wrap__details">
-            <h2 class="details__title">Dodatki</h2>
+            <h2 class="details__title">Mocne strony</h2>
             <div class="details__photo details__photo--big">
               <img
                 class="details__element"
@@ -1789,7 +1928,7 @@
             </div>
             <div class="details__photo details__photo--small">
               <img
-                class="details__element details__element--down"
+                class="details__element"
                 alt="img-Fact X 50-back"
                 src="./images/keeway/superlight125/superblackfront1.jpg"
               />
@@ -1857,12 +1996,12 @@
 
                 <p class="tech-info__paragraph">Średnica x skok (mm)</p>
                 <p class="tech-info__paragraph tech-info__paragraph--value">
-                  ø56.5×49,5
+                  ø56.5x49,5
                 </p>
 
-                <p class="tech-info__paragraph">Zapłon</p>
+                <p class="tech-info__paragraph">Układ chłodzenia</p>
                 <p class="tech-info__paragraph tech-info__paragraph--value">
-                  TCI
+                  Chłodzony powietrzem
                 </p>
               </div>
 
@@ -1892,9 +2031,9 @@
                   9:1
                 </p>
 
-                <p class="tech-info__paragraph">Układ chłodzenia</p>
+                <p class="tech-info__paragraph">Zapłon</p>
                 <p class="tech-info__paragraph tech-info__paragraph--value">
-                  Chłodzony powietrzem
+                  TCI
                 </p>
               </div>
             </div>
@@ -2002,6 +2141,19 @@
         </section>
       </section>
     </main>
+
+    <section class="about-company">
+      <h2 class="title-secondary about-company__title">
+        Więcej o marce Keeway
+      </h2>
+      <div class="company-wrap about-company__company-wrap">
+        <a
+          class="company-wrap__link"
+          target="_blank"
+          href="https://www.keeway.com/pl-pl/about-us"
+        ></a>
+      </div>
+    </section>
 
     <footer class="footer">
       <section class="footer-info-section footer__section">
