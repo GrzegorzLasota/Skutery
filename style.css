@@ -189,6 +189,37 @@ table {
   transform: translateY(0);
 }
 
+.fading-drop {
+  opacity: 0.1;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.fading-drop-left {
+  opacity: 0;
+  transform: translateX(-250px);
+  transition: all 0.3s ease-in-out;
+}
+
+.visible-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fading-drop-right {
+  opacity: 0;
+  transform: translateX(-250px);
+  transition: all 0.9s ease-in-out;
+}
+
+.visible-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .button {
   position: relative;
   display: block;
@@ -1575,10 +1606,30 @@ table {
   }
 }
 .producer-main .product {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   justify-content: center;
+}
+.producer-main .product::before {
+  content: "";
+  color: #000;
+  text-transform: uppercase;
+  box-shadow: 0px 6px 20px #ffffff;
+  border-radius: 10px;
+  line-height: 10px;
+  font-size: 22px;
+  text-align: center;
+  font-family: "Poppins", serif;
+  letter-spacing: 2px;
+  display: block;
+  width: 100%;
+  grid-column: 1/-1;
+  height: 10px;
+  background-color: #f0ede5;
+  position: absolute;
+  top: 0;
 }
 @media (min-width: 640px) {
   .producer-main .product {
@@ -1604,6 +1655,12 @@ table {
   overflow: hidden;
   border-radius: 10px;
   border: 2px solid rgba(255, 217, 0, 0.63);
+  border-bottom: 0;
+}
+@media (min-width: 1020px) {
+  .producer-main .product__photo-box {
+    grid-column: 2/-2;
+  }
 }
 .producer-main .product .photo-box .switch-color {
   display: flex;
@@ -1871,8 +1928,7 @@ table {
 .producer-main .product__title--name {
   grid-column: 1/-1;
   line-height: 60px;
-  border-top: 2px dashed gold;
-  padding-top: 175px;
+  padding-top: 100px;
   font-style: italic;
   font-size: 46px;
   text-align: center;
@@ -2235,7 +2291,8 @@ table {
   margin-bottom: 50px;
 }
 .about-company__title {
-  font-family: "Dancing Script", serif;
+  font-family: "Poppins", serif;
+  letter-spacing: 1px;
   font-weight: 400;
   font-style: normal;
 }
@@ -2259,10 +2316,12 @@ table {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-image: url("../../../images/loga/keeway1000.png");
   background-size: cover;
 }
-.about-company .company-wrap__link:hover {
+.about-company .company-wrap__link--keeway {
+  background-image: url("../../../images/loga/keeway1000.png");
+}
+.about-company .company-wrap__link--keeway:hover {
   background-image: url("../../../images/loga/keeway2.png");
 }
 

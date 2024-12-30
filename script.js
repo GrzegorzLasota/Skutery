@@ -62,29 +62,71 @@ const drops = document.querySelectorAll(".fading-drop");
 window.addEventListener("scroll", checkDrops);
 
 function checkDrops() {
-  const triggerBot = window.innerHeight + 50;
+  const triggerBot = window.innerHeight - 200;
 
   drops.forEach((drop) => {
     const dropTop = drop.getBoundingClientRect().top;
 
     if (dropTop < triggerBot) {
-      drop.classList.add("closer");
+      drop.classList.add("visible");
+    } else {
+      drop.classList.remove("visible");
     }
-    // else {
-    //   box.classList.remove("show");
-    // }
   });
 }
 
-const btnFactRight = document.querySelector(".switch-color__arrow--fact_right");
+const dropsLeft = document.querySelectorAll(".fading-drop-left");
+window.addEventListener("scroll", checkDropsLeft);
+
+function checkDropsLeft() {
+  const triggerBot = window.innerHeight - 200;
+
+  dropsLeft.forEach((drop) => {
+    const dropTop = drop.getBoundingClientRect().top;
+
+    if (dropTop < triggerBot) {
+      drop.classList.add("visible-left");
+    } else {
+      drop.classList.remove("visible-left");
+    }
+  });
+}
+
+const dropsRight = document.querySelectorAll(".fading-drop-right");
+window.addEventListener("scroll", checkDropsRight);
+
+function checkDropsRight() {
+  const triggerBot = window.innerHeight - 200;
+
+  dropsRight.forEach((drop) => {
+    const dropTop = drop.getBoundingClientRect().top;
+
+    if (dropTop < triggerBot) {
+      drop.classList.add("visible-right");
+    } else {
+      drop.classList.remove("visible-right");
+    }
+  });
+}
+
+//////////////////////////////////////////slidery pojazdów///////////////////////////////////////////////////////
+
 const btnFactLeft = document.querySelector(".switch-color__arrow--fact_left");
+const btnFactRight = document.querySelector(".switch-color__arrow--fact_right");
 
-if (btnFactRight) {
-  btnFactRight.addEventListener("click", function () {
-    $(".pro-colors--fact_one").addClass("pro-colors--fact_run");
-    $(".pro-colors--fact_hide").addClass("pro-colors--fact_show");
-  });
-}
+const btnViesteLeft = document.querySelector(
+  ".switch-color__arrow--vieste_left"
+);
+const btnViesteRight = document.querySelector(
+  ".switch-color__arrow--vieste_right"
+);
+
+const btnVersiliaLeft = document.querySelector(
+  ".switch-color__arrow--versilia_left"
+);
+const btnVersiliaRight = document.querySelector(
+  ".switch-color__arrow--versilia_right"
+);
 
 if (btnFactLeft) {
   btnFactLeft.addEventListener("click", function () {
@@ -92,18 +134,10 @@ if (btnFactLeft) {
     $(".pro-colors--fact_one").removeClass("pro-colors--fact_run");
   });
 }
-
-const btnViesteRight = document.querySelector(
-  ".switch-color__arrow--vieste_right"
-);
-const btnViesteLeft = document.querySelector(
-  ".switch-color__arrow--vieste_left"
-);
-
-if (btnViesteRight) {
-  btnViesteRight.addEventListener("click", function () {
-    $(".pro-colors--vieste_one").addClass("pro-colors--vieste_run");
-    $(".pro-colors--vieste_hide").addClass("pro-colors--vieste_show");
+if (btnFactRight) {
+  btnFactRight.addEventListener("click", function () {
+    $(".pro-colors--fact_one").addClass("pro-colors--fact_run");
+    $(".pro-colors--fact_hide").addClass("pro-colors--fact_show");
   });
 }
 
@@ -113,18 +147,10 @@ if (btnViesteLeft) {
     $(".pro-colors--vieste_one").removeClass("pro-colors--vieste_run");
   });
 }
-
-const btnVersiliaRight = document.querySelector(
-  ".switch-color__arrow--versilia_right"
-);
-const btnVersiliaLeft = document.querySelector(
-  ".switch-color__arrow--versilia_left"
-);
-
-if (btnVersiliaRight) {
-  btnVersiliaRight.addEventListener("click", function () {
-    $(".pro-colors--versilia_one").addClass("pro-colors--versilia_run");
-    $(".pro-colors--versilia_hide").addClass("pro-colors--versilia_show");
+if (btnViesteRight) {
+  btnViesteRight.addEventListener("click", function () {
+    $(".pro-colors--vieste_one").addClass("pro-colors--vieste_run");
+    $(".pro-colors--vieste_hide").addClass("pro-colors--vieste_show");
   });
 }
 
@@ -132,5 +158,11 @@ if (btnVersiliaLeft) {
   btnVersiliaLeft.addEventListener("click", function () {
     $(".pro-colors--versilia_hide").removeClass("pro-colors--versilia_show");
     $(".pro-colors--versilia_one").removeClass("pro-colors--versilia_run");
+  });
+}
+if (btnVersiliaRight) {
+  btnVersiliaRight.addEventListener("click", function () {
+    $(".pro-colors--versilia_one").addClass("pro-colors--versilia_run");
+    $(".pro-colors--versilia_hide").addClass("pro-colors--versilia_show");
   });
 }
