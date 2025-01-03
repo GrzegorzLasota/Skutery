@@ -1283,6 +1283,10 @@ table {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 90vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -1305,19 +1309,27 @@ table {
     gap: 34px;
   }
 }
-.producer-header--keeway {
-  background-image: url("../../images//keewfront4.jpg");
-  min-height: 90vh;
-  background-position: 85% center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 @media (min-width: 1020px) {
-  .producer-header--keeway {
+  .producer-header {
     background-position: center;
     background-size: contain;
     min-height: 682px;
   }
+}
+.producer-header--keeway {
+  background-image: url("../../images/keeway/keewfront4.jpg");
+}
+.producer-header--kymco {
+  background-image: url("../../images/kymco/kymcofront1.jpg");
+}
+.producer-header--qjmotor {
+  background-image: url("../../images/qjmotor/qjfront2.jpg");
+}
+.producer-header--morbidelli {
+  background-image: url("../../images/morbidelli/mbpfront.jpg");
+}
+.producer-header--quady {
+  background-image: url("../../images/quady/quadfront.jpg");
 }
 .producer-header__nav {
   grid-column: 1/-1;
@@ -2216,7 +2228,7 @@ table {
   background-color: #c2c2c2;
   min-height: 100vh;
   box-sizing: border-box;
-  position: fixed;
+  position: absolute;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   top: 0;
@@ -2251,7 +2263,12 @@ table {
   }
 }
 .drop-menu__links {
-  padding: 0 25px;
+  padding: 0 25px 25px;
+}
+@media (min-width: 640px) {
+  .drop-menu__links {
+    display: flex;
+  }
 }
 .drop-menu:target {
   transform: translateX(0);
@@ -2260,8 +2277,16 @@ table {
 .producer-links {
   grid-column: 1/-1;
 }
+.producer-links__list {
+  padding: 0 20px;
+}
 .producer-links__item {
-  padding-bottom: 22px;
+  padding-bottom: 12px;
+}
+@media (min-width: 640px) {
+  .producer-links__item {
+    padding-bottom: 22px;
+  }
 }
 .producer-links__link {
   font-family: Poppins;
@@ -2277,6 +2302,12 @@ table {
   border-bottom: 2px solid transparent;
   text-transform: uppercase;
   box-sizing: border-box;
+}
+@media (min-width: 640px) {
+  .producer-links__link {
+    font-size: 22px;
+    line-height: 22px;
+  }
 }
 .producer-links__link:hover {
   border-bottom: 2px solid #1d1d1d;
@@ -2317,11 +2348,36 @@ table {
   height: 100%;
   border-radius: 50%;
   background-size: cover;
+  background-position: center;
 }
 .about-company .company-wrap__link--keeway {
   background-image: url("../../../images/loga/keeway1000.png");
 }
 .about-company .company-wrap__link--keeway:hover {
+  background-image: url("../../../images/loga/keeway2.png");
+}
+.about-company .company-wrap__link--kymco {
+  background-image: url("../../images/loga/kymco.png");
+}
+.about-company .company-wrap__link--kymco:hover {
+  background-image: url("../../images/loga/kymco1.png");
+}
+.about-company .company-wrap__link--qjmotor {
+  background-image: url("../../images/loga/qj.png");
+}
+.about-company .company-wrap__link--qjmotor:hover {
+  background-image: url("../../images/loga/qjj.png");
+}
+.about-company .company-wrap__link--morbidelli {
+  background-image: url("../../images/loga/mbp.png");
+}
+.about-company .company-wrap__link--morbidelli:hover {
+  background-image: url("../../images/loga/mbpp.png");
+}
+.about-company .company-wrap__link--benneli {
+  background-image: url("../../../images/loga/keeway1000.png");
+}
+.about-company .company-wrap__link--benneli:hover {
   background-image: url("../../../images/loga/keeway2.png");
 }
 

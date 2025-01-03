@@ -6,7 +6,7 @@
   background-color: #c2c2c2;
   min-height: 100vh;
   box-sizing: border-box;
-  position: fixed;
+  position: absolute;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   top: 0;
@@ -21,7 +21,11 @@
   }
 
   &__links {
-    padding: 0 25px;
+    padding: 0 25px 25px;
+
+    @include md {
+      display: flex;
+    }
   }
 
   &:target {
@@ -32,8 +36,16 @@
 .producer-links {
   grid-column: 1 / -1;
 
+  &__list {
+    padding: 0 20px;
+  }
+
   &__item {
-    padding-bottom: 22px;
+    padding-bottom: 12px;
+
+    @include md {
+      padding-bottom: 22px;
+    }
   }
 
   &__link {
@@ -50,6 +62,11 @@
     border-bottom: 2px solid transparent;
     text-transform: uppercase;
     box-sizing: border-box;
+
+    @include md {
+      font-size: 22px;
+      line-height: 22px;
+    }
 
     &:hover {
       border-bottom: 2px solid #1d1d1d;

@@ -5,20 +5,50 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  min-height: 90vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
   @include grid;
 
-  &--keeway {
-    background-image: url("../../images//keewfront4.jpg");
-    min-height: 90vh;
-    background-position: 85% center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  @include lg() {
+    background-position: center;
+    background-size: contain;
+    min-height: 682px;
+  }
 
-    @include lg() {
-      background-position: center;
-      background-size: contain;
-      min-height: 682px;
-    }
+  &--keeway {
+    background-image: url("../../images/keeway/keewfront4.jpg");
+  }
+
+  &--kymco {
+    background-image: url("../../images/kymco/kymcofront1.jpg");
+  }
+
+  &--qjmotor {
+    background-image: url("../../images/qjmotor/qjfront2.jpg");
+  }
+
+  &--morbidelli {
+    background-image: url("../../images/morbidelli/mbpfront.jpg");
+  }
+
+  // &--benelli {
+  //   background-image: url("../../images/morbidelli/mbpfront.jpg");
+  // }
+
+  // &--skutery {
+  //   background-image: url("../../images/morbidelli/mbpfront.jpg");
+  // }
+
+  // &--motocykle {
+  //   background-image: url("../../images/morbidelli/mbpfront.jpg");
+  // }
+
+  &--quady {
+    background-image: url("../../images/quady/quadfront.jpg");
   }
 
   &__nav {

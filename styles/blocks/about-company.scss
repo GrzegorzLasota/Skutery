@@ -33,9 +33,42 @@
       height: 100%;
       border-radius: 50%;
       background-size: cover;
+      background-position: center;
     }
 
     &__link--keeway {
+      background-image: url("../../../images/loga/keeway1000.png");
+
+      &:hover {
+        background-image: url("../../../images/loga/keeway2.png");
+      }
+    }
+
+    &__link--kymco {
+      background-image: url("../../images/loga/kymco.png");
+
+      &:hover {
+        background-image: url("../../images/loga/kymco1.png");
+      }
+    }
+
+    &__link--qjmotor {
+      background-image: url("../../images/loga/qj.png");
+
+      &:hover {
+        background-image: url("../../images/loga/qjj.png");
+      }
+    }
+
+    &__link--morbidelli {
+      background-image: url("../../images/loga/mbp.png");
+
+      &:hover {
+        background-image: url("../../images/loga/mbpp.png");
+      }
+    }
+
+    &__link--benneli {
       background-image: url("../../../images/loga/keeway1000.png");
 
       &:hover {
