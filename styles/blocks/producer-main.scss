@@ -309,6 +309,12 @@
           }
         }
 
+        &--red-right {
+          &::after {
+            @include red-right;
+          }
+        }
+
         // kolory beforków i afterków - KONIEC
       }
     }

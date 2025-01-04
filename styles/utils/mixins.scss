@@ -101,6 +101,15 @@
   left: -40px;
 }
 
+@mixin red-right() {
+  @include colorsOfBike;
+  content: "czerwony";
+  font-size: 12px;
+  color: rgb(158, 0, 0);
+  transform: rotate(45deg);
+  right: -40px;
+}
+
 @mixin blue() {
   @include colorsOfBike;
   content: "niebieski";
