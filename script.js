@@ -75,24 +75,24 @@ function checkDrops() {
   });
 }
 
-const dropsLeft = document.querySelectorAll(".fading-drop-left");
-window.addEventListener("scroll", checkDropsLeft);
+const dropsFast = document.querySelectorAll(".fading-drop-fast");
+window.addEventListener("scroll", checkDropsFast);
 
-function checkDropsLeft() {
+function checkDropsFast() {
   const triggerBot = window.innerHeight - 200;
 
-  dropsLeft.forEach((drop) => {
+  dropsFast.forEach((drop) => {
     const dropTop = drop.getBoundingClientRect().top;
 
     if (dropTop < triggerBot) {
-      drop.classList.add("visible-left");
+      drop.classList.add("visible-fast");
     } else {
-      drop.classList.remove("visible-left");
+      drop.classList.remove("visible-fast");
     }
   });
 }
 
-const dropsRight = document.querySelectorAll(".fading-drop-right");
+const dropsRight = document.querySelectorAll(".fading-drop-slow");
 window.addEventListener("scroll", checkDropsRight);
 
 function checkDropsRight() {
@@ -102,9 +102,9 @@ function checkDropsRight() {
     const dropTop = drop.getBoundingClientRect().top;
 
     if (dropTop < triggerBot) {
-      drop.classList.add("visible-right");
+      drop.classList.add("visible-slow");
     } else {
-      drop.classList.remove("visible-right");
+      drop.classList.remove("visible-slow");
     }
   });
 }

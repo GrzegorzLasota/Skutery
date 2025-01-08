@@ -176,7 +176,6 @@
       overflow: hidden;
       border-radius: 10px;
       border: 2px solid rgba(255, 217, 0, 0.63);
-      border-bottom: 0;
 
       @include lg {
         grid-column: 2/-2;
@@ -285,6 +284,12 @@
           }
         }
 
+        &--gray-right {
+          &::after {
+            @include gray-right;
+          }
+        }
+
         &--white {
           &::after {
             @include white;
@@ -312,6 +317,24 @@
         &--red-right {
           &::after {
             @include red-right;
+          }
+        }
+
+        &--gold {
+          &::after {
+            @include gold;
+          }
+        }
+
+        &--silver {
+          &::after {
+            @include silver;
+          }
+        }
+
+        &--orange {
+          &::after {
+            @include orange;
           }
         }
 

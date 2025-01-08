@@ -17,22 +17,22 @@
   opacity: 1;
 }
 
-.fading-drop-left {
+.fading-drop-fast {
   opacity: 0;
   transform: translateX(-250px);
   transition: all 0.3s ease-in-out;
 }
-.visible-left {
+.visible-fast {
   opacity: 1;
   transform: translateX(0);
 }
 
-.fading-drop-right {
+.fading-drop-slow {
   opacity: 0;
   transform: translateX(-250px);
   transition: all 0.9s ease-in-out;
 }
-.visible-right {
+.visible-slow {
   opacity: 1;
   transform: translateX(0);
 }

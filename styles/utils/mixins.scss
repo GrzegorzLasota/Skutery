@@ -92,6 +92,24 @@
   left: -40px;
 }
 
+@mixin gray-right() {
+  @include colorsOfBike;
+  content: "szary";
+  color: rgb(73, 73, 73);
+  transform: rotate(45deg);
+  right: -40px;
+}
+
+@mixin silver() {
+  @include colorsOfBike;
+  content: "srebrny";
+  color: rgb(87, 87, 87);
+  text-shadow: 0px 0px 1px silver;
+  font-size: 14px;
+  transform: rotate(45deg);
+  right: -40px;
+}
+
 @mixin red() {
   @include colorsOfBike;
   content: "czerwony";
@@ -115,6 +133,26 @@
   content: "niebieski";
   font-size: 14px;
   color: rgb(0, 61, 173);
+  transform: rotate(45deg);
+  right: -40px;
+}
+
+@mixin gold() {
+  @include colorsOfBike;
+  content: "piaskowy";
+  font-size: 13px;
+  color: gold;
+  text-shadow: 0 0px 3px #000;
+  transform: rotate(45deg);
+  right: -40px;
+}
+
+@mixin orange() {
+  @include colorsOfBike;
+  content: "pomarańczowy";
+  text-shadow: 0 0px 3px orange;
+  font-size: 8px;
+  color: rgb(0, 0, 0);
   transform: rotate(45deg);
   right: -40px;
 }
