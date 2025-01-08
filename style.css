@@ -1329,6 +1329,9 @@ table {
 .producer-header--morbidelli {
   background-image: url("../../images/morbidelli/mbpfront.jpg");
 }
+.producer-header--benelli {
+  background-image: url("../../images/benneli/benellifront.jpg");
+}
 .producer-header--quady {
   background-image: url("../../images/quady/quadfront.jpg");
 }
@@ -1755,6 +1758,24 @@ table {
   left: 0;
   transform: translateX(100%);
 }
+.producer-main .product .photo-box .pro-colors--fourth_hide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+.producer-main .product .photo-box .pro-colors--fourth_show {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: translateX(0%);
+}
+.producer-main .product .photo-box .pro-colors--fourth_run {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+}
 .producer-main .product .photo-box .pro-colors__photo {
   width: 50%;
   height: auto;
@@ -1784,6 +1805,7 @@ table {
   position: absolute;
   top: 20px;
   content: "biały";
+  z-index: 1;
   color: rgb(254, 255, 216);
   transform: rotate(45deg);
   right: -40px;
@@ -1864,6 +1886,7 @@ table {
   position: absolute;
   top: 20px;
   content: "biały";
+  z-index: 1;
   color: rgb(254, 255, 216);
   transform: rotate(45deg);
   right: -40px;
@@ -2016,6 +2039,48 @@ table {
   color: rgb(0, 0, 0);
   transform: rotate(45deg);
   right: -40px;
+}
+.producer-main .product .photo-box .pro-colors--green::after {
+  display: block;
+  z-index: -1;
+  text-align: center;
+  width: 140px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: gold;
+  text-shadow: 1px 1px 10px rgb(0, 0, 0);
+  position: absolute;
+  top: 20px;
+  content: "zielony";
+  font-size: 14px;
+  color: green;
+  transform: rotate(45deg);
+  right: -40px;
+}
+.producer-main .product .photo-box .pro-colors--brown::before {
+  display: block;
+  z-index: -1;
+  text-align: center;
+  width: 140px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: gold;
+  text-shadow: 1px 1px 10px rgb(0, 0, 0);
+  position: absolute;
+  top: 20px;
+  content: "brązowy";
+  font-size: 13px;
+  color: brown;
+  transform: rotate(-45deg);
+  left: -40px;
 }
 .producer-main .product__title {
   grid-column: 1/-1;
@@ -2482,10 +2547,10 @@ table {
   background-image: url("../../images/loga/mbpp.png");
 }
 .about-company .company-wrap__link--benneli {
-  background-image: url("../../../images/loga/keeway1000.png");
+  background-image: url("../../images/loga/benneli1.png");
 }
 .about-company .company-wrap__link--benneli:hover {
-  background-image: url("../../../images/loga/keeway2.png");
+  background-image: url("../../images/loga/benneli12.png");
 }
 
 html {

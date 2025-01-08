@@ -250,6 +250,18 @@
           @include motor_run;
         }
 
+        &--fourth_hide {
+          @include motor_hide;
+        }
+
+        &--fourth_show {
+          @include motor_show;
+        }
+
+        &--fourth_run {
+          @include motor_run;
+        }
+
         // slider z kolorowymi skuterami, klasy po kliknieciu zeby zwiewaly i wracały
 
         &__photo {
@@ -335,6 +347,18 @@
         &--orange {
           &::after {
             @include orange;
+          }
+        }
+
+        &--green {
+          &::after {
+            @include green;
+          }
+        }
+
+        &--brown {
+          &::before {
+            @include brown;
           }
         }
 

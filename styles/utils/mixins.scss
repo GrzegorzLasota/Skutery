@@ -71,6 +71,7 @@
 @mixin white() {
   @include colorsOfBike;
   content: "biały";
+  z-index: 1;
   color: rgb(254, 255, 216);
   transform: rotate(45deg);
   right: -40px;
@@ -155,6 +156,24 @@
   color: rgb(0, 0, 0);
   transform: rotate(45deg);
   right: -40px;
+}
+
+@mixin green() {
+  @include colorsOfBike;
+  content: "zielony";
+  font-size: 14px;
+  color: green;
+  transform: rotate(45deg);
+  right: -40px;
+}
+
+@mixin brown() {
+  @include colorsOfBike;
+  content: "brązowy";
+  font-size: 13px;
+  color: brown;
+  transform: rotate(-45deg);
+  left: -40px;
 }
 
 @mixin motor_hide() {

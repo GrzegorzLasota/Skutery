@@ -128,6 +128,14 @@ const btnVersiliaRight = document.querySelector(
   ".switch-color__arrow--versilia_right"
 );
 
+const btnFourthLeft = document.querySelector(
+  ".switch-color__arrow--fourth_left"
+);
+
+const btnFourthRight = document.querySelector(
+  ".switch-color__arrow--fourth_right"
+);
+
 if (btnFactLeft) {
   btnFactLeft.addEventListener("click", function () {
     $(".pro-colors--fact_hide").removeClass("pro-colors--fact_show");
@@ -164,5 +172,18 @@ if (btnVersiliaRight) {
   btnVersiliaRight.addEventListener("click", function () {
     $(".pro-colors--versilia_one").addClass("pro-colors--versilia_run");
     $(".pro-colors--versilia_hide").addClass("pro-colors--versilia_show");
+  });
+}
+
+if (btnFourthLeft) {
+  btnFourthLeft.addEventListener("click", function () {
+    $(".pro-colors--fourth_hide").removeClass("pro-colors--fourth_show");
+    $(".pro-colors--fourth_one").removeClass("pro-colors--fourth_run");
+  });
+}
+if (btnFourthRight) {
+  btnFourthRight.addEventListener("click", function () {
+    $(".pro-colors--fourth_one").addClass("pro-colors--fourth_run");
+    $(".pro-colors--fourth_hide").addClass("pro-colors--fourth_show");
   });
 }
