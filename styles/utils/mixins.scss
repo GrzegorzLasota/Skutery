@@ -83,6 +83,7 @@
   color: rgb(0, 0, 0);
   transform: rotate(-45deg);
   left: -40px;
+  z-index: 1;
 }
 
 @mixin gray() {
@@ -99,6 +100,7 @@
   color: rgb(73, 73, 73);
   transform: rotate(45deg);
   right: -40px;
+  z-index: 1;
 }
 
 @mixin silver() {

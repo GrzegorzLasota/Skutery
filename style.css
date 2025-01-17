@@ -1829,6 +1829,7 @@ table {
   color: rgb(0, 0, 0);
   transform: rotate(-45deg);
   left: -40px;
+  z-index: 1;
 }
 .producer-main .product .photo-box .pro-colors--gray::before {
   display: block;
@@ -1869,6 +1870,7 @@ table {
   color: rgb(73, 73, 73);
   transform: rotate(45deg);
   right: -40px;
+  z-index: 1;
 }
 .producer-main .product .photo-box .pro-colors--white::after {
   display: block;
@@ -1910,6 +1912,7 @@ table {
   color: rgb(0, 0, 0);
   transform: rotate(-45deg);
   left: -40px;
+  z-index: 1;
 }
 .producer-main .product .photo-box .pro-colors--blue::before {
   display: block;
