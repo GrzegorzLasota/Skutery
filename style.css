@@ -1935,6 +1935,27 @@ table {
   transform: rotate(45deg);
   right: -40px;
 }
+.producer-main .product .photo-box .pro-colors--blue-after::after {
+  display: block;
+  z-index: -1;
+  text-align: center;
+  width: 140px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: gold;
+  text-shadow: 1px 1px 10px rgb(0, 0, 0);
+  position: absolute;
+  top: 20px;
+  content: "niebieski";
+  font-size: 14px;
+  color: rgb(0, 61, 173);
+  transform: rotate(45deg);
+  right: -40px;
+}
 .producer-main .product .photo-box .pro-colors--red::after {
   display: block;
   z-index: -1;

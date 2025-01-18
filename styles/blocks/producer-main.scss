@@ -320,6 +320,12 @@
           }
         }
 
+        &--blue-after {
+          &::after {
+            @include blue-after;
+          }
+        }
+
         &--red {
           &::after {
             @include red;
