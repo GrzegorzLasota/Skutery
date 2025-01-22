@@ -1872,6 +1872,27 @@ table {
   right: -40px;
   z-index: 1;
 }
+.producer-main .product .photo-box .pro-colors--white-before::before {
+  display: block;
+  z-index: -1;
+  text-align: center;
+  width: 140px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: gold;
+  text-shadow: 1px 1px 10px rgb(0, 0, 0);
+  position: absolute;
+  top: 20px;
+  content: "biały";
+  z-index: 1;
+  color: rgb(254, 255, 216);
+  transform: rotate(-45deg);
+  left: -40px;
+}
 .producer-main .product .photo-box .pro-colors--white::after {
   display: block;
   z-index: -1;
@@ -1914,6 +1935,27 @@ table {
   left: -40px;
   z-index: 1;
 }
+.producer-main .product .photo-box .pro-colors--black-after::after {
+  display: block;
+  z-index: -1;
+  text-align: center;
+  width: 140px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: gold;
+  text-shadow: 1px 1px 10px rgb(0, 0, 0);
+  position: absolute;
+  top: 20px;
+  content: "czarny";
+  z-index: 1;
+  color: rgb(0, 0, 0);
+  transform: rotate(45deg);
+  right: -40px;
+}
 .producer-main .product .photo-box .pro-colors--blue::before {
   display: block;
   z-index: -1;
@@ -1934,6 +1976,27 @@ table {
   color: rgb(0, 61, 173);
   transform: rotate(45deg);
   right: -40px;
+}
+.producer-main .product .photo-box .pro-colors--blue-left::before {
+  display: block;
+  z-index: -1;
+  text-align: center;
+  width: 140px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: gold;
+  text-shadow: 1px 1px 10px rgb(0, 0, 0);
+  position: absolute;
+  top: 20px;
+  content: "niebieski";
+  font-size: 14px;
+  color: rgb(0, 61, 173);
+  transform: rotate(-45deg);
+  left: -40px;
 }
 .producer-main .product .photo-box .pro-colors--blue-after::after {
   display: block;

@@ -302,6 +302,12 @@
           }
         }
 
+        &--white-before {
+          &::before {
+            @include white-before;
+          }
+        }
+
         &--white {
           &::after {
             @include white;
@@ -314,9 +320,21 @@
           }
         }
 
+        &--black-after {
+          &::after {
+            @include black-after;
+          }
+        }
+
         &--blue {
           &::before {
             @include blue;
+          }
+        }
+
+        &--blue-left {
+          &::before {
+            @include blue-left;
           }
         }
 

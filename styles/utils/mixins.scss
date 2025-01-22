@@ -77,6 +77,15 @@
   right: -40px;
 }
 
+@mixin white-before() {
+  @include colorsOfBike;
+  content: "biały";
+  z-index: 1;
+  color: rgb(254, 255, 216);
+  transform: rotate(-45deg);
+  left: -40px;
+}
+
 @mixin black() {
   @include colorsOfBike;
   content: "czarny";
@@ -84,6 +93,15 @@
   transform: rotate(-45deg);
   left: -40px;
   z-index: 1;
+}
+
+@mixin black-after() {
+  @include colorsOfBike;
+  content: "czarny";
+  z-index: 1;
+  color: rgb(0, 0, 0);
+  transform: rotate(45deg);
+  right: -40px;
 }
 
 @mixin gray() {
@@ -138,6 +156,15 @@
   color: rgb(0, 61, 173);
   transform: rotate(45deg);
   right: -40px;
+}
+
+@mixin blue-left() {
+  @include colorsOfBike;
+  content: "niebieski";
+  font-size: 14px;
+  color: rgb(0, 61, 173);
+  transform: rotate(-45deg);
+  left: -40px;
 }
 
 @mixin blue-after() {
