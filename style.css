@@ -1332,6 +1332,12 @@ table {
 .producer-header--benelli {
   background-image: url("../../images/benneli/benellifront.jpg");
 }
+.producer-header--scooter {
+  background-image: url("../../images/inne/most.jpg");
+}
+.producer-header--motocykle {
+  background-image: url("../../images/inne/singlemotor11.jpg");
+}
 .producer-header--quady {
   background-image: url("../../images/quady/quadfront.jpg");
 }
@@ -2180,21 +2186,15 @@ table {
   text-decoration-skip-ink: none;
 }
 .producer-main .product__write {
-  font-family: "Niconne", serif;
-  font-weight: 400;
+  font-family: "Dancing Script", serif;
+  text-transform: uppercase;
+  font-weight: bold;
   font-style: normal;
-  font-size: 50px;
+  font-size: 30px;
   letter-spacing: 2px;
   display: block;
-  padding-top: 25px;
-  line-height: 60px;
-}
-@media (min-width: 1020px) {
-  .producer-main .product__write {
-    padding-top: 0;
-    padding-left: 20px;
-    display: inline-block;
-  }
+  padding-top: 20px;
+  line-height: 150%;
 }
 .producer-main .product__title--name {
   grid-column: 1/-1;
