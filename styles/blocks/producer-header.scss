@@ -40,15 +40,15 @@
   }
 
   &--scooter {
-    background-image: url("../../images/inne/most.jpg");
+    background-image: url("../../images/inne/skuteryx.jpg");
   }
 
   &--motocykle {
-    background-image: url("../../images/inne/singlemotor11.jpg");
+    background-image: url("../../images/inne/most.jpg");
   }
 
   &--quady {
-    background-image: url("../../images/quady/quadfront.jpg");
+    background-image: url("../../images/inne/quadfront.jpg");
   }
 
   &__nav {
@@ -109,6 +109,7 @@
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+    text-shadow: 0px 0px 3px #000000;
     color: #fff;
     display: flex;
     justify-content: center;
