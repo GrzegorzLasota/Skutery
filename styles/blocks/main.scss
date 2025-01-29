@@ -2,6 +2,57 @@
 @use "../utils/variables.scss" as *;
 @use "../utils/font-icon.scss" as *;
 
+.work {
+  &::before {
+    content: "Zakładka w trakcie budowy.";
+    width: 100%;
+    height: 35px;
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    font-size: 10px;
+    white-space: wrap;
+    line-height: 35px;
+    text-align: center;
+    background-color: rgba(255, 217, 0, 0.836);
+    color: #000;
+    z-index: 1;
+    font-size: 17px;
+
+    @include md() {
+      font-size: 12.5px;
+    }
+
+    @include lg() {
+      font-size: 18px;
+    }
+  }
+
+  &::after {
+    content: "Otwarcie 01.03.2025r.";
+    width: 100%;
+    height: 35px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    font-size: 10px;
+    white-space: wrap;
+    line-height: 35px;
+    text-align: center;
+    background-color: rgba(255, 217, 0, 0.836);
+    color: #000;
+    z-index: 1;
+    font-size: 17px;
+
+    @include md() {
+      font-size: 12.5px;
+    }
+    @include lg() {
+      font-size: 18px;
+    }
+  }
+}
+
 .main {
   padding: 10px;
 
@@ -349,7 +400,11 @@
           }
 
           &:hover .grid-cars-bottom__link {
-            transform: translateY(-5px);
+            transform: scale(1.05);
+          }
+
+          &:hover .grid-cars-bottom__paragraph {
+            color: gold;
           }
         }
 
@@ -365,6 +420,31 @@
           text-transform: uppercase;
           transition: transform 0.2s ease;
           border-radius: 10px;
+          position: relative;
+        }
+
+        &__paragraph {
+          color: #d4d4d4;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          padding: 5px;
+          font-family: $bruno;
+          text-transform: lowercase;
+          letter-spacing: 1px;
+          box-sizing: border-box;
+          position: absolute;
+          left: 0;
+          font-size: 10px;
+          padding: 10px;
+          top: 0;
+
+          @include md {
+            font-size: 16px;
+            justify-content: flex-start;
+          }
         }
       }
     }

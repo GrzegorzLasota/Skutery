@@ -288,7 +288,7 @@ table {
 @media (min-width: 1600px) {
   .header {
     grid-template-columns: repeat(12, 73px);
-    gap: 34px;
+    gap: 14px;
   }
 }
 @media (min-width: 640px) {
@@ -381,44 +381,6 @@ table {
   padding-right: 10px;
   box-sizing: border-box;
   position: relative;
-}
-.header .middle::before {
-  content: "Strona w trakcie budowy.";
-  width: 100%;
-  height: 35px;
-  position: absolute;
-  left: 0;
-  bottom: 35px;
-  font-size: 10px;
-  white-space: wrap;
-  line-height: 35px;
-  text-align: center;
-  background-color: gold;
-  color: #000;
-}
-@media (min-width: 640px) {
-  .header .middle::before {
-    font-size: 20px;
-  }
-}
-.header .middle::after {
-  content: "Otwarcie salonu 1 marca 2025r.";
-  width: 100%;
-  height: 35px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  font-size: 10px;
-  white-space: wrap;
-  line-height: 35px;
-  text-align: center;
-  background-color: gold;
-  color: #000;
-}
-@media (min-width: 640px) {
-  .header .middle::after {
-    font-size: 20px;
-  }
 }
 @media (min-width: 640px) {
   .header .middle {
@@ -524,6 +486,59 @@ table {
   align-items: center;
 }
 
+.work::before {
+  content: "Zakładka w trakcie budowy.";
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+  font-size: 10px;
+  white-space: wrap;
+  line-height: 35px;
+  text-align: center;
+  background-color: rgba(255, 217, 0, 0.836);
+  color: #000;
+  z-index: 1;
+  font-size: 17px;
+}
+@media (min-width: 640px) {
+  .work::before {
+    font-size: 12.5px;
+  }
+}
+@media (min-width: 1020px) {
+  .work::before {
+    font-size: 18px;
+  }
+}
+.work::after {
+  content: "Otwarcie 01.03.2025r.";
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  font-size: 10px;
+  white-space: wrap;
+  line-height: 35px;
+  text-align: center;
+  background-color: rgba(255, 217, 0, 0.836);
+  color: #000;
+  z-index: 1;
+  font-size: 17px;
+}
+@media (min-width: 640px) {
+  .work::after {
+    font-size: 12.5px;
+  }
+}
+@media (min-width: 1020px) {
+  .work::after {
+    font-size: 18px;
+  }
+}
+
 .main {
   padding: 10px;
   display: grid;
@@ -545,7 +560,7 @@ table {
 @media (min-width: 1600px) {
   .main {
     grid-template-columns: repeat(12, 73px);
-    gap: 34px;
+    gap: 14px;
   }
 }
 @media (min-width: 1600px) {
@@ -577,7 +592,7 @@ table {
 @media (min-width: 1600px) {
   .main .navi {
     grid-template-columns: repeat(12, 73px);
-    gap: 34px;
+    gap: 14px;
   }
 }
 .main .navi__list {
@@ -603,7 +618,7 @@ table {
 @media (min-width: 1600px) {
   .main .navi__list {
     grid-template-columns: repeat(12, 73px);
-    gap: 34px;
+    gap: 14px;
   }
 }
 @media (min-width: 1020px) {
@@ -920,7 +935,10 @@ table {
   }
 }
 .main .navi__item--cars .grid-cars-bottom__item:hover .grid-cars-bottom__link {
-  transform: translateY(-5px);
+  transform: scale(1.05);
+}
+.main .navi__item--cars .grid-cars-bottom__item:hover .grid-cars-bottom__paragraph {
+  color: gold;
 }
 .main .navi__item--cars .grid-cars-bottom__link {
   text-decoration: none;
@@ -934,6 +952,31 @@ table {
   text-transform: uppercase;
   transition: transform 0.2s ease;
   border-radius: 10px;
+  position: relative;
+}
+.main .navi__item--cars .grid-cars-bottom__paragraph {
+  color: #d4d4d4;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 5px;
+  font-family: "Bruno Ace SC", sans-serif;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  font-size: 10px;
+  padding: 10px;
+  top: 0;
+}
+@media (min-width: 640px) {
+  .main .navi__item--cars .grid-cars-bottom__paragraph {
+    font-size: 16px;
+    justify-content: flex-start;
+  }
 }
 
 .section__open {
@@ -961,7 +1004,7 @@ table {
 @media (min-width: 1600px) {
   .section .open {
     grid-template-columns: repeat(12, 73px);
-    gap: 34px;
+    gap: 14px;
   }
 }
 .section .open__title {
@@ -1046,7 +1089,7 @@ table {
 @media (min-width: 1600px) {
   .footer {
     grid-template-columns: repeat(12, 73px);
-    gap: 34px;
+    gap: 14px;
   }
 }
 .footer-info-section {
@@ -1071,7 +1114,7 @@ table {
 @media (min-width: 1600px) {
   .footer-info-section {
     grid-template-columns: repeat(12, 73px);
-    gap: 34px;
+    gap: 14px;
   }
 }
 .footer__block {
@@ -1273,11 +1316,16 @@ table {
 }
 .footer .socials__link-tiktok {
   border: 2px solid #69c9d0;
-  color: #69c9d0;
+  color: #000;
 }
 .footer .socials__link-tiktok:hover {
-  background-color: #69c9d0;
-  color: #010101;
+  background-color: #fff;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.footer .socials__link .tiktok-logo {
+  max-width: 100%;
+  height: auto;
 }
 .footer .socials__icon {
   font-size: 20px;
@@ -1319,7 +1367,7 @@ table {
 @media (min-width: 1600px) {
   .producer-header {
     grid-template-columns: repeat(12, 73px);
-    gap: 34px;
+    gap: 14px;
   }
 }
 @media (min-width: 1020px) {
@@ -1390,6 +1438,24 @@ table {
 .producer-header__item--logo {
   width: 160px;
 }
+.producer-header__link {
+  text-decoration: none;
+}
+.producer-header__back-page {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 5px;
+  color: rgba(255, 217, 0, 0.411);
+  position: relative;
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+.producer-header__back-page::before {
+  content: "<<< ";
+  position: absolute;
+  left: 0;
+}
 .producer-header__keeway {
   width: 100%;
   height: auto;
@@ -1444,7 +1510,7 @@ table {
 @media (min-width: 1600px) {
   .producer-main {
     grid-template-columns: repeat(12, 73px);
-    gap: 34px;
+    gap: 14px;
   }
 }
 .producer-main__invite {
@@ -1472,7 +1538,7 @@ table {
 @media (min-width: 1600px) {
   .producer-main .invite {
     grid-template-columns: repeat(12, 73px);
-    gap: 34px;
+    gap: 14px;
   }
 }
 @media (min-width: 640px) {
@@ -1563,7 +1629,7 @@ table {
 @media (min-width: 1600px) {
   .producer-main .products-wrapper {
     grid-template-columns: repeat(12, 73px);
-    gap: 34px;
+    gap: 14px;
   }
 }
 .producer-main .products-wrapper__product {
@@ -1602,7 +1668,7 @@ table {
 @media (min-width: 1600px) {
   .producer-main .products-wrapper__product-wrap {
     grid-template-columns: repeat(12, 73px);
-    gap: 34px;
+    gap: 14px;
   }
 }
 .producer-main .product-wrap {
@@ -1679,7 +1745,7 @@ table {
 @media (min-width: 1600px) {
   .producer-main .product {
     grid-template-columns: repeat(12, 73px);
-    gap: 34px;
+    gap: 14px;
   }
 }
 .producer-main .product__photo-box {
@@ -2298,7 +2364,7 @@ table {
 @media (min-width: 1600px) {
   .producer-main .details {
     grid-template-columns: repeat(12, 73px);
-    gap: 34px;
+    gap: 14px;
   }
 }
 .producer-main .details__title {
@@ -2424,7 +2490,7 @@ table {
 @media (min-width: 1600px) {
   .producer-main .technicals {
     grid-template-columns: repeat(12, 73px);
-    gap: 34px;
+    gap: 14px;
   }
 }
 .producer-main .technicals__title {
@@ -2561,7 +2627,7 @@ table {
 @media (min-width: 1600px) {
   .drop-menu {
     grid-template-columns: repeat(12, 73px);
-    gap: 34px;
+    gap: 14px;
   }
 }
 @media (min-width: 640px) {

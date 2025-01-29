@@ -236,11 +236,17 @@
 
       &-tiktok {
         border: 2px solid #69c9d0;
-        color: #69c9d0;
+        color: #000;
         &:hover {
-          background-color: #69c9d0;
-          color: #010101;
+          background-color: #fff;
+          color: #fff;
+          border: 2px solid #fff;
         }
+      }
+
+      .tiktok-logo {
+        max-width: 100%;
+        height: auto;
       }
     }
 

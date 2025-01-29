@@ -95,6 +95,27 @@
     }
   }
 
+  &__link {
+    text-decoration: none;
+  }
+
+  &__back-page {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 5px;
+    color: rgba(255, 217, 0, 0.411);
+    position: relative;
+    letter-spacing: 1px;
+    font-size: 10px;
+
+    &::before {
+      content: "<<< ";
+      position: absolute;
+      left: 0;
+    }
+  }
+
   &__keeway {
     width: 100%;
     height: auto;
