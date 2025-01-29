@@ -178,6 +178,10 @@ table {
   letter-spacing: 1px;
 }
 
+.title-shadow {
+  text-shadow: 0px 0px 3px #000000;
+}
+
 .fading-box {
   opacity: 0;
   transform: translateY(150px);
@@ -1267,6 +1271,14 @@ table {
   background-color: #c4302b;
   color: #fff;
 }
+.footer .socials__link-tiktok {
+  border: 2px solid #69c9d0;
+  color: #69c9d0;
+}
+.footer .socials__link-tiktok:hover {
+  background-color: #69c9d0;
+  color: #010101;
+}
 .footer .socials__icon {
   font-size: 20px;
 }
@@ -1391,7 +1403,6 @@ table {
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  text-shadow: 0px 0px 3px #000000;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -1778,6 +1789,42 @@ table {
   transform: translateX(0%);
 }
 .producer-main .product .photo-box .pro-colors--fourth_run {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+}
+.producer-main .product .photo-box .pro-colors--fifth_hide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+.producer-main .product .photo-box .pro-colors--fifth_show {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: translateX(0%);
+}
+.producer-main .product .photo-box .pro-colors--fifth_run {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+}
+.producer-main .product .photo-box .pro-colors--sixth_hide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+.producer-main .product .photo-box .pro-colors--sixth_show {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: translateX(0%);
+}
+.producer-main .product .photo-box .pro-colors--sixth_run {
   position: absolute;
   top: 0;
   left: 0;

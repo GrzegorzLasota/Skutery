@@ -262,6 +262,30 @@
           @include motor_run;
         }
 
+        &--fifth_hide {
+          @include motor_hide;
+        }
+
+        &--fifth_show {
+          @include motor_show;
+        }
+
+        &--fifth_run {
+          @include motor_run;
+        }
+
+        &--sixth_hide {
+          @include motor_hide;
+        }
+
+        &--sixth_show {
+          @include motor_show;
+        }
+
+        &--sixth_run {
+          @include motor_run;
+        }
+
         // slider z kolorowymi skuterami, klasy po kliknieciu zeby zwiewaly i wracały
 
         &__photo {

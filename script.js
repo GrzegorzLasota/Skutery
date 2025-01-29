@@ -136,6 +136,18 @@ const btnFourthRight = document.querySelector(
   ".switch-color__arrow--fourth_right"
 );
 
+const btnFifthLeft = document.querySelector(".switch-color__arrow--fifth_left");
+
+const btnFifthRight = document.querySelector(
+  ".switch-color__arrow--fifth_right"
+);
+
+const btnSixthLeft = document.querySelector(".switch-color__arrow--sixth_left");
+
+const btnSixthRight = document.querySelector(
+  ".switch-color__arrow--sixth_right"
+);
+
 if (btnFactLeft) {
   btnFactLeft.addEventListener("click", function () {
     $(".pro-colors--fact_hide").removeClass("pro-colors--fact_show");
@@ -185,5 +197,31 @@ if (btnFourthRight) {
   btnFourthRight.addEventListener("click", function () {
     $(".pro-colors--fourth_one").addClass("pro-colors--fourth_run");
     $(".pro-colors--fourth_hide").addClass("pro-colors--fourth_show");
+  });
+}
+
+if (btnFifthLeft) {
+  btnFifthLeft.addEventListener("click", function () {
+    $(".pro-colors--fifth_hide").removeClass("pro-colors--fifth_show");
+    $(".pro-colors--fifth_one").removeClass("pro-colors--fifth_run");
+  });
+}
+if (btnFifthRight) {
+  btnFifthRight.addEventListener("click", function () {
+    $(".pro-colors--fifth_one").addClass("pro-colors--fifth_run");
+    $(".pro-colors--fifth_hide").addClass("pro-colors--fifth_show");
+  });
+}
+
+if (btnSixthLeft) {
+  btnSixthLeft.addEventListener("click", function () {
+    $(".pro-colors--sixth_hide").removeClass("pro-colors--sixth_show");
+    $(".pro-colors--sixth_one").removeClass("pro-colors--sixth_run");
+  });
+}
+if (btnSixthRight) {
+  btnSixthRight.addEventListener("click", function () {
+    $(".pro-colors--sixth_one").addClass("pro-colors--sixth_run");
+    $(".pro-colors--sixth_hide").addClass("pro-colors--sixth_show");
   });
 }
