@@ -405,7 +405,7 @@ table {
   animation: flying-banner 14s linear infinite;
   white-space: nowrap;
   letter-spacing: 1px;
-  color: #800020;
+  color: limegreen;
   font-size: 30px;
   line-height: 40px;
 }

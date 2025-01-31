@@ -225,3 +225,12 @@ if (btnSixthRight) {
     $(".pro-colors--sixth_hide").addClass("pro-colors--sixth_show");
   });
 }
+
+// const techBox = document.querySelector(".tech-el");
+// const techBoxParag = document.querySelector(".tech-el__paragraph");
+// const techInfo = document.querySelector(".tech-info");
+
+// document.addEventListener("click", function () {
+//   techBoxParag.classList.add("shadow-tech");
+//   techInfo.classList.add("visible-tech");
+// });
