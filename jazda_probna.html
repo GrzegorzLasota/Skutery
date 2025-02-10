@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Znajdziesz tutaj stylowe skutery miejskie i nie tylko. Gdy wybierzesz już swój wymarzony model, zajrzyj do działu z wyjątkowymi akcesoriami."
+    />
     <title>SkuteryGdansk.pl</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
@@ -15,7 +19,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./fontello/css/fontello.css" />
+    <link rel="stylesheet" href="./fontello/font/css/fontello.css" />
     <script src="./script.js" defer></script>
   </head>
   <body>
@@ -34,7 +38,7 @@
 
         <section class="company footer__block">
           <div class="company__logo-overlay">
-            <a class="company__link" href="#">
+            <a class="company__link" href="index.html">
               <img
                 class="company__logo-img"
                 alt="company-brand"
@@ -42,28 +46,38 @@
             /></a>
           </div>
           <div class="company__call-overlay">
+            <h4 class="title-fourth company__title">Zadzwoń do nas!</h4>
             <div class="company__icon">
               <i class="icon-phone"></i>
             </div>
-            <p class="paragraph">+58 123 456 789</p>
+            <a href="tel:507959344" class="paragraph company__call-paragraph"
+              >534 756 642</a
+            >
           </div>
           <div class="company__adress-overlay">
+            <h4 class="title-fourth company__title">Odwiedź nas!</h4>
             <div class="company__icon">
               <i class="icon-home"></i>
             </div>
-            <p class="paragraph">
+            <p class="paragraph company__adress-paragraph">
               ul. Kartuska 426 <br />
               80-125 Gdańsk
             </p>
           </div>
           <div class="company__mail-overlay">
+            <h4 class="title-fourth company__title">Napisz do nas!</h4>
             <div class="company__icon">
               <i class="icon-mail"></i>
             </div>
-            <p class="paragraph">salon@skuterygdansk.pl</p>
+            <a
+              href="mailto:salon@skuterygdansk.pl"
+              class="paragraph company__mail-paragraph"
+            >
+              salon@skuterygdansk.pl
+            </a>
           </div>
           <p class="paragraph company__paragraph">
-            Jesteśmy pierwszym i jedynym salonem skuterowym w Gdańsku.
+            Jesteśmy najlepszym salonem skuterowym, motocyklowym i nie tylko.
           </p>
         </section>
 
@@ -85,10 +99,10 @@
                     <a class="sub-navi__link" href="benneli.html">Benneli</a>
                   </li>
                   <li>
-                    <a class="sub-navi__link" href="kymco.html">Kymco</a>
+                    <a class="sub-navi__link" href="qjmotor.html">Qjmotor</a>
                   </li>
                   <li>
-                    <a class="sub-navi__link" href="qjmotor.html">Qjmotor</a>
+                    <a class="sub-navi__link" href="kymco.html">Kymco</a>
                   </li>
                   <li>
                     <a class="sub-navi__link" href="morbidelli.html"
@@ -116,9 +130,7 @@
               </li>
 
               <li class="navi-map__item">
-                <a class="navi-map__link" href="jazda_probna.html"
-                  >Jazda Próbna</a
-                >
+                <a class="navi-map__link" href="odziez.html">Odzież</a>
               </li>
 
               <li class="navi-map__item">
@@ -134,7 +146,11 @@
               </li>
 
               <li class="navi-map__item">
-                <a class="navi-map__link" href="odziez.html">Odzież</a>
+                <a
+                  class="navi-map__link active-subpage"
+                  href="jazda_probna.html"
+                  >Jazda Próbna</a
+                >
               </li>
             </ul>
           </div>
@@ -144,13 +160,22 @@
           <h4 class="title-fourth footer__block-title socials__title">
             Social Media
           </h4>
-          <p class="paragraph">
-            Nie przegap żadnej okazji i śledź nas na facebooku.
-          </p>
+          <p class="paragraph">Nie przegap żadnej okazji i śledź nas.</p>
           <div class="socials__overlay">
-            <a class="socials__link" href="#"
+            <a
+              class="socials__link socials__link-facebook"
+              href="https://www.facebook.com/profile.php?id=61572933863023"
               ><i class="icon-facebook socials__icon"></i
             ></a>
+            <a class="socials__link socials__link-instagram" href="index.html"
+              ><i class="icon-instagram socials__icon"></i
+            ></a>
+            <a class="socials__link socials__link-youtube" href="index.html"
+              ><i class="icon-youtube-squared socials__icon"></i
+            ></a>
+            <a class="socials__link socials__link-tiktok" href="index.html"
+              ><img class="tiktok-logo" src="./images/tiktok.png" alt="tiktok"
+            /></a>
           </div>
           <p class="paragraph socials__paragraph">Tutaj jesteśmy</p>
           <div class="socials__google-box">
@@ -168,9 +193,8 @@
 
         <section class="footer-finish">
           <p class="paragraph footer-finish__paragraph">
-            Copyright <span class="year">2024</span> &copy Wszelkie prawa
-            zastrzeżone. <br />
-            Realizacja - Grinjas
+            &copy <span id="year"></span> skuterygdansk.pl <br />
+            Realizacja - <span class="glascroll">glasota</span>
           </p>
         </section>
       </section>

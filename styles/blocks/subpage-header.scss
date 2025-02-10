@@ -1,0 +1,115 @@
+@use "../utils/mixins.scss" as *;
+@use "../utils/variables.scss" as *;
+
+.subpage-header {
+  min-height: 90vh;
+  @include grid;
+
+  @include lg() {
+    min-height: 682px;
+  }
+
+  &__clothes {
+    background-color: #eef7ff;
+
+    grid-column: 1/-1;
+    padding: 0 16px 40px;
+    margin-bottom: 64px;
+    @include grid;
+  }
+
+  .clothes {
+    .company-top {
+      grid-column: 1/-1;
+      min-height: 60px;
+      @include flex-center;
+
+      &__box {
+        display: block;
+        text-align: center;
+        box-sizing: border-box;
+        width: 100%;
+      }
+
+      &__logo-link {
+        max-width: 150px;
+        height: auto;
+      }
+    }
+
+    &__introduce {
+      grid-column: 1/-1;
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -1%;
+      text-align: center;
+      padding-top: 12px;
+
+      color: #1c1a26;
+    }
+
+    .header-photo-box {
+      grid-column: 1/-1;
+      @include flex-center;
+      flex-direction: column;
+      position: relative;
+
+      &__header-photo {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &__title {
+      grid-column: 1/-1;
+      color: #1c1a26;
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 64px;
+      line-height: 54.4px;
+      letter-spacing: -5%;
+      text-align: center;
+      z-index: 1;
+      position: absolute;
+      text-transform: uppercase;
+    }
+
+    &__start-btn {
+      grid-column: 1/-1;
+      display: block;
+      margin: 10px auto 0;
+      width: 288px;
+      height: 56px;
+      top: 510px;
+      left: 16px;
+      gap: 4px;
+      border-radius: 32px;
+      border: 2px solid #f9512e;
+      text-decoration: none;
+      @include flex-center;
+
+      &:hover {
+        background-color: #f9502e23;
+        border: 2px solid transparent;
+      }
+    }
+
+    .start-img-clothes-link {
+      color: #f9512e;
+      font-size: 20px;
+    }
+
+    .start-btn-clothes-link {
+      font-family: Inter;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: 2%;
+      text-transform: uppercase;
+
+      color: #f9512e;
+    }
+  }
+}

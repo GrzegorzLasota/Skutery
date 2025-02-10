@@ -234,3 +234,24 @@ if (btnSixthRight) {
 //   techBoxParag.classList.add("shadow-tech");
 //   techInfo.classList.add("visible-tech");
 // });
+
+[...document.querySelectorAll(".producer-main .technicals .tech-el")].forEach(
+  (el) => {
+    el.addEventListener("touchstart", () => {
+      [...el.querySelectorAll(".tech-el__tech-info")].forEach((tech) => {
+        tech.classList.add("tech-el__tech-info--visible");
+      });
+      el.querySelector(".tech-el__paragraph").classList.add(
+        "tech-el__paragraph--fade"
+      );
+    });
+    el.addEventListener("mouseout", () => {
+      [...el.querySelectorAll(".tech-el__tech-info")].forEach((tech) => {
+        tech.classList.remove("tech-el__tech-info--visible");
+      });
+      el.querySelector(".tech-el__paragraph").classList.remove(
+        "tech-el__paragraph--fade"
+      );
+    });
+  }
+);

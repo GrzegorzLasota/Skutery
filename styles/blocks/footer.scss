@@ -5,6 +5,10 @@
 .footer {
   @include grid();
 
+  &--clothes {
+    background-color: #1c1a26 !important;
+  }
+
   //drugi najstarszy element całej stópki, musi być żeby tło było scalowane
   &-info-section {
     grid-column: 1/-1;
@@ -157,6 +161,11 @@
       &__link {
         text-decoration: none;
         color: #fff;
+
+        &:hover:after {
+          content: "\22b2";
+          padding-left: 2px;
+        }
       }
     }
 
@@ -173,6 +182,11 @@
     &__link {
       text-decoration: none;
       color: #fff;
+
+      &:hover:after {
+        content: "\22b2";
+        padding-left: 2px;
+      }
     }
   }
 
@@ -264,6 +278,24 @@
       text-align: center;
       padding-bottom: 20px;
       font-size: 10px;
+    }
+  }
+
+  .glascroll {
+    color: #d1d1d1;
+    font-family: $popins;
+    letter-spacing: 1px;
+  }
+
+  .active-subpage {
+    &::after {
+      content: "\22b2";
+      padding-left: 2px;
+      color: gold;
+    }
+
+    &:hover {
+      border: none;
     }
   }
 }

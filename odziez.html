@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Znajdziesz tutaj stylowe skutery miejskie i nie tylko. Gdy wybierzesz już swój wymarzony model, zajrzyj do działu z wyjątkowymi akcesoriami."
+    />
     <title>SkuteryGdansk.pl</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
@@ -11,16 +15,211 @@
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luckiest+Guy&family=Niconne&family=Playwrite+AU+VIC+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./fontello/css/fontello.css" />
+    <link rel="stylesheet" href="./fontello/font/css/fontello.css" />
     <script src="./script.js" defer></script>
   </head>
-  <body>
+  <body class="clothes-subpage">
+    <header class="subpage-header">
+      <section class="clothes subpage-header__clothes">
+        <div class="company-top clothes__company-top">
+          <a href="index.html" class="company-top__box"
+            ><img
+              class="company-top__logo-link"
+              alt="company-logo"
+              src="./images/loga/gda.png"
+          /></a>
+        </div>
+
+        <h2 class="clothes__introduce title-secondary">
+          Odzież stworzona przez motocyklistów dla motocyklistów!
+        </h2>
+
+        <div class="header-photo-box clothes__header-photo-box">
+          <h1 class="clothes__title title">Rebelhorn i Ozone</h1>
+          <img
+            class="header-photo-box__header-photo"
+            src="./images/odzież/cloths.png"
+          />
+        </div>
+
+        <a class="clothes__start-btn" href="#offer-clothes">
+          <i class="icon-ok-circled start-img-clothes-link"></i>
+          <p class="start-btn-clothes-link">Rozejrzyj się</p>
+        </a>
+      </section>
+    </header>
+
+    <main class="subpage-main clothes-subpage__subpage-main" id="offer-clothes">
+      <section class="our-offer subpage-main__our-offer">
+        <h1 class="our-offer__title title">Nasza oferta obejmuje:</h1>
+        <p class="our-offer__paragraph">
+          Doskonale wiemy, jak ważne jest odpowiednie wyposażenie każdego
+          motocyklisty.
+        </p>
+
+        <section
+          class="offer-product our-offer__offer-product offer-product--one"
+        >
+          <div class="offer-product__box">
+            <img
+              class="offer-product__photo"
+              src="./images/odzież/kurtkaa.jpg"
+            />
+          </div>
+          <h3 class="offer-product__title">Kurtki motocyklowe</h3>
+          <p class="offer-product__paragraph">
+            Wybieraj spośród modeli tekstylnych i skórzanych, zaprojektowanych z
+            myślą o różnych stylach jazdy - od miejskiej po turystyczną.
+            Oferujemy kurtki z certyfikowanymi ochraniaczami, wentylacją i
+            membranami wodoodpornymi, które sprawdzą się w każdych warunkach.
+          </p>
+        </section>
+
+        <section
+          class="offer-product our-offer__offer-product offer-product--two"
+        >
+          <div class="offer-product__box">
+            <img
+              class="offer-product__photo"
+              src="./images/odzież/spodnie.jpg"
+            />
+          </div>
+          <h3 class="offer-product__title">Spodnie motocyklowe</h3>
+          <p class="offer-product__paragraph">
+            Oferujemy spodnie jeansowe z kevlarowymi wzmocnieniami, spodnie
+            turystyczne oraz sportowe, zapewniające maksymalną ochronę i wygodę.
+          </p>
+        </section>
+
+        <section
+          class="offer-product our-offer__offer-product offer-product--three"
+        >
+          <div class="offer-product__box">
+            <img
+              class="offer-product__photo"
+              src="./images/odzież/rekawice.jpg"
+            />
+          </div>
+          <h3 class="offer-product__title">Rękawice motocyklowe</h3>
+          <p class="offer-product__paragraph">
+            Od lekkich, przewiewnych modeli na lato, po ocieplane rękawice
+            zimowe z wodoodpornymi membranami - u nas znajdziesz rękawice
+            dostosowane do każdej pory roku i stylu jazdy.
+          </p>
+        </section>
+
+        <section
+          class="offer-product our-offer__offer-product offer-product--four"
+        >
+          <div class="offer-product__box">
+            <img class="offer-product__photo" src="./images/odzież/buty.jpg" />
+          </div>
+          <h3 class="offer-product__title">Buty motocyklowe</h3>
+          <p class="offer-product__paragraph">
+            W naszej ofercie znajdziesz buty sportowe, turystyczne, miejskie
+            oraz off-roadowe, które łączą wytrzymałość, ochronę i komfort.
+          </p>
+        </section>
+
+        <section
+          class="offer-product our-offer__offer-product offer-product--one"
+        >
+          <div class="offer-product__box">
+            <img class="offer-product__photo" src="./images/odzież/termo.jpg" />
+          </div>
+          <h3 class="offer-product__title">
+            Odzież termoaktywna i przeciwdeszczowa
+          </h3>
+          <p class="offer-product__paragraph">
+            Idealna do jazdy w każdych warunkach pogodowych - zapewnia ciepło,
+            suchość i wygodę podczas długich tras.
+          </p>
+        </section>
+
+        <section
+          class="offer-product our-offer__offer-product offer-product--two"
+        >
+          <div class="offer-product__box">
+            <img
+              class="offer-product__photo"
+              src="./images/odzież/odziez.png"
+            />
+          </div>
+          <h3 class="offer-product__title">Inne, niezbędne elementy</h3>
+          <p class="offer-product__paragraph">
+            W naszym salonie znajdziesz wszystko co niezbędne do jazdy
+            motocyklem. Dzięki bogatemu asortymentowi, zaspokoisz potrzeby w
+            jednym miejscu.
+          </p>
+        </section>
+      </section>
+
+      <section class="our-offer subpage-main__our-offer our-offer--bckgrd">
+        <h1 class="our-offer__title title our-offer__title--half">
+          Dlaczego warto nas wybrać?
+        </h1>
+        <p class="our-offer__paragraph our-offer__paragraph--half">
+          Zadbaj o swoje bezpieczeństwo i komfort podczas jazdy - odwiedź nasz
+          salon i znajdź idealne wyposażenie dla siebie! Zapraszamy do naszego
+          salonu - znajdź odzież, która spełni wszystkie Twoje oczekiwania!
+        </p>
+        <section
+          class="offer-product our-offer__offer-product offer-product--even"
+        >
+          <h3 class="offer-product__title offer-product__title--strong">
+            Renomowane marki
+          </h3>
+          <p class="offer-product__paragraph offer-product__paragraph--bold">
+            Oferujemy produkty od uznanych producentów, takich jak REBELHORN i
+            OZONE.
+          </p>
+        </section>
+
+        <section
+          class="offer-product our-offer__offer-product offer-product--even"
+        >
+          <h3 class="offer-product__title offer-product__title--strong">
+            Profesjonalne doradztwo
+          </h3>
+          <p class="offer-product__paragraph offer-product__paragraph--bold">
+            Nasi eksperci pomogą Ci dobrać odzież dopasowaną do Twoich potrzeb i
+            stylu jazdy.
+          </p>
+        </section>
+
+        <section
+          class="offer-product our-offer__offer-product offer-product--even"
+        >
+          <h3 class="offer-product__title offer-product__title--strong">
+            Bogaty wybór
+          </h3>
+          <p class="offer-product__paragraph offer-product__paragraph--bold">
+            Posiadamy odzież dla motocyklistów i motocyklistów w każdym wieku i
+            rozmiarze.
+          </p>
+        </section>
+
+        <section
+          class="offer-product our-offer__offer-product offer-product--even"
+        >
+          <h3 class="offer-product__title offer-product__title--strong">
+            Komfort i bezpieczeństwo na drodze
+          </h3>
+          <p class="offer-product__paragraph offer-product__paragraph--bold">
+            Dzięki naszej odzieży motocyklowej zyskasz pewność, że jesteś
+            odpowiednio chroniony, a jednocześnie możesz cieszyć się stylowym
+            wyglądem.
+          </p>
+        </section>
+      </section>
+    </main>
+
     <footer class="footer">
-      <section class="footer-info-section footer__section">
+      <section class="footer-info-section footer__section footer--clothes">
         <section class="about footer__block">
           <h4 class="title-fourth footer__block-title about__title">
             Witamy na skuterygdansk.pl
@@ -34,7 +233,7 @@
 
         <section class="company footer__block">
           <div class="company__logo-overlay">
-            <a class="company__link" href="#">
+            <a class="company__link" href="index.html">
               <img
                 class="company__logo-img"
                 alt="company-brand"
@@ -42,28 +241,38 @@
             /></a>
           </div>
           <div class="company__call-overlay">
+            <h4 class="title-fourth company__title">Zadzwoń do nas!</h4>
             <div class="company__icon">
               <i class="icon-phone"></i>
             </div>
-            <p class="paragraph">+58 123 456 789</p>
+            <a href="tel:507959344" class="paragraph company__call-paragraph"
+              >534 756 642</a
+            >
           </div>
           <div class="company__adress-overlay">
+            <h4 class="title-fourth company__title">Odwiedź nas!</h4>
             <div class="company__icon">
               <i class="icon-home"></i>
             </div>
-            <p class="paragraph">
+            <p class="paragraph company__adress-paragraph">
               ul. Kartuska 426 <br />
               80-125 Gdańsk
             </p>
           </div>
           <div class="company__mail-overlay">
+            <h4 class="title-fourth company__title">Napisz do nas!</h4>
             <div class="company__icon">
               <i class="icon-mail"></i>
             </div>
-            <p class="paragraph">salon@skuterygdansk.pl</p>
+            <a
+              href="mailto:salon@skuterygdansk.pl"
+              class="paragraph company__mail-paragraph"
+            >
+              salon@skuterygdansk.pl
+            </a>
           </div>
           <p class="paragraph company__paragraph">
-            Jesteśmy pierwszym i jedynym salonem skuterowym w Gdańsku.
+            Jesteśmy najlepszym salonem skuterowym, motocyklowym i nie tylko.
           </p>
         </section>
 
@@ -85,10 +294,10 @@
                     <a class="sub-navi__link" href="benneli.html">Benneli</a>
                   </li>
                   <li>
-                    <a class="sub-navi__link" href="kymco.html">Kymco</a>
+                    <a class="sub-navi__link" href="qjmotor.html">Qjmotor</a>
                   </li>
                   <li>
-                    <a class="sub-navi__link" href="qjmotor.html">Qjmotor</a>
+                    <a class="sub-navi__link" href="kymco.html">Kymco</a>
                   </li>
                   <li>
                     <a class="sub-navi__link" href="morbidelli.html"
@@ -116,8 +325,8 @@
               </li>
 
               <li class="navi-map__item">
-                <a class="navi-map__link" href="jazda_probna.html"
-                  >Jazda Próbna</a
+                <a class="navi-map__link active-subpage" href="odziez.html"
+                  >Odzież</a
                 >
               </li>
 
@@ -134,7 +343,9 @@
               </li>
 
               <li class="navi-map__item">
-                <a class="navi-map__link" href="odziez.html">Odzież</a>
+                <a class="navi-map__link" href="jazda_probna.html"
+                  >Jazda Próbna</a
+                >
               </li>
             </ul>
           </div>
@@ -144,13 +355,22 @@
           <h4 class="title-fourth footer__block-title socials__title">
             Social Media
           </h4>
-          <p class="paragraph">
-            Nie przegap żadnej okazji i śledź nas na facebooku.
-          </p>
+          <p class="paragraph">Nie przegap żadnej okazji i śledź nas.</p>
           <div class="socials__overlay">
-            <a class="socials__link" href="#"
+            <a
+              class="socials__link socials__link-facebook"
+              href="https://www.facebook.com/profile.php?id=61572933863023"
               ><i class="icon-facebook socials__icon"></i
             ></a>
+            <a class="socials__link socials__link-instagram" href="index.html"
+              ><i class="icon-instagram socials__icon"></i
+            ></a>
+            <a class="socials__link socials__link-youtube" href="index.html"
+              ><i class="icon-youtube-squared socials__icon"></i
+            ></a>
+            <a class="socials__link socials__link-tiktok" href="index.html"
+              ><img class="tiktok-logo" src="./images/tiktok.png" alt="tiktok"
+            /></a>
           </div>
           <p class="paragraph socials__paragraph">Tutaj jesteśmy</p>
           <div class="socials__google-box">
@@ -168,9 +388,8 @@
 
         <section class="footer-finish">
           <p class="paragraph footer-finish__paragraph">
-            Copyright <span class="year">2024</span> &copy Wszelkie prawa
-            zastrzeżone. <br />
-            Realizacja - Grinjas
+            &copy <span id="year"></span> skuterygdansk.pl <br />
+            Realizacja - <span class="glascroll">glasota</span>
           </p>
         </section>
       </section>
