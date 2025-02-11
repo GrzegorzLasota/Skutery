@@ -8,7 +8,16 @@
 .subpage-main {
   padding: 16px;
 
+  &__our-offer {
+    margin-bottom: 72px;
+
+    @include lg {
+      margin-bottom: 172px;
+    }
+  }
+
   .our-offer {
+    padding: 5px;
     @include grid;
 
     &__title {
@@ -24,7 +33,7 @@
 
       &--half {
         @include md {
-          grid-column: span 4;
+          grid-column: span 3;
         }
 
         @include lg {
@@ -46,7 +55,7 @@
       &--half {
         @include md {
           padding-top: 10px;
-          grid-column: span 2;
+          grid-column: span 3;
         }
         @include lg {
           grid-column: span 4;
@@ -85,17 +94,16 @@
       }
 
       &__title--strong {
-        color: #ffffff;
-
+        color: #000000;
         font-family: Inter;
-        font-weight: 400;
+        font-weight: bold;
         font-size: 28px;
         line-height: 28.4px;
         letter-spacing: -5%;
         text-transform: uppercase;
 
         @include lg {
-          font-size: 24px;
+          font-size: 22px;
         }
       }
 
@@ -117,7 +125,7 @@
           grid-column: span 3;
         }
         @include lg {
-          grid-column: 1/5;
+          grid-column: 1/6;
         }
       }
       &--two {
@@ -125,7 +133,7 @@
           grid-column: span 3;
         }
         @include lg {
-          grid-column: 5/9;
+          grid-column: 6/11;
         }
       }
 
@@ -134,7 +142,7 @@
           grid-column: span 3;
         }
         @include lg {
-          grid-column: 5/9;
+          grid-column: 3/8;
         }
       }
 
@@ -143,13 +151,13 @@
           grid-column: span 3;
         }
         @include lg {
-          grid-column: 9/-1;
+          grid-column: 8/-1;
         }
       }
 
       &--even {
         padding: 10px;
-        background-color: #11111157;
+        background-color: #10abb0b2;
         border-radius: 10px;
 
         @include md {
@@ -158,10 +166,102 @@
       }
     }
 
-    &--bckgrd {
+    &--why-us {
       background-image: url("../../images/odzież/trip.png");
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: center 60%;
+
+      @include md {
+        background-position: center 5%;
+      }
+      @include lg {
+        background-position: center 10%;
+      }
+    }
+  }
+
+  &__our-partners {
+    grid-column: 1/-1;
+    margin-bottom: 72px;
+
+    @include lg {
+      margin-bottom: 172px;
+    }
+  }
+
+  .our-partners {
+    padding: 5px;
+    @include grid;
+
+    &__introduce-box {
+      grid-column: 1/-1;
+
+      @include md {
+        grid-column: 1/4;
+      }
+
+      @include lg {
+        grid-column: 1/7;
+      }
+    }
+
+    &__title {
+      font-family: Inter;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 52px;
+      letter-spacing: 0%;
+      color: #333333;
+
+      @include md {
+        grid-column: 1/4;
+        font-size: 48px;
+        line-height: 62px;
+      }
+
+      @include lg {
+        font-size: 62px;
+        line-height: 78px;
+      }
+    }
+
+    &__paragraph {
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0%;
+      color: #333333;
+      padding: 10px 0;
+    }
+
+    &__box {
+      grid-column: 1/-1;
+      height: 100%;
+      @include flex-center;
+
+      @include md {
+        grid-column: 4/-1;
+      }
+      @include lg {
+        grid-column: 7/-1;
+      }
+    }
+
+    &__photo {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+
+      @include md {
+        max-width: 100%;
+        height: 80%;
+      }
+    }
+
+    &__about-partners {
+      font-weight: bold;
     }
   }
 }

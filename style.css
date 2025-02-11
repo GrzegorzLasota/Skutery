@@ -2781,7 +2781,7 @@ table {
 }
 .subpage-header .clothes .company-top {
   grid-column: 1/-1;
-  min-height: 60px;
+  min-height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2805,7 +2805,8 @@ table {
   letter-spacing: -1%;
   text-align: center;
   padding-top: 12px;
-  color: #1c1a26;
+  color: #fd9e05;
+  font-weight: bold;
 }
 .subpage-header .clothes .header-photo-box {
   grid-column: 1/-1;
@@ -2816,8 +2817,9 @@ table {
   position: relative;
 }
 .subpage-header .clothes .header-photo-box__header-photo {
-  max-width: 100%;
-  height: auto;
+  max-width: auto;
+  max-height: 400px;
+  object-fit: cover;
 }
 .subpage-header .clothes__title {
   grid-column: 1/-1;
@@ -2828,9 +2830,13 @@ table {
   line-height: 54.4px;
   letter-spacing: -5%;
   text-align: center;
-  z-index: 1;
-  position: absolute;
   text-transform: uppercase;
+}
+@media (min-width: 640px) {
+  .subpage-header .clothes__title {
+    font-size: 80px;
+    line-height: 68px;
+  }
 }
 .subpage-header .clothes__start-btn {
   grid-column: 1/-1;
@@ -2842,18 +2848,18 @@ table {
   left: 16px;
   gap: 4px;
   border-radius: 32px;
-  border: 2px solid #f9512e;
+  border: 2px solid #fd9e05;
   text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .subpage-header .clothes__start-btn:hover {
-  background-color: rgba(249, 80, 46, 0.137254902);
+  background-color: rgba(253, 158, 5, 0.5882352941);
   border: 2px solid transparent;
 }
 .subpage-header .clothes .start-img-clothes-link {
-  color: #f9512e;
+  color: #fd9e05;
   font-size: 20px;
 }
 .subpage-header .clothes .start-btn-clothes-link {
@@ -2863,7 +2869,7 @@ table {
   line-height: 16px;
   letter-spacing: 2%;
   text-transform: uppercase;
-  color: #f9512e;
+  color: #fd9e05;
 }
 
 .clothes-subpage {
@@ -2873,7 +2879,16 @@ table {
 .subpage-main {
   padding: 16px;
 }
+.subpage-main__our-offer {
+  margin-bottom: 72px;
+}
+@media (min-width: 1020px) {
+  .subpage-main__our-offer {
+    margin-bottom: 172px;
+  }
+}
 .subpage-main .our-offer {
+  padding: 5px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -2909,7 +2924,7 @@ table {
 }
 @media (min-width: 640px) {
   .subpage-main .our-offer__title--half {
-    grid-column: span 4;
+    grid-column: span 3;
   }
 }
 @media (min-width: 1020px) {
@@ -2930,7 +2945,7 @@ table {
 @media (min-width: 640px) {
   .subpage-main .our-offer__paragraph--half {
     padding-top: 10px;
-    grid-column: span 2;
+    grid-column: span 3;
   }
 }
 @media (min-width: 1020px) {
@@ -2964,9 +2979,9 @@ table {
   text-transform: uppercase;
 }
 .subpage-main .our-offer .offer-product__title--strong {
-  color: #ffffff;
+  color: #000000;
   font-family: Inter;
-  font-weight: 400;
+  font-weight: bold;
   font-size: 28px;
   line-height: 28.4px;
   letter-spacing: -5%;
@@ -2974,7 +2989,7 @@ table {
 }
 @media (min-width: 1020px) {
   .subpage-main .our-offer .offer-product__title--strong {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 .subpage-main .our-offer .offer-product__paragraph {
@@ -2995,7 +3010,7 @@ table {
 }
 @media (min-width: 1020px) {
   .subpage-main .our-offer .offer-product--one {
-    grid-column: 1/5;
+    grid-column: 1/6;
   }
 }
 @media (min-width: 640px) {
@@ -3005,7 +3020,7 @@ table {
 }
 @media (min-width: 1020px) {
   .subpage-main .our-offer .offer-product--two {
-    grid-column: 5/9;
+    grid-column: 6/11;
   }
 }
 @media (min-width: 640px) {
@@ -3015,7 +3030,7 @@ table {
 }
 @media (min-width: 1020px) {
   .subpage-main .our-offer .offer-product--three {
-    grid-column: 5/9;
+    grid-column: 3/8;
   }
 }
 @media (min-width: 640px) {
@@ -3025,12 +3040,12 @@ table {
 }
 @media (min-width: 1020px) {
   .subpage-main .our-offer .offer-product--four {
-    grid-column: 9/-1;
+    grid-column: 8/-1;
   }
 }
 .subpage-main .our-offer .offer-product--even {
   padding: 10px;
-  background-color: rgba(17, 17, 17, 0.3411764706);
+  background-color: rgba(16, 171, 176, 0.6980392157);
   border-radius: 10px;
 }
 @media (min-width: 640px) {
@@ -3038,10 +3053,128 @@ table {
     grid-column: span 3;
   }
 }
-.subpage-main .our-offer--bckgrd {
+.subpage-main .our-offer--why-us {
   background-image: url("../../images/odzież/trip.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 60%;
+}
+@media (min-width: 640px) {
+  .subpage-main .our-offer--why-us {
+    background-position: center 5%;
+  }
+}
+@media (min-width: 1020px) {
+  .subpage-main .our-offer--why-us {
+    background-position: center 10%;
+  }
+}
+.subpage-main__our-partners {
+  grid-column: 1/-1;
+  margin-bottom: 72px;
+}
+@media (min-width: 1020px) {
+  .subpage-main__our-partners {
+    margin-bottom: 172px;
+  }
+}
+.subpage-main .our-partners {
+  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .subpage-main .our-partners {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+  }
+}
+@media (min-width: 1020px) {
+  .subpage-main .our-partners {
+    grid-template-columns: repeat(12, 60px);
+  }
+}
+@media (min-width: 1600px) {
+  .subpage-main .our-partners {
+    grid-template-columns: repeat(12, 73px);
+    gap: 14px;
+  }
+}
+.subpage-main .our-partners__introduce-box {
+  grid-column: 1/-1;
+}
+@media (min-width: 640px) {
+  .subpage-main .our-partners__introduce-box {
+    grid-column: 1/4;
+  }
+}
+@media (min-width: 1020px) {
+  .subpage-main .our-partners__introduce-box {
+    grid-column: 1/7;
+  }
+}
+.subpage-main .our-partners__title {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: 0%;
+  color: #333333;
+}
+@media (min-width: 640px) {
+  .subpage-main .our-partners__title {
+    grid-column: 1/4;
+    font-size: 48px;
+    line-height: 62px;
+  }
+}
+@media (min-width: 1020px) {
+  .subpage-main .our-partners__title {
+    font-size: 62px;
+    line-height: 78px;
+  }
+}
+.subpage-main .our-partners__paragraph {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #333333;
+  padding: 10px 0;
+}
+.subpage-main .our-partners__box {
+  grid-column: 1/-1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 640px) {
+  .subpage-main .our-partners__box {
+    grid-column: 4/-1;
+  }
+}
+@media (min-width: 1020px) {
+  .subpage-main .our-partners__box {
+    grid-column: 7/-1;
+  }
+}
+.subpage-main .our-partners__photo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+@media (min-width: 640px) {
+  .subpage-main .our-partners__photo {
+    max-width: 100%;
+    height: 80%;
+  }
+}
+.subpage-main .our-partners__about-partners {
+  font-weight: bold;
 }
 
 .keeway-page {

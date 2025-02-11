@@ -21,7 +21,7 @@
   .clothes {
     .company-top {
       grid-column: 1/-1;
-      min-height: 60px;
+      min-height: 100px;
       @include flex-center;
 
       &__box {
@@ -46,8 +46,8 @@
       letter-spacing: -1%;
       text-align: center;
       padding-top: 12px;
-
-      color: #1c1a26;
+      color: #fd9e05;
+      font-weight: bold;
     }
 
     .header-photo-box {
@@ -57,8 +57,9 @@
       position: relative;
 
       &__header-photo {
-        max-width: 100%;
-        height: auto;
+        max-width: auto;
+        max-height: 400px;
+        object-fit: cover;
       }
     }
 
@@ -71,9 +72,13 @@
       line-height: 54.4px;
       letter-spacing: -5%;
       text-align: center;
-      z-index: 1;
-      position: absolute;
+
       text-transform: uppercase;
+
+      @include md {
+        font-size: 80px;
+        line-height: 68px;
+      }
     }
 
     &__start-btn {
@@ -86,18 +91,18 @@
       left: 16px;
       gap: 4px;
       border-radius: 32px;
-      border: 2px solid #f9512e;
+      border: 2px solid #fd9e05;
       text-decoration: none;
       @include flex-center;
 
       &:hover {
-        background-color: #f9502e23;
+        background-color: #fd9e0596;
         border: 2px solid transparent;
       }
     }
 
     .start-img-clothes-link {
-      color: #f9512e;
+      color: #fd9e05;
       font-size: 20px;
     }
 
@@ -108,8 +113,7 @@
       line-height: 16px;
       letter-spacing: 2%;
       text-transform: uppercase;
-
-      color: #f9512e;
+      color: #fd9e05;
     }
   }
 }
