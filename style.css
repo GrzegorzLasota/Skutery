@@ -3090,6 +3090,11 @@ table {
   text-transform: uppercase;
   text-decoration: underline;
 }
+@media (min-width: 640px) {
+  .subpage-main .our-offer .offer-product__title {
+    min-height: 60px;
+  }
+}
 .subpage-main .our-offer .offer-product__title--strong {
   color: #000000;
   font-family: Inter;
@@ -3209,6 +3214,25 @@ table {
   .subpage-main .our-partners {
     grid-template-columns: repeat(12, 73px);
     gap: 14px;
+  }
+}
+.subpage-main .our-partners--logo-mark {
+  background-image: url("../../images/odzież/best.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  align-items: flex-start;
+}
+@media (min-width: 640px) {
+  .subpage-main .our-partners--logo-mark {
+    min-height: 250px;
+  }
+}
+@media (min-width: 1020px) {
+  .subpage-main .our-partners--logo-mark {
+    min-height: 300px;
   }
 }
 .subpage-main .our-partners__introduce-box {
@@ -3332,6 +3356,26 @@ table {
   color: #333;
   padding: 15px;
   margin-bottom: 50px;
+}
+.subpage-main .about-firm__title--why-bckgrd {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: 0%;
+  color: #333333;
+}
+@media (min-width: 640px) {
+  .subpage-main .about-firm__title--why-bckgrd {
+    font-size: 48px;
+    line-height: 62px;
+  }
+}
+@media (min-width: 1020px) {
+  .subpage-main .about-firm__title--why-bckgrd {
+    font-size: 62px;
+    line-height: 78px;
+  }
 }
 .subpage-main .about-firm__title--summary {
   font-family: "Roboto", serif;

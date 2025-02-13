@@ -121,6 +121,10 @@
         margin-bottom: 8px;
         text-transform: uppercase;
         text-decoration: underline;
+
+        @include md {
+          min-height: 60px;
+        }
       }
 
       &__title--strong {
@@ -221,6 +225,23 @@
   .our-partners {
     padding: 5px;
     @include grid;
+
+    &--logo-mark {
+      background-image: url("../../images/odzież/best.png");
+      background-position: bottom;
+      background-repeat: no-repeat;
+      min-height: 250px;
+      display: flex;
+      align-items: center;
+      align-items: flex-start;
+
+      @include md {
+        min-height: 250px;
+      }
+      @include lg {
+        min-height: 300px;
+      }
+    }
 
     &__introduce-box {
       grid-column: 1/-1;
@@ -324,6 +345,25 @@
       color: #333;
       padding: 15px;
       margin-bottom: 50px;
+
+      &--why-bckgrd {
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 52px;
+        letter-spacing: 0%;
+        color: #333333;
+
+        @include md {
+          font-size: 48px;
+          line-height: 62px;
+        }
+
+        @include lg {
+          font-size: 62px;
+          line-height: 78px;
+        }
+      }
 
       &--summary {
         font-family: $roboto;
