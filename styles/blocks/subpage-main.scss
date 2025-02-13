@@ -95,13 +95,20 @@
         width: 100%;
         text-align: center;
         margin-bottom: 16px;
+        border-radius: 8px;
+        overflow: hidden;
       }
 
       &__photo {
         max-width: 100%;
         height: 356px;
         object-fit: cover;
-        border-radius: 8px;
+
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
 
       &__title {
@@ -259,7 +266,8 @@
 
     &__box {
       grid-column: 1/-1;
-      height: 100%;
+      overflow: hidden;
+      border-radius: 8px;
       @include flex-center;
 
       @include md {
@@ -275,6 +283,11 @@
       height: auto;
       border-radius: 8px;
       object-fit: cover;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1) skew(-1deg);
+      }
 
       @include md {
         max-width: 100%;
@@ -311,6 +324,24 @@
       color: #333;
       padding: 15px;
       margin-bottom: 50px;
+
+      &--summary {
+        font-family: $roboto;
+        border: none;
+        color: #fd9e05;
+        text-shadow: 0 1px 1px #000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        line-height: 150%;
+
+        @include md {
+          font-size: 24px;
+        }
+
+        @include lg {
+          font-size: 36px;
+        }
+      }
     }
 
     &__box {
@@ -365,34 +396,71 @@
 
     &__assortment {
       grid-column: 1/-1;
-      margin-bottom: 170px;
+      margin-bottom: 40px;
       @include grid;
     }
 
     .assortment {
       &__assortment-box {
-        grid-column: span 6;
+        grid-column: 1/-1;
+
+        @include md {
+          grid-column: 2/6;
+        }
+
+        @include lg {
+          grid-column: span 6;
+        }
       }
 
       .assortment-box {
+        overflow: hidden;
+
         @include lg {
           height: 350px;
+        }
+
+        &--first {
+          @include lg {
+            order: 1;
+          }
+        }
+
+        &--last {
+          @include lg {
+            order: 2;
+          }
         }
 
         &__photo {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.1);
+          }
         }
 
         &__title {
           font-family: Inter;
           font-weight: 700;
-          font-size: 56px;
-          line-height: 60px;
+          font-size: 36px;
+          line-height: 40px;
           letter-spacing: 0%;
           color: #333;
           margin-bottom: 30px;
+          word-wrap: break-word;
+
+          @include md {
+            font-size: 52px;
+            line-height: 60px;
+          }
+
+          &--ozone {
+            text-align: center;
+          }
         }
 
         &__paragraph {

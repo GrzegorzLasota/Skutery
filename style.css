@@ -268,7 +268,7 @@ table {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  grid-template-rows: repeat(2, 120px);
+  grid-template-rows: 120px 120px 250px auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -422,6 +422,69 @@ table {
     transform: translateX(-100%);
     padding-left: 100%;
   }
+}
+.header .additional {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 5px;
+  padding: 0 10px;
+}
+@media (min-width: 640px) {
+  .header .additional {
+    justify-content: space-around;
+  }
+}
+.header .additional__insure {
+  height: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  font-family: "Roboto", serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.884);
+  background-image: url("../../images/pasekbl.png");
+  background-position: center;
+}
+.header .additional__insure--top {
+  margin-bottom: 30px;
+}
+@media (min-width: 640px) {
+  .header .additional__insure--top {
+    margin-bottom: 60px;
+    font-size: 20px;
+  }
+}
+.header .additional__installments {
+  height: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  font-family: "Roboto", serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.884);
+  background-image: url("../../images/pasekgre.png");
+  margin-top: 30px;
+}
+@media (min-width: 640px) {
+  .header .additional__installments {
+    margin-top: 40px;
+    font-size: 20px;
+  }
+}
+.header .additional__icon {
+  padding-right: 15px;
+  color: rgba(255, 255, 255, 0.884);
+  font-size: 20px;
 }
 .header__end {
   margin-bottom: 30px;
@@ -3004,12 +3067,17 @@ table {
   width: 100%;
   text-align: center;
   margin-bottom: 16px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 .subpage-main .our-offer .offer-product__photo {
   max-width: 100%;
   height: 356px;
   object-fit: cover;
-  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.subpage-main .our-offer .offer-product__photo:hover {
+  transform: scale(1.1);
 }
 .subpage-main .our-offer .offer-product__title {
   font-family: Inter;
@@ -3188,7 +3256,8 @@ table {
 }
 .subpage-main .our-partners__box {
   grid-column: 1/-1;
-  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3208,6 +3277,10 @@ table {
   height: auto;
   border-radius: 8px;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.subpage-main .our-partners__photo:hover {
+  transform: scale(1.1) skew(-1deg);
 }
 @media (min-width: 640px) {
   .subpage-main .our-partners__photo {
@@ -3259,6 +3332,25 @@ table {
   color: #333;
   padding: 15px;
   margin-bottom: 50px;
+}
+.subpage-main .about-firm__title--summary {
+  font-family: "Roboto", serif;
+  border: none;
+  color: #fd9e05;
+  text-shadow: 0 1px 1px #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  line-height: 150%;
+}
+@media (min-width: 640px) {
+  .subpage-main .about-firm__title--summary {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1020px) {
+  .subpage-main .about-firm__title--summary {
+    font-size: 36px;
+  }
 }
 .subpage-main .about-firm__box {
   grid-column: 1/-1;
@@ -3313,7 +3405,7 @@ table {
 }
 .subpage-main .about-firm__assortment {
   grid-column: 1/-1;
-  margin-bottom: 170px;
+  margin-bottom: 40px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -3337,26 +3429,63 @@ table {
   }
 }
 .subpage-main .about-firm .assortment__assortment-box {
-  grid-column: span 6;
+  grid-column: 1/-1;
+}
+@media (min-width: 640px) {
+  .subpage-main .about-firm .assortment__assortment-box {
+    grid-column: 2/6;
+  }
+}
+@media (min-width: 1020px) {
+  .subpage-main .about-firm .assortment__assortment-box {
+    grid-column: span 6;
+  }
+}
+.subpage-main .about-firm .assortment .assortment-box {
+  overflow: hidden;
 }
 @media (min-width: 1020px) {
   .subpage-main .about-firm .assortment .assortment-box {
     height: 350px;
   }
 }
+@media (min-width: 1020px) {
+  .subpage-main .about-firm .assortment .assortment-box--first {
+    order: 1;
+  }
+}
+@media (min-width: 1020px) {
+  .subpage-main .about-firm .assortment .assortment-box--last {
+    order: 2;
+  }
+}
 .subpage-main .about-firm .assortment .assortment-box__photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.subpage-main .about-firm .assortment .assortment-box__photo:hover {
+  transform: scale(1.1);
 }
 .subpage-main .about-firm .assortment .assortment-box__title {
   font-family: Inter;
   font-weight: 700;
-  font-size: 56px;
-  line-height: 60px;
+  font-size: 36px;
+  line-height: 40px;
   letter-spacing: 0%;
   color: #333;
   margin-bottom: 30px;
+  word-wrap: break-word;
+}
+@media (min-width: 640px) {
+  .subpage-main .about-firm .assortment .assortment-box__title {
+    font-size: 52px;
+    line-height: 60px;
+  }
+}
+.subpage-main .about-firm .assortment .assortment-box__title--ozone {
+  text-align: center;
 }
 .subpage-main .about-firm .assortment .assortment-box__paragraph {
   font-family: Inter;
