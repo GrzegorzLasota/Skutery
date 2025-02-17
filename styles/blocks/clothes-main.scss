@@ -1,0 +1,518 @@
+@use "../utils/mixins.scss" as *;
+@use "../utils/variables.scss" as *;
+
+.clothes-subpage {
+  background-color: #eef7ff;
+}
+
+.subpage-main {
+  padding: 16px;
+  @include grid;
+
+  &__our-offer {
+    margin-bottom: 72px;
+
+    @include lg {
+      margin-bottom: 172px;
+    }
+
+    &--bckgrd-clothes {
+      grid-column: 1/-1;
+    }
+
+    @include lg {
+      background-image: url("../../images/odzież/clothes.png");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .our-offer {
+    padding: 5px;
+    @include grid;
+
+    &__title {
+      grid-column: 1/-1;
+
+      font-family: Inter;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 52px;
+      letter-spacing: 0%;
+      color: #333333;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+
+      @include md {
+        font-size: 48px;
+        line-height: 62px;
+      }
+
+      @include lg {
+        font-size: 62px;
+        line-height: 78px;
+      }
+
+      &--half {
+        @include md {
+          grid-column: span 3;
+        }
+
+        @include lg {
+          grid-column: span 8;
+        }
+      }
+    }
+
+    &__paragraph {
+      grid-column: 1/-1;
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -1%;
+      color: #1c1a26;
+      margin-bottom: 56px;
+
+      &--half {
+        @include md {
+          padding-top: 10px;
+          grid-column: span 3;
+        }
+        @include lg {
+          grid-column: span 4;
+        }
+      }
+    }
+
+    &__offer-product {
+      margin-bottom: 56px;
+      grid-column: 1/-1;
+    }
+
+    .offer-product {
+      &__box {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 16px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      &__photo {
+        max-width: 100%;
+        height: 356px;
+        object-fit: cover;
+
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      &__title {
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 2%;
+        color: #7f8096;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        text-decoration: underline;
+
+        @include md {
+          min-height: 60px;
+        }
+      }
+
+      &__title--strong {
+        color: #000000;
+        font-family: Inter;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 28.4px;
+        letter-spacing: -5%;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        @include lg {
+          font-size: 22px;
+        }
+      }
+
+      &__paragraph {
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -1%;
+        color: #1c1a26;
+        text-shadow: 0 1px 13px #eef7ff;
+
+        &--bold {
+          color: #ffffff;
+        }
+      }
+
+      &--one {
+        @include md {
+          grid-column: span 3;
+        }
+        @include lg {
+          grid-column: 1/6;
+        }
+      }
+      &--two {
+        @include md {
+          grid-column: span 3;
+        }
+        @include lg {
+          grid-column: 6/11;
+        }
+      }
+
+      &--three {
+        @include md {
+          grid-column: span 3;
+        }
+        @include lg {
+          grid-column: 3/8;
+        }
+      }
+
+      &--four {
+        @include md {
+          grid-column: span 3;
+        }
+        @include lg {
+          grid-column: 8/-1;
+        }
+      }
+
+      &--even {
+        padding: 10px;
+        background-color: #10abb0b2;
+        border-radius: 10px;
+
+        @include md {
+          grid-column: span 3;
+        }
+      }
+    }
+
+    &--why-us {
+      grid-column: 1/-1;
+      background-image: url("../../images/odzież/trip.png");
+      background-repeat: no-repeat;
+      background-position: center 60%;
+
+      @include md {
+        background-position: center 5%;
+      }
+      @include lg {
+        background-position: center 10%;
+      }
+    }
+  }
+
+  &__our-partners {
+    grid-column: 1/-1;
+    margin-bottom: 72px;
+  }
+
+  .our-partners {
+    padding: 5px;
+    @include grid;
+
+    &--logo-mark {
+      background-image: url("../../images/odzież/best.png");
+      background-position: bottom;
+      background-repeat: no-repeat;
+      min-height: 250px;
+      display: flex;
+      align-items: center;
+      align-items: flex-start;
+
+      @include md {
+        min-height: 250px;
+      }
+      @include lg {
+        min-height: 300px;
+      }
+    }
+
+    &__introduce-box {
+      grid-column: 1/-1;
+
+      @include md {
+        grid-column: 1/4;
+      }
+
+      @include lg {
+        grid-column: 1/7;
+      }
+    }
+
+    &__title {
+      font-family: Inter;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 52px;
+      letter-spacing: 0%;
+      color: #333333;
+
+      @include md {
+        grid-column: 1/4;
+        font-size: 48px;
+        line-height: 62px;
+      }
+
+      @include lg {
+        font-size: 62px;
+        line-height: 78px;
+      }
+    }
+
+    &__paragraph {
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0%;
+      color: #333333;
+      padding: 10px 0;
+    }
+
+    &__box {
+      grid-column: 1/-1;
+      overflow: hidden;
+      border-radius: 8px;
+      @include flex-center;
+
+      @include md {
+        grid-column: 4/-1;
+      }
+      @include lg {
+        grid-column: 7/-1;
+      }
+    }
+
+    &__photo {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1) skew(-1deg);
+      }
+
+      @include md {
+        max-width: 100%;
+        height: 80%;
+      }
+    }
+
+    &__about-partners {
+      font-weight: bold;
+    }
+
+    &__about-firm {
+      grid-column: 1/-1;
+      margin-bottom: 72px;
+    }
+  }
+
+  .about-firm {
+    @include grid;
+
+    &--mrgn-top {
+      margin-top: 150px;
+    }
+
+    &--mrgn-bottom {
+      margin-bottom: 0;
+    }
+
+    &__title {
+      grid-column: 1/-1;
+      text-align: center;
+      border: 0.5px solid #333;
+      border-radius: 8px;
+      color: #333;
+      padding: 15px;
+      margin-bottom: 50px;
+
+      &--why-bckgrd {
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 52px;
+        letter-spacing: 0%;
+        color: #333333;
+
+        @include md {
+          font-size: 48px;
+          line-height: 62px;
+        }
+
+        @include lg {
+          font-size: 62px;
+          line-height: 78px;
+        }
+      }
+
+      &--summary {
+        font-family: $roboto;
+        border: none;
+        color: #fd9e05;
+        text-shadow: 0 1px 1px #000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        line-height: 150%;
+
+        @include md {
+          font-size: 24px;
+        }
+
+        @include lg {
+          font-size: 36px;
+        }
+      }
+    }
+
+    &__box {
+      grid-column: 1/-1;
+      min-height: 100px;
+      @include flex-center;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      @include md {
+        grid-column: span 3;
+      }
+
+      @include lg {
+        grid-column: span 3;
+      }
+    }
+
+    &__inbox {
+      @include flex-center;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      min-height: 60px;
+    }
+
+    &__inbox-title {
+      font-family: Inter;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 28px;
+      letter-spacing: 0%;
+      text-align: center;
+      color: #333;
+    }
+
+    &__inbox-paragraph {
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0%;
+      text-align: center;
+      color: #7c7c7c;
+      text-align: center;
+      padding: 5px;
+    }
+
+    &__icon {
+      font-size: 45px;
+      color: #4f4f4f;
+    }
+
+    &__assortment {
+      grid-column: 1/-1;
+      margin-bottom: 40px;
+      @include grid;
+    }
+
+    .assortment {
+      &__assortment-box {
+        grid-column: 1/-1;
+
+        @include md {
+          grid-column: 2/6;
+        }
+
+        @include lg {
+          grid-column: span 6;
+        }
+      }
+
+      .assortment-box {
+        overflow: hidden;
+
+        @include lg {
+          height: 350px;
+        }
+
+        &--first {
+          @include lg {
+            order: 1;
+          }
+        }
+
+        &--last {
+          @include lg {
+            order: 2;
+          }
+        }
+
+        &__photo {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        &__title {
+          font-family: Inter;
+          font-weight: 700;
+          font-size: 36px;
+          line-height: 40px;
+          letter-spacing: 0%;
+          color: #333;
+          margin-bottom: 30px;
+          word-wrap: break-word;
+
+          @include md {
+            font-size: 52px;
+            line-height: 60px;
+          }
+
+          &--ozone {
+            text-align: center;
+          }
+        }
+
+        &__paragraph {
+          font-family: Inter;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0%;
+          color: #7c7c7c;
+          padding: 5px;
+        }
+      }
+    }
+  }
+}

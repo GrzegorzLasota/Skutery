@@ -1,0 +1,144 @@
+@use "../utils/mixins.scss" as *;
+@use "../utils/variables.scss" as *;
+
+.subpage-header {
+  &--helmets {
+    grid-column: 1/-1;
+    padding: 0 16px 40px;
+    // grid-template-rows: 100px auto;
+    @include grid;
+  }
+}
+
+.helmets {
+  grid-column: 1/-1;
+
+  @include grid;
+
+  &__company-top {
+    grid-column: 1/-1;
+  }
+
+  .company-top {
+    grid-column: 1/-1;
+    &__box {
+      padding: 15px;
+      display: block;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    &__logo-link {
+      max-width: 200px;
+      height: auto;
+    }
+  }
+
+  .helmets-entry {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    @include grid;
+  }
+
+  &__header-photo-box {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+
+    @include md {
+      grid-column: 2/-2;
+    }
+
+    @include lg {
+      grid-column: span 6;
+      order: 1;
+    }
+  }
+
+  &__header-info-box {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+
+    @include lg {
+      grid-column: 2/7;
+      order: 0;
+    }
+  }
+
+  .header-photo-box {
+    &__header-photo {
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: left;
+      margin-bottom: 25px;
+
+      @include md {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  &__title {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 31.2px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #333333;
+    padding: 25px 20px 10px;
+
+    @include md {
+      font-size: 36px;
+      line-height: 54px;
+    }
+
+    @include lg {
+      font-size: 55px;
+      line-height: 78px;
+      text-align: left;
+      margin-bottom: 30px;
+      padding: 0;
+    }
+  }
+
+  &__paragraph {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    color: #333;
+
+    @include lg {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__start-btn {
+    width: 280px;
+    height: 60px;
+    margin: 30px auto;
+    background-color: #333;
+    text-decoration: none;
+    @include flex-center;
+
+    @include lg {
+      margin: 30px 0;
+    }
+  }
+
+  .start-btn-helmets-link {
+    color: #f2f2f2;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20.8px;
+    letter-spacing: 3px;
+    text-align: center;
+  }
+}
