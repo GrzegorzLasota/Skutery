@@ -8,6 +8,10 @@
     // grid-template-rows: 100px auto;
     @include grid;
   }
+
+  &__helmets {
+    margin-bottom: 60px;
+  }
 }
 
 .helmets {
@@ -111,11 +115,12 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0%;
-    text-align: left;
+    text-align: center;
     color: #333;
 
     @include lg {
       margin-bottom: 50px;
+      text-align: left;
     }
   }
 
@@ -124,11 +129,23 @@
     height: 60px;
     margin: 30px auto;
     background-color: #333;
+    border: 1px solid transparent;
     text-decoration: none;
+    transition: all 0.3s ease;
     @include flex-center;
 
     @include lg {
       margin: 30px 0;
+    }
+
+    &:hover {
+      background-color: #e4dfd3;
+      border: 1px solid #333;
+      color: #333;
+    }
+
+    &:hover > .start-btn-helmets-link {
+      color: #333;
     }
   }
 
@@ -140,5 +157,6 @@
     line-height: 20.8px;
     letter-spacing: 3px;
     text-align: center;
+    transition: all 0.3s ease;
   }
 }
