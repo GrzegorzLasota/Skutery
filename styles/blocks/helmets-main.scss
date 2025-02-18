@@ -38,6 +38,7 @@
       }
 
       &__invite-paragraph {
+        padding: 0 15px;
         font-family: Poppins;
         font-weight: 400;
         font-size: 16px;
@@ -218,6 +219,282 @@
             height: 80%;
             object-fit: cover;
           }
+        }
+      }
+    }
+
+    &__select-helmet {
+      grid-column: 1/-1;
+      margin-bottom: 100px;
+      @include grid;
+    }
+
+    .select-helmet {
+      &__select-caption {
+        grid-column: 1/2;
+      }
+
+      .select-caption {
+        @include flex-center;
+        flex-direction: column;
+        display: none;
+
+        @include md {
+          display: block;
+        }
+
+        &__rectangle {
+          height: 100px;
+          width: 1px;
+          margin: 10px auto;
+          background-color: #344f1080;
+        }
+
+        &__paragraph {
+          @include flex-center;
+          font-family: Poppins;
+          width: 100%;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 18.2px;
+          letter-spacing: 0%;
+          color: #344f1080;
+          // text-orientation: sideways-right;
+          writing-mode: vertical-rl;
+          transform: rotate(180deg);
+        }
+      }
+
+      &__helmets-photos {
+        grid-column: 1/-1;
+        @include grid;
+
+        @include md {
+          grid-column: 2/-1;
+        }
+
+        @include lg {
+          grid-column: 3/-1;
+        }
+      }
+
+      .helmets-photos {
+        &__title {
+          padding: 15px;
+          grid-column: 1/-1;
+          font-family: Poppins;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 36px;
+          letter-spacing: 5%;
+          color: #344f10;
+        }
+
+        &__box {
+          grid-column: 1/-1;
+          padding: 15px;
+          overflow: hidden;
+
+          @include md {
+            grid-column: span 3;
+          }
+
+          @include lg {
+            grid-column: span 4;
+          }
+        }
+
+        &__helmet-img {
+          width: 100%;
+          height: 400px;
+          object-fit: cover;
+          object-position: center;
+
+          @include md {
+            height: 300px;
+          }
+        }
+
+        &__signature {
+          font-family: Poppins;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 27px;
+          letter-spacing: 5%;
+          color: #333333;
+          border-bottom: 2px solid #333;
+          padding: 10px;
+          margin-bottom: 15px;
+        }
+
+        &__paragraph {
+          font-family: Poppins;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 27px;
+          letter-spacing: 5%;
+          color: #333333;
+        }
+      }
+    }
+
+    &__cleaning-helmet {
+      grid-column: 1/-1;
+      margin-bottom: 100px;
+      @include grid;
+    }
+
+    .cleaning-helmet {
+      &__cleaning-caption {
+        grid-column: 1/2;
+      }
+
+      .cleaning-caption {
+        @include flex-center;
+        flex-direction: column;
+        display: none;
+
+        @include md {
+          display: block;
+        }
+
+        &__rectangle {
+          height: 100px;
+          width: 1px;
+          margin: 10px auto;
+          background-color: #344f1080;
+        }
+
+        &__paragraph {
+          @include flex-center;
+          font-family: Poppins;
+          width: 100%;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 18.2px;
+          letter-spacing: 0%;
+          color: #344f1080;
+          // text-orientation: sideways-right;
+          writing-mode: vertical-rl;
+          transform: rotate(180deg);
+        }
+      }
+
+      &__title {
+        grid-column: 1/-1;
+        padding: 0 15px;
+        font-family: Poppins;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 5%;
+        color: #344f10;
+
+        @include md {
+          grid-column: 2/4;
+        }
+
+        @include lg {
+          grid-column: 2/5;
+          font-size: 36px;
+          line-height: 39.6px;
+        }
+      }
+
+      &__hints {
+        padding: 20px 0;
+        grid-column: 1/2;
+
+        @include md {
+          grid-column: 4/5;
+        }
+
+        @include lg {
+          grid-column: 5/7;
+        }
+      }
+
+      &__paragraph {
+        font-family: Poppins;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0%;
+        text-align: right;
+        color: #333333;
+        padding: 6px;
+        box-sizing: border-box;
+        border: 1px solid#333;
+        margin: 3px;
+        border-radius: 4px;
+        display: block;
+        text-decoration: none;
+
+        &:hover {
+          background-color: #333;
+          color: #fff;
+        }
+      }
+
+      &__photo-box {
+        grid-column: 2/-1;
+        text-align: left;
+        padding: 20px 0;
+
+        @include md {
+          grid-column: 5/-1;
+        }
+
+        @include lg {
+          grid-column: 7/-1;
+        }
+      }
+
+      &__clean-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left;
+      }
+
+      &__hint-answers {
+        grid-column: 1/-1;
+        margin-top: 60px;
+      }
+
+      .hint-answers {
+        &__strong-title {
+          font-family: Poppins;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 27px;
+          letter-spacing: 5%;
+          color: #828282;
+          text-decoration: underline;
+          padding: 5px 20px;
+          color: #344f10;
+          text-align: center;
+        }
+
+        &__strong-hint {
+          font-family: Poppins;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 27px;
+          letter-spacing: 5%;
+          color: #828282;
+          padding: 5px 20px;
+        }
+
+        &__paragraph {
+          padding: 5px 20px;
+          font-family: Poppins;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 18.2px;
+          letter-spacing: 5%;
+          text-align: left;
+          color: #333;
         }
       }
     }

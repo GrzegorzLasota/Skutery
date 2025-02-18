@@ -3818,6 +3818,7 @@ table {
   }
 }
 .helmets-subpage .helmets-main .different-choices__invite-paragraph {
+  padding: 0 15px;
   font-family: Poppins;
   font-weight: 400;
   font-size: 16px;
@@ -4014,6 +4015,327 @@ table {
     height: 80%;
     object-fit: cover;
   }
+}
+.helmets-subpage .helmets-main__select-helmet {
+  grid-column: 1/-1;
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .helmets-subpage .helmets-main__select-helmet {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+  }
+}
+@media (min-width: 1020px) {
+  .helmets-subpage .helmets-main__select-helmet {
+    grid-template-columns: repeat(12, 60px);
+  }
+}
+@media (min-width: 1600px) {
+  .helmets-subpage .helmets-main__select-helmet {
+    grid-template-columns: repeat(12, 73px);
+    gap: 14px;
+  }
+}
+.helmets-subpage .helmets-main .select-helmet__select-caption {
+  grid-column: 1/2;
+}
+.helmets-subpage .helmets-main .select-helmet .select-caption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+@media (min-width: 640px) {
+  .helmets-subpage .helmets-main .select-helmet .select-caption {
+    display: block;
+  }
+}
+.helmets-subpage .helmets-main .select-helmet .select-caption__rectangle {
+  height: 100px;
+  width: 1px;
+  margin: 10px auto;
+  background-color: rgba(52, 79, 16, 0.5019607843);
+}
+.helmets-subpage .helmets-main .select-helmet .select-caption__paragraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins;
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18.2px;
+  letter-spacing: 0%;
+  color: rgba(52, 79, 16, 0.5019607843);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+.helmets-subpage .helmets-main .select-helmet__helmets-photos {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .helmets-subpage .helmets-main .select-helmet__helmets-photos {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+  }
+}
+@media (min-width: 1020px) {
+  .helmets-subpage .helmets-main .select-helmet__helmets-photos {
+    grid-template-columns: repeat(12, 60px);
+  }
+}
+@media (min-width: 1600px) {
+  .helmets-subpage .helmets-main .select-helmet__helmets-photos {
+    grid-template-columns: repeat(12, 73px);
+    gap: 14px;
+  }
+}
+@media (min-width: 640px) {
+  .helmets-subpage .helmets-main .select-helmet__helmets-photos {
+    grid-column: 2/-1;
+  }
+}
+@media (min-width: 1020px) {
+  .helmets-subpage .helmets-main .select-helmet__helmets-photos {
+    grid-column: 3/-1;
+  }
+}
+.helmets-subpage .helmets-main .select-helmet .helmets-photos__title {
+  padding: 15px;
+  grid-column: 1/-1;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 5%;
+  color: #344f10;
+}
+.helmets-subpage .helmets-main .select-helmet .helmets-photos__box {
+  grid-column: 1/-1;
+  padding: 15px;
+  overflow: hidden;
+}
+@media (min-width: 640px) {
+  .helmets-subpage .helmets-main .select-helmet .helmets-photos__box {
+    grid-column: span 3;
+  }
+}
+@media (min-width: 1020px) {
+  .helmets-subpage .helmets-main .select-helmet .helmets-photos__box {
+    grid-column: span 4;
+  }
+}
+.helmets-subpage .helmets-main .select-helmet .helmets-photos__helmet-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+@media (min-width: 640px) {
+  .helmets-subpage .helmets-main .select-helmet .helmets-photos__helmet-img {
+    height: 300px;
+  }
+}
+.helmets-subpage .helmets-main .select-helmet .helmets-photos__signature {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 5%;
+  color: #333333;
+  border-bottom: 2px solid #333;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.helmets-subpage .helmets-main .select-helmet .helmets-photos__paragraph {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: 5%;
+  color: #333333;
+}
+.helmets-subpage .helmets-main__cleaning-helmet {
+  grid-column: 1/-1;
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .helmets-subpage .helmets-main__cleaning-helmet {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+  }
+}
+@media (min-width: 1020px) {
+  .helmets-subpage .helmets-main__cleaning-helmet {
+    grid-template-columns: repeat(12, 60px);
+  }
+}
+@media (min-width: 1600px) {
+  .helmets-subpage .helmets-main__cleaning-helmet {
+    grid-template-columns: repeat(12, 73px);
+    gap: 14px;
+  }
+}
+.helmets-subpage .helmets-main .cleaning-helmet__cleaning-caption {
+  grid-column: 1/2;
+}
+.helmets-subpage .helmets-main .cleaning-helmet .cleaning-caption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+@media (min-width: 640px) {
+  .helmets-subpage .helmets-main .cleaning-helmet .cleaning-caption {
+    display: block;
+  }
+}
+.helmets-subpage .helmets-main .cleaning-helmet .cleaning-caption__rectangle {
+  height: 100px;
+  width: 1px;
+  margin: 10px auto;
+  background-color: rgba(52, 79, 16, 0.5019607843);
+}
+.helmets-subpage .helmets-main .cleaning-helmet .cleaning-caption__paragraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins;
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18.2px;
+  letter-spacing: 0%;
+  color: rgba(52, 79, 16, 0.5019607843);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+.helmets-subpage .helmets-main .cleaning-helmet__title {
+  grid-column: 1/-1;
+  padding: 0 15px;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 5%;
+  color: #344f10;
+}
+@media (min-width: 640px) {
+  .helmets-subpage .helmets-main .cleaning-helmet__title {
+    grid-column: 2/4;
+  }
+}
+@media (min-width: 1020px) {
+  .helmets-subpage .helmets-main .cleaning-helmet__title {
+    grid-column: 2/5;
+    font-size: 36px;
+    line-height: 39.6px;
+  }
+}
+.helmets-subpage .helmets-main .cleaning-helmet__hints {
+  padding: 20px 0;
+  grid-column: 1/2;
+}
+@media (min-width: 640px) {
+  .helmets-subpage .helmets-main .cleaning-helmet__hints {
+    grid-column: 4/5;
+  }
+}
+@media (min-width: 1020px) {
+  .helmets-subpage .helmets-main .cleaning-helmet__hints {
+    grid-column: 5/7;
+  }
+}
+.helmets-subpage .helmets-main .cleaning-helmet__paragraph {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: right;
+  color: #333333;
+  padding: 6px;
+  box-sizing: border-box;
+  border: 1px solid #333;
+  margin: 3px;
+  border-radius: 4px;
+  display: block;
+  text-decoration: none;
+}
+.helmets-subpage .helmets-main .cleaning-helmet__paragraph:hover {
+  background-color: #333;
+  color: #fff;
+}
+.helmets-subpage .helmets-main .cleaning-helmet__photo-box {
+  grid-column: 2/-1;
+  text-align: left;
+  padding: 20px 0;
+}
+@media (min-width: 640px) {
+  .helmets-subpage .helmets-main .cleaning-helmet__photo-box {
+    grid-column: 5/-1;
+  }
+}
+@media (min-width: 1020px) {
+  .helmets-subpage .helmets-main .cleaning-helmet__photo-box {
+    grid-column: 7/-1;
+  }
+}
+.helmets-subpage .helmets-main .cleaning-helmet__clean-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+.helmets-subpage .helmets-main .cleaning-helmet__hint-answers {
+  grid-column: 1/-1;
+  margin-top: 60px;
+}
+.helmets-subpage .helmets-main .cleaning-helmet .hint-answers__strong-title {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 5%;
+  color: #828282;
+  text-decoration: underline;
+  padding: 5px 20px;
+  color: #344f10;
+  text-align: center;
+}
+.helmets-subpage .helmets-main .cleaning-helmet .hint-answers__strong-hint {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 5%;
+  color: #828282;
+  padding: 5px 20px;
+}
+.helmets-subpage .helmets-main .cleaning-helmet .hint-answers__paragraph {
+  padding: 5px 20px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18.2px;
+  letter-spacing: 5%;
+  text-align: left;
+  color: #333;
 }
 
 .about-company {
