@@ -1,0 +1,71 @@
+@use "../utils/mixins.scss" as *;
+@use "../utils/variables.scss" as *;
+
+.subpage-header {
+  @include grid;
+
+  &__drive-main {
+    grid-column: 1/-1;
+    padding-top: 70px;
+    min-height: 500px;
+  }
+}
+
+.drive-main {
+  background-color: #05040b;
+  @include grid;
+
+  &__more-fun-wrap {
+    grid-column: 1/-1;
+  }
+
+  .more-fun-wrap {
+    &__title {
+      font-family: Inter;
+      font-weight: 900;
+      font-size: 21px;
+      line-height: 25.41px;
+      letter-spacing: 0%;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+
+      @include lg {
+        font-size: 36px;
+        line-height: 44px;
+      }
+    }
+
+    &__glee {
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 25.41px;
+      letter-spacing: 0%;
+      text-align: center;
+      color: #05c2df;
+
+      @include lg {
+        font-size: 36px;
+        line-height: 44px;
+      }
+    }
+
+    &__paragraph {
+      width: 300px;
+      margin: 0 auto;
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14.52px;
+      letter-spacing: 0%;
+      text-align: center;
+      color: #05c2df;
+
+      @include lg {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+  }
+}

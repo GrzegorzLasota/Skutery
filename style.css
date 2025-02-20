@@ -4338,6 +4338,331 @@ table {
   color: #333;
 }
 
+.subpage-header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .subpage-header {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+  }
+}
+@media (min-width: 1020px) {
+  .subpage-header {
+    grid-template-columns: repeat(12, 60px);
+  }
+}
+@media (min-width: 1600px) {
+  .subpage-header {
+    grid-template-columns: repeat(12, 73px);
+    gap: 14px;
+  }
+}
+.subpage-header__drive-main {
+  grid-column: 1/-1;
+  padding-top: 70px;
+  min-height: 500px;
+}
+
+.drive-main {
+  background-color: #05040b;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .drive-main {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+  }
+}
+@media (min-width: 1020px) {
+  .drive-main {
+    grid-template-columns: repeat(12, 60px);
+  }
+}
+@media (min-width: 1600px) {
+  .drive-main {
+    grid-template-columns: repeat(12, 73px);
+    gap: 14px;
+  }
+}
+.drive-main__more-fun-wrap {
+  grid-column: 1/-1;
+}
+.drive-main .more-fun-wrap__title {
+  font-family: Inter;
+  font-weight: 900;
+  font-size: 21px;
+  line-height: 25.41px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+@media (min-width: 1020px) {
+  .drive-main .more-fun-wrap__title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+.drive-main .more-fun-wrap__glee {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 25.41px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #05c2df;
+}
+@media (min-width: 1020px) {
+  .drive-main .more-fun-wrap__glee {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+.drive-main .more-fun-wrap__paragraph {
+  width: 300px;
+  margin: 0 auto;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14.52px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #05c2df;
+}
+@media (min-width: 1020px) {
+  .drive-main .more-fun-wrap__paragraph {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.subpage-header__drive {
+  margin-bottom: 60px;
+}
+.subpage-header--drive {
+  grid-column: 1/-1;
+  padding: 0 16px 40px;
+  background: linear-gradient(to right, #191536, #000000);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .subpage-header--drive {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+  }
+}
+@media (min-width: 1020px) {
+  .subpage-header--drive {
+    grid-template-columns: repeat(12, 60px);
+  }
+}
+@media (min-width: 1600px) {
+  .subpage-header--drive {
+    grid-template-columns: repeat(12, 73px);
+    gap: 14px;
+  }
+}
+
+.drive {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .drive {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+  }
+}
+@media (min-width: 1020px) {
+  .drive {
+    grid-template-columns: repeat(12, 60px);
+  }
+}
+@media (min-width: 1600px) {
+  .drive {
+    grid-template-columns: repeat(12, 73px);
+    gap: 14px;
+  }
+}
+.drive__company-top {
+  grid-column: 1/-1;
+}
+.drive .company-top {
+  grid-column: 1/-1;
+}
+.drive .company-top__box {
+  padding: 15px;
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+}
+.drive .company-top__logo-link {
+  max-width: 200px;
+  height: auto;
+}
+.drive__drive-entry {
+  grid-column: 1/-1;
+}
+.drive .drive-entry {
+  display: flex;
+  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .drive .drive-entry {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+  }
+}
+@media (min-width: 1020px) {
+  .drive .drive-entry {
+    grid-template-columns: repeat(12, 60px);
+  }
+}
+@media (min-width: 1600px) {
+  .drive .drive-entry {
+    grid-template-columns: repeat(12, 73px);
+    gap: 14px;
+  }
+}
+.drive__header-photo-box {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 640px) {
+  .drive__header-photo-box {
+    grid-column: 2/-2;
+  }
+}
+@media (min-width: 1020px) {
+  .drive__header-photo-box {
+    grid-column: 7/-1;
+    order: 1;
+  }
+}
+.drive .header-photo-box__header-photo {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: left;
+  border-radius: 30px;
+}
+.drive__header-info-box {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1020px) {
+  .drive__header-info-box {
+    grid-column: 1/6;
+    order: 0;
+  }
+}
+.drive__title {
+  font-family: Inter;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 33.8px;
+  letter-spacing: 0%;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+@media (min-width: 1020px) {
+  .drive__title {
+    font-size: 46px;
+    line-height: 60px;
+  }
+}
+.drive__azure {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 33.8px;
+  letter-spacing: 0%;
+  color: #05c2df;
+  text-transform: uppercase;
+}
+@media (min-width: 1020px) {
+  .drive__azure {
+    font-size: 46px;
+    line-height: 60px;
+  }
+}
+.drive__paragraph {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #929292;
+  margin-bottom: 10px;
+}
+@media (min-width: 1020px) {
+  .drive__paragraph {
+    margin-bottom: 50px;
+    text-align: left;
+  }
+}
+.drive__price {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21.78px;
+  letter-spacing: 0%;
+  color: #fff;
+}
+.drive__start-btn {
+  width: 280px;
+  height: 60px;
+  margin: 30px auto;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1020px) {
+  .drive__start-btn {
+    margin: 30px 0;
+  }
+}
+.drive__start-btn:hover .drive__start-btn-play {
+  opacity: 0;
+}
+.drive__start-btn:hover .drive__start-btn-hidden {
+  opacity: 1;
+}
+.drive__start-btn-play {
+  max-width: 100%;
+  height: auto;
+}
+.drive__start-btn-hidden {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  opacity: 0;
+}
+
 .about-company {
   margin-bottom: 50px;
 }
