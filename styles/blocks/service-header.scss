@@ -1,0 +1,138 @@
+@use "../utils/mixins.scss" as *;
+@use "../utils/variables.scss" as *;
+
+.subpage-header {
+  &__service {
+    margin-bottom: 60px;
+  }
+
+  &--service {
+    grid-column: 1/-1;
+    padding: 0 16px 40px;
+    // grid-template-rows: 100px auto;
+    @include grid;
+  }
+}
+
+.service {
+  grid-column: 1/-1;
+
+  @include grid;
+
+  &__company-top {
+    grid-column: 1/-1;
+  }
+
+  .company-top {
+    grid-column: 1/-1;
+    &__box {
+      padding: 15px;
+      display: block;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    &__logo-link {
+      max-width: 200px;
+      height: auto;
+    }
+  }
+
+  &__service-entry {
+    grid-column: 1/-1;
+  }
+
+  .service-entry {
+    display: flex;
+    flex-direction: column;
+    @include grid;
+  }
+
+  &__header-photo-box {
+    grid-column: 1/-1;
+    @include flex-center;
+    align-items: flex-start;
+
+    @include md {
+      grid-column: 2/-2;
+    }
+
+    @include lg {
+      grid-column: 7/-1;
+      order: 1;
+    }
+  }
+
+  .header-photo-box {
+    &__header-photo {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      object-position: center;
+
+      @include lg {
+        height: 450px;
+      }
+    }
+  }
+
+  &__header-info-box {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+
+    @include lg {
+      grid-column: 1/6;
+      order: 0;
+    }
+  }
+
+  &__title {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 42px;
+    letter-spacing: 0%;
+
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    @include md {
+      font-size: 40px;
+      line-height: 52px;
+    }
+
+    @include lg {
+      font-size: 50px;
+      line-height: 68px;
+    }
+
+    // @include lg {
+    //   font-size: 55px;
+    //   line-height: 78px;
+    //   text-align: left;
+    //   margin-bottom: 30px;
+    //   padding: 0;
+    // }
+  }
+
+  &__pinky {
+    color: #f9512e;
+  }
+
+  &__paragraph {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #333;
+    margin-bottom: 10px;
+
+    @include lg {
+      margin-bottom: 50px;
+      text-align: left;
+    }
+  }
+}
