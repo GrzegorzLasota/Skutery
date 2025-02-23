@@ -2,17 +2,240 @@
 @use "../utils/variables.scss" as *;
 
 .service-subpage {
-  background-color: #ffe600;
   background: linear-gradient(#f7f7f7, #fff1f9);
-  background-color: #f7f7f7;
 
   &__service-main {
+    margin-top: 60px;
     padding: 10px;
   }
 }
 
 .service-main {
   @include grid;
+
+  &__offer-service {
+    grid-column: 1/-1;
+    margin-bottom: 80px;
+  }
+
+  .offer-service {
+    @include grid;
+
+    &__title {
+      grid-column: 1/-1;
+      text-align: center;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 150px;
+      font-family: Inter;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 52px;
+      letter-spacing: 0%;
+      color: #0db2b3;
+      text-shadow: 1px 1px 3px #000;
+
+      @include md {
+        font-size: 48px;
+        line-height: 62px;
+      }
+
+      @include lg {
+        font-size: 62px;
+        line-height: 78px;
+      }
+
+      &--covers {
+        color: #e7ae16;
+      }
+    }
+
+    &__offer-article {
+      grid-column: 1/-1;
+      margin-bottom: 80px;
+      padding: 30px 0;
+    }
+
+    .offer-article {
+      @include grid;
+
+      &__offer-service-caption {
+        grid-column: 1/-1;
+
+        @include md {
+          grid-column: 1/2;
+        }
+      }
+
+      .offer-article-caption {
+        @include flex-center;
+        grid-column: 1/-1;
+        padding: 20px;
+        order: 0;
+
+        &--first {
+          @include md {
+            order: 0;
+          }
+        }
+
+        &--last {
+          @include md {
+            order: 3;
+          }
+        }
+
+        @include md {
+          flex-direction: column;
+          grid-column: span 1;
+          padding: 0;
+        }
+
+        &__rectangle {
+          height: 70px;
+          width: 1px;
+          margin: 10px auto;
+          background-color: #0db2b3;
+        }
+
+        &__paragraph {
+          @include flex-center;
+          width: 100%;
+          // text-orientation: sideways-right;
+          text-align: center;
+          font-family: Inter;
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 14px;
+          letter-spacing: 0%;
+          color: #0db2b3;
+          text-shadow: 0 21px 1px #7c7c7c;
+
+          @include md {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+
+            &--reverse {
+              transform: rotate(0deg);
+            }
+          }
+        }
+      }
+
+      &__offer-photo {
+        grid-column: 1/-1;
+        margin-bottom: 20px;
+        @include flex-center;
+        order: 1;
+
+        @include md {
+          grid-column: span 2;
+        }
+
+        @include lg {
+          grid-column: span 5;
+        }
+
+        &--left {
+          @include md {
+            order: 1;
+          }
+        }
+
+        &--right {
+          @include md {
+            order: 3;
+          }
+        }
+      }
+
+      &__photo-picture {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+
+        @include md {
+          width: 200px;
+          height: 200px;
+        }
+
+        @include lg {
+          width: 300px;
+          height: 300px;
+        }
+      }
+
+      &__offer-info {
+        grid-column: 1/-1;
+        height: 300px;
+        box-sizing: border-box;
+        padding: 0 30px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        order: 2;
+
+        @include md {
+          grid-column: span 3;
+        }
+
+        @include lg {
+          grid-column: span 6;
+        }
+      }
+
+      &__title {
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 46px;
+        line-height: 40px;
+        letter-spacing: 0%;
+        color: #e7ae16;
+        text-align: center;
+        text-shadow: 1px 1px 3px #000;
+
+        @include md {
+          text-align: left;
+          font-size: 40px;
+        }
+
+        @include lg {
+          font-size: 56px;
+          line-height: 50px;
+        }
+      }
+
+      &__paragraph {
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0%;
+        color: #7c7c7c;
+        text-align: center;
+
+        @include md {
+          text-align: left;
+        }
+      }
+
+      &__caption {
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #0db2b3;
+
+        @include md {
+          text-align: left;
+        }
+      }
+    }
+  }
 
   &__arrange {
     grid-column: 1/-1;
@@ -25,6 +248,7 @@
 
     &__steps {
       grid-column: 1/-1;
+      margin-top: 60px;
       margin-bottom: 60px;
       order: 1;
 
@@ -36,7 +260,7 @@
 
     &__title {
       font-family: Inter;
-      font-weight: 900;
+      font-weight: 700;
       font-size: 36px;
       line-height: 43.57px;
       letter-spacing: 0%;
@@ -62,7 +286,7 @@
       font-size: 36px;
       line-height: 43.57px;
       letter-spacing: 0%;
-      color: #f9512e;
+      color: #0db2b3;
     }
 
     &__paragraph {
@@ -76,11 +300,14 @@
     }
 
     &__caption-wrap {
+      background-image: url("../../images/serwis/jazda.jpg");
+      background-size: cover;
+      background-position: center;
+
       order: 1;
       grid-column: 1/-1;
       margin-bottom: 60px;
       box-sizing: border-box;
-      border-radius: 20px;
       @include flex-center;
 
       @include md {
@@ -103,7 +330,7 @@
       font-size: 48px;
       line-height: 62.4px;
       letter-spacing: 0%;
-      color: #000000;
+      color: #ffffff;
 
       @include lg {
         font-size: 64px;
@@ -145,149 +372,90 @@
     }
   }
 
-  &__offer-service {
+  &__door-to-door {
     grid-column: 1/-1;
     margin-bottom: 80px;
   }
 
-  .offer-service {
+  .door-to-door {
     @include grid;
 
     &__title {
-      grid-column: 1/-1;
-      text-align: center;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      color: #333;
-      padding: 15px;
-      margin-bottom: 50px;
       font-family: Inter;
       font-weight: 700;
-      font-size: 40px;
-      line-height: 52px;
+      font-size: 14px;
+      line-height: 20px;
       letter-spacing: 0%;
-      color: #333333;
+      text-align: center;
+      color: #131313;
+      padding: 30px;
+      margin-bottom: 60px;
+      grid-column: span 6;
 
       @include md {
-        font-size: 48px;
-        line-height: 62px;
-      }
-
-      @include lg {
-        font-size: 62px;
-        line-height: 78px;
+        grid-column: 1/-1;
       }
     }
 
-    &__offer-article {
+    &__how-it-work {
       grid-column: 1/-1;
       margin-bottom: 80px;
     }
 
-    .offer-article {
+    .how-it-work {
       @include grid;
 
-      &__offer-service-caption {
-        @include md {
-          grid-column: 1/2;
-        }
-      }
-
-      .offer-service-caption {
-        @include flex-center;
-        flex-direction: column;
-        display: none;
-
-        @include md {
-          display: block;
-        }
-
-        &__rectangle {
-          height: 70px;
-          width: 1px;
-          margin: 10px auto;
-          background-color: #0db2b3;
-        }
-
-        &__paragraph {
-          @include flex-center;
-          width: 100%;
-          // text-orientation: sideways-right;
-          writing-mode: vertical-rl;
-          transform: rotate(180deg);
-          font-family: Inter;
-          font-weight: 700;
-          font-size: 12px;
-          line-height: 14px;
-          letter-spacing: 0%;
-          color: #0db2b3;
-          text-shadow: 0 21px 1px #11111125;
-        }
-      }
-
-      &__offer-photo {
+      &__wrap-icons {
         grid-column: 1/-1;
-        @include flex-center;
-
-        @include md {
-          grid-column: span 2;
-        }
-
-        @include lg {
-          grid-column: span 5;
-        }
-      }
-
-      &__photo-picture {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        object-position: center;
-      }
-
-      &__offer-info {
-        grid-column: 1/-1;
-        height: 300px;
-        box-sizing: border-box;
-        padding: 0 10px;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
 
         @include md {
           grid-column: span 3;
         }
 
-        @include lg {
+        &--extended {
           grid-column: span 6;
         }
+      }
+
+      &__icon-box {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      &__icon-photo {
+        max-width: 25%;
+        height: auto;
       }
 
       &__title {
         font-family: Inter;
         font-weight: 700;
-        font-size: 56px;
-        line-height: 50px;
+        font-size: 22px;
+        line-height: 28px;
         letter-spacing: 0%;
+        text-align: center;
         color: #333;
+        margin-bottom: 52px;
+
+        &--extended {
+          min-height: 60px;
+          margin-bottom: 32px;
+        }
       }
 
       &__paragraph {
         font-family: Inter;
         font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 14px;
+        line-height: 21px;
         letter-spacing: 0%;
+        text-align: center;
         color: #7c7c7c;
-      }
+        padding: 15px;
 
-      &__caption {
-        font-family: Inter;
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 14px;
-        letter-spacing: 0%;
-        color: #0db2b3;
+        &--we-can {
+          padding: 0;
+        }
       }
     }
   }
