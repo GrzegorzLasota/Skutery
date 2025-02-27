@@ -26,10 +26,13 @@
 
   .company-top {
     grid-column: 1/-1;
+    @include flex-center;
+
     &__box {
       display: block;
       text-align: center;
       box-sizing: border-box;
+      width: 250px;
     }
 
     &__logo-link {

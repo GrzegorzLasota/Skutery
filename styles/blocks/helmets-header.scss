@@ -16,7 +16,7 @@
 
 .helmets {
   grid-column: 1/-1;
-
+  grid-template-rows: 100px auto;
   @include grid;
 
   &__company-top {
@@ -25,11 +25,13 @@
 
   .company-top {
     grid-column: 1/-1;
+    @include flex-center;
     &__box {
       padding: 15px;
       display: block;
       text-align: center;
       box-sizing: border-box;
+      width: 250px;
     }
 
     &__logo-link {
