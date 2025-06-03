@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-59CR3FQF");
+    </script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -24,10 +38,20 @@
     <script src="./script.js" defer></script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-59CR3FQF"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="header">
       <section class="start header__start">
         <div class="start__logo">
-          <a class="start__link" href="#">
+          <a class="start__link" href="index.html">
             <img
               class="start__icon"
               alt="logo-icon"
@@ -44,16 +68,17 @@
       <section class="middle">
         <div class="middle__banner">
           <p class="middle__paragraph">
-            Majówka tuż tuż. Nie czekaj na ostatnią chwilę i odwiedź nasz salon!
+            Dużo nowych modeli, nowe marki Niu i Kayo!
           </p>
         </div>
       </section>
       <section class="additional">
-        <div class="additional__insure additional__insure--top">
-          <i>Ubezpieczamy</i>
-        </div>
-        <div class="additional__installments additional__installments--bottom">
-          <i>Mamy raty</i>
+        <div class="additional__insure">
+          <i>Raty</i>
+          <i>Serwis</i>
+          <i class="additional--sale">Sprzedaż</i>
+          <i>Ubezpieczenia</i>
+          <i>Wypożyczalnia</i>
         </div>
       </section>
       <section class="end header__end">
@@ -87,11 +112,11 @@
                 /></a>
               </li>
               <li class="grid-cars-top__item">
-                <a href="qjmotor.html" class="grid-cars-top__link"
+                <a href="kayo.html" class="grid-cars-top__link"
                   ><img
                     class="grid-cars-top__icon"
-                    alt="qj-logo"
-                    src="./images/loga/qj1.png"
+                    alt="kayo"
+                    src="./images/loga/kayo.png"
                 /></a>
               </li>
               <li class="grid-cars-top__item">
@@ -108,6 +133,14 @@
                     class="grid-cars-top__icon"
                     alt="mbp-logo"
                     src="./images/loga/mbpcentre.png"
+                /></a>
+              </li>
+              <li class="grid-cars-top__item grid-cars-top__item--qj">
+                <a href="qjmotor.html" class="grid-cars-top__link"
+                  ><img
+                    class="grid-cars-top__icon grid-cars-top__icon--qj"
+                    alt="qj-logo"
+                    src="./images/loga/qj1.png"
                 /></a>
               </li>
             </ul>
@@ -133,6 +166,14 @@
                   class="grid-cars-bottom__link grid-cars-bottom__item--quad"
                 >
                   <p class="grid-cars-bottom__paragraph">Quady</p>
+                </a>
+              </li>
+              <li class="grid-cars-bottom__item">
+                <a
+                  href="electric.html"
+                  class="grid-cars-bottom__link grid-cars-bottom__item--electric"
+                >
+                  <p class="grid-cars-bottom__paragraph">Elektryki</p>
                 </a>
               </li>
             </ul>
